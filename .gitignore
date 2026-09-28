@@ -1,0 +1,18 @@
+# Keep raw or generated material out of the public presentation repository.
+*.csv
+*.csv.gz
+*.gz
+*.npz
+*.xlsx
+*.zip
+*.mp4
+*.mov
+*.mkv
+*.wav
+*.jpg
+*.jpeg
+*.png
+raw/
+private/
+work/
+.DS_Store
