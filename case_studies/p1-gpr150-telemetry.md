@@ -3,6 +3,7 @@
 **Date:** 2026-09-03
 **Vehicle:** GPR150
 **Context:** repeated practice sessions on a compact P1 circuit
+**Tools:** RaceChrono Pro, VBO/Circuit Tools exports, Python/NumPy/Matplotlib/OpenCV, and multi-camera onboard video
 **Read this case for:** a lap-time progression traced through data quality checks, geographic sectors, linked-corner analysis, and selected onboard-video evidence.
 
 ## Result

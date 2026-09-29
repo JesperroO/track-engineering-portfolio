@@ -1,10 +1,12 @@
 # Track Engineering Portfolio
 
-An evidence-bounded motorsport data and vehicle-dynamics portfolio built around real-track motorcycle telemetry, onboard video, simulation telemetry, and lap-time modelling.
+An evidence-bounded motorsport data and vehicle-dynamics portfolio built around real-track motorcycle telemetry, onboard video, simulation telemetry, and lap-time modelling. The work is implemented as a Python-based acquisition, analysis, visualisation, and modelling toolchain rather than a collection of presentation-only charts.
 
 The project documents how measurements are acquired, checked, connected to visual evidence, transformed into derived quantities, and used to form testable engineering hypotheses.
 
 The current evidence package includes a nine-session P1 GPR150 programme with 71 timed laps, a reference progression from `60.022 s` to `55.496 s`, real onboard video/proxy material, and selected frame exports from daylight, overcast, and night running. The public figures show lap progression, geographic sector gains, and the relationship between a local T1 gate and the full-lap result.
+
+The technical profile records the software and implementation behind these outputs: RaceChrono and VBO/Circuit Tools exports, OBD-II and video workflows, Assetto Corsa telemetry, Python/NumPy/Matplotlib/OpenCV, CasADi-based vehicle models, and pytest-backed checks.
 
 ## What this portfolio covers
 
@@ -12,6 +14,8 @@ The current evidence package includes a nine-session P1 GPR150 programme with 71
 - Video evidence: the private real-track archive contains multi-camera onboard material and proxy exports, including multiple camera files for one P1 session. The public version contains selected still frames only; cross-camera time synchronization remains an explicit analysis step rather than an implied completed result.
 - Simulation telemetry: higher-rate traces with individual wheel speeds, brake bias, tyre state, fuel use, throttle, and braking channels.
 - Modelling experiments: GGV envelopes, transient minimum-lap-time formulations, optimal-control formulations, and an exploratory SSN/KKT solver direction.
+
+See [Technical profile](TECHNICAL_PROFILE.md) for the acquisition stack, software, implementation scope, and the engineering experience represented by the case studies.
 
 The 25 Hz and multi-camera details are project-level acquisition facts confirmed for the real-track programme. They are not assigned to every session by default. The case pages use session-level values only where the internal session reports or acquired media support them, and keep the raw files in a separate private archive.
 

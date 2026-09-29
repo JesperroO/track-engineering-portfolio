@@ -2,9 +2,19 @@
 
 ## Position
 
-Computer-science and engineering student working on personal motorsport data systems, vehicle-dynamics analysis, and lap-time modelling. The practical focus is turning imperfect telemetry into bounded, reviewable engineering decisions.
+I build a personal motorsport data and vehicle-dynamics toolchain spanning real-track acquisition, video review, simulation telemetry, Python analysis, and lap-time modelling. The practical focus is turning imperfect telemetry into bounded, reviewable engineering decisions.
 
 The practical focus is data preparation, channel and timing checks, lap and sector comparison, setup-test bookkeeping, and clear separation between what the data shows and what still needs confirmation.
+
+The implementation behind the selected work includes RaceChrono and VBO/Circuit Tools exports, OBD-II and multi-camera video workflows, Assetto Corsa telemetry, Python/NumPy/Matplotlib/OpenCV, CasADi nonlinear optimisation, and pytest-based model checks. [Technical profile](TECHNICAL_PROFILE.md) maps those tools to the work they support.
+
+## What this demonstrates
+
+- I can take a mixed acquisition package—GPS/GNSS, IMU, OBD-II, timing records, VBO exports, and onboard video—and turn it into a traceable analysis dataset.
+- I can distinguish raw measurements from derived quantities such as geographic gates, GPS yaw, normalized throttle, inferred gear, sector allocation, and kinematic demand.
+- I can write analysis and rendering tools rather than relying only on a telemetry viewer: the underlying archive contains 26 modelling modules, 41 analysis tools, and 15 test modules.
+- I can carry a result from observation to decision: identify a repeatable pattern, state the uncertainty, and propose the next controlled measurement or setup test.
+- I can work across the full loop from data-quality audit to vehicle model, while keeping model assumptions and solver feasibility separate from real-vehicle performance.
 
 ## Selected case studies
 

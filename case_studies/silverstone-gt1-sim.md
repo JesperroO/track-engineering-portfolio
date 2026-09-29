@@ -4,6 +4,7 @@
 **Platform:** Assetto Corsa simulation
 **Vehicle:** GT1-class simulation car
 **Context:** pre-qualification practice
+**Tools:** Content Manager, Live Telemetry 1.8.5, SimTelemetry records, Python/NumPy/Matplotlib, and setup metadata
 **Read this case for:** how higher-rate telemetry turns a driving observation into a concrete, single-variable setup test.
 
 ## Dataset

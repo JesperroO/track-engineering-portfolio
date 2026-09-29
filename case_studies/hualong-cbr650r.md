@@ -3,6 +3,7 @@
 **Date:** 2026-07-28
 **Vehicle:** 2020 Honda CBR650R
 **Context:** four-session practice day on a compact circuit
+**Tools:** RaceChrono Pro, OBD-II, heart-rate data, action-camera footage, Python-derived tables, and an Excel analysis workbook
 **Read this case for:** a session-to-session comparison that keeps comparable laps separate from degraded GPS and provisional data.
 
 ## Result
