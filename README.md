@@ -33,6 +33,26 @@ This prevents a fast lap, a noisy channel, or a model output from being promoted
 - [Silverstone GT1 simulation telemetry](case_studies/silverstone-gt1-sim.md)
 - [Vehicle and lap-time modelling](modelling/lap-time-modelling.md)
 
+## Visual evidence
+
+The portfolio includes selected frame exports from the real-track video archive and figures regenerated from the dated P1 analysis tables. They show the evidence chain at three levels: what the camera saw, how lap time progressed, and where the measured gains were distributed.
+
+<p align="center">
+  <img src="assets/p1/video_frames/p1-s04-day-corner-01.jpg" alt="P1 daytime corner frame" width="31%" />
+  <img src="assets/p1/video_frames/p1-s07-overlay-straight.jpg" alt="P1 onboard frame with timing display" width="31%" />
+  <img src="assets/p1/video_frames/p1-s08-night-corner-02.jpg" alt="P1 night corner frame" width="31%" />
+</p>
+
+<p align="center">
+  <img src="assets/p1/p1-lap-progression.png" alt="P1 GPR150 lap progression across 71 timed laps" width="96%" />
+</p>
+
+<p align="center">
+  <img src="assets/p1/p1-sector-gains.png" alt="P1 sector gain heatmap across four reference transitions" width="96%" />
+</p>
+
+The full [P1 case study](case_studies/p1-gpr150-telemetry.md) contains the larger frame gallery and the T1 gate analysis. The public repository stores only these derived images; the original video archive remains private.
+
 ## Scope and privacy
 
 This is a sanitized public presentation layer. It intentionally excludes health and DEXA records, exact GPS traces and unnecessary location detail, private original media, local filesystem paths, raw high-frequency logs, temporary solver outputs, and personal equipment or riding records.

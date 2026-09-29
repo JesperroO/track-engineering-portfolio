@@ -16,3 +16,10 @@ raw/
 private/
 work/
 .DS_Store
+
+# The curated public figures and frame exports are intentional exceptions.
+!assets/
+!assets/p1/
+!assets/p1/*.png
+!assets/p1/video_frames/
+!assets/p1/video_frames/*.jpg
