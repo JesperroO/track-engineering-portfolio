@@ -8,6 +8,8 @@ The practical focus is data preparation, channel and timing checks, lap and sect
 
 The implementation behind the selected work includes RaceChrono and VBO/Circuit Tools exports, OBD-II and multi-camera video workflows, Assetto Corsa telemetry, Python/NumPy/Matplotlib/OpenCV, CasADi nonlinear optimisation, and pytest-based model checks. [Technical profile](TECHNICAL_PROFILE.md) maps those tools to the work they support.
 
+The strongest repeated evidence is the [trackside feedback loop](TRACKSIDE_FEEDBACK_LOOP.md): post-session analysis becomes a one-turn or one-variable decision for the next run, and the next run is judged against the actual intended mechanism rather than against lap time alone.
+
 ## What this demonstrates
 
 - I can take a mixed acquisition package—GPS/GNSS, IMU, OBD-II, timing records, VBO exports, and onboard video—and turn it into a traceable analysis dataset.
@@ -23,6 +25,10 @@ The implementation behind the selected work includes RaceChrono and VBO/Circuit 
 | [P1 GPR150, 2026-09-03](case_studies/p1-gpr150-telemetry.md) | 71 timed laps across nine sessions; reference pace `60.022 → 55.496 s`; actual onboard/proxy video with multi-camera material | GPS quality, geographic alignment, linked corners, inferred gear, throttle continuity, frame-level video evidence, synchronization boundaries |
 | [Hualong CBR650R, 2026-07-28](case_studies/hualong-cbr650r.md) | Four practice sessions; comparable best `47.869 → 42.641 s` | OBD throttle calibration, lap comparison, data-quality gating, limits of low-rate GPS |
 | [Silverstone GT1 simulation, 2026-09-12](case_studies/silverstone-gt1-sim.md) | 50 Hz telemetry; 64,544 samples | Four-wheel speed, lockup signals, brake bias, tyre state, fuel, single-variable test design |
+
+## Session-to-session engineering
+
+The P1 CBR650R work shows the complete cycle most clearly: a first-session video and telemetry review isolated T2/T18 control continuity, the next session reduced the task to one repeatable turn correction, and later footage and sector timing checked what had actually improved. The Hualong work added explicit baseline, single-variable, provisional-data, and confirmation stages. The September P1 and Silverstone cases show how the same method scales to multi-session telemetry and simulation setup tests.
 
 ## Transferable engineering habits
 

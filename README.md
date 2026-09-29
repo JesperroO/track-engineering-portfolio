@@ -8,6 +8,8 @@ The current evidence package includes a nine-session P1 GPR150 programme with 71
 
 The technical profile records the software and implementation behind these outputs: RaceChrono and VBO/Circuit Tools exports, OBD-II and video workflows, Assetto Corsa telemetry, Python/NumPy/Matplotlib/OpenCV, CasADi-based vehicle models, and pytest-backed checks.
 
+The most important recurring pattern is the [trackside feedback loop](TRACKSIDE_FEEDBACK_LOOP.md): analyse one session, isolate one turn or linked section, change one controllable thing in the next session, and use the new data to keep or reject the interpretation.
+
 ## What this portfolio covers
 
 - Real-track motorcycle data: 25 Hz GNSS, IMU, and OBD-II acquisition, with lap and sector comparison, racing-line analysis, throttle and braking/deceleration behaviour, and consistency/repeatability analysis.
@@ -34,6 +36,8 @@ This prevents a fast lap, a noisy channel, or a model output from being promoted
 ## Selected work
 
 - [Portfolio overview](PORTFOLIO.md)
+- [Trackside feedback loop](TRACKSIDE_FEEDBACK_LOOP.md)
+- [Technical profile](TECHNICAL_PROFILE.md)
 - [P1 GPR150 real-track telemetry](case_studies/p1-gpr150-telemetry.md)
 - [Hualong CBR650R practice analysis](case_studies/hualong-cbr650r.md)
 - [Silverstone GT1 simulation telemetry](case_studies/silverstone-gt1-sim.md)
