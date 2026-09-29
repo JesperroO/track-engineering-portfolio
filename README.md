@@ -1,17 +1,19 @@
 # Track Engineering Portfolio
 
-An independent motorsport data and vehicle-dynamics portfolio built around real-track motorcycle telemetry, simulation telemetry, and lap-time modelling.
+An evidence-bounded motorsport data and vehicle-dynamics portfolio built around real-track motorcycle telemetry, onboard video, simulation telemetry, and lap-time modelling.
 
-The project is aimed at student engineer / data roles and technical conversations with race teams. It documents how measurements are acquired, checked, transformed into derived quantities, and used to form testable engineering hypotheses.
+The project is aimed at student engineer / data roles and technical conversations with race teams. It documents how measurements are acquired, checked, connected to visual evidence, transformed into derived quantities, and used to form testable engineering hypotheses.
+
+The current evidence package includes a nine-session P1 GPR150 programme with 71 timed laps, a reference progression from `60.022 s` to `55.496 s`, real onboard video/proxy material, and selected frame exports from daylight, overcast, and night running. The public figures show lap progression, geographic sector gains, and the relationship between a local T1 gate and the full-lap result.
 
 ## What this portfolio covers
 
 - Real-track motorcycle data: 25 Hz GNSS, IMU, and OBD-II acquisition, with lap and sector comparison, racing-line analysis, throttle and braking/deceleration behaviour, and consistency/repeatability analysis.
-- Video alignment: one real-track session included multi-channel acquisition with multi-camera onboard video. The public version contains no raw media or private media references.
+- Video evidence: the private real-track archive contains multi-camera onboard material and proxy exports, including multiple camera files for one P1 session. The public version contains selected still frames only; cross-camera time synchronization remains an explicit analysis step rather than an implied completed result.
 - Simulation telemetry: higher-rate traces with individual wheel speeds, brake bias, tyre state, fuel use, throttle, and braking channels.
 - Modelling experiments: GGV envelopes, transient minimum-lap-time formulations, optimal-control formulations, and an exploratory SSN/KKT solver direction.
 
-The 25 Hz and multi-camera details are project-level acquisition facts confirmed for the real-track programme. They are not assigned to every session by default. The case pages use session-level values only where the internal session reports record them, and keep the raw files in a separate private archive.
+The 25 Hz and multi-camera details are project-level acquisition facts confirmed for the real-track programme. They are not assigned to every session by default. The case pages use session-level values only where the internal session reports or acquired media support them, and keep the raw files in a separate private archive.
 
 ## Engineering method
 

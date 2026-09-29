@@ -21,9 +21,9 @@ The last step was supported by a three-lap progression (`55.957 / 55.920 / 55.49
 
 ## Acquisition and alignment
 
-The real-track programme used 25 Hz GNSS, IMU, and OBD-II acquisition. The broader programme also included a session with multi-channel, multi-camera onboard video. The public portfolio does not publish the raw files or camera identifiers.
+The real-track programme used 25 Hz GNSS, IMU, and OBD-II acquisition. The private P1 archive also contains per-session VBO/Circuit Tools records and onboard video/proxy exports; one session has multiple camera files, and the public evidence package now includes selected frames from daylight, overcast, and night running. The raw files and camera identifiers remain private.
 
-For this case, cross-source comparison used geographic gates because the available GPS schemas produced materially different distance totals. The next video step is to align a visible start/finish crossing with the stored lap markers, then test whether telemetry changes correspond to a visible corner, line, body movement, or control action.
+For this case, cross-source comparison used geographic gates because the available GPS schemas produced materially different distance totals. The frame gallery proves that the visual record exists and can be inspected; it does not by itself prove cross-camera synchronization. The next video step is to align a visible start/finish crossing with the stored lap markers, then test whether telemetry changes correspond to a visible corner, line, body movement, or control action.
 
 ## What was measured or observed
 
@@ -31,6 +31,7 @@ For this case, cross-source comparison used geographic gates because the availab
 - Lap and sector progression was compared with geographic gates rather than blindly joining incompatible distance channels.
 - T1 gear was inferred from the GPS/RPM ratio and rider report; there was no direct ECU gear channel.
 - Throttle continuity, longitudinal acceleration, GPS yaw, lean episodes, and linked-corner timing were used as analysis signals.
+- Selected video frames were reviewed as visual context for corner geometry, onboard display state, and changing daylight/night conditions; a frame is treated as context until its timestamp is explicitly aligned.
 - The fastest laps did not require a new extreme lean event. The more repeatable gain was linked-corner continuity and reduced dead time.
 
 ## Engineering interpretation
@@ -41,7 +42,7 @@ The analysis separated:
 - **Derived quantity:** geographic gate times, GPS/RPM gear inference, sector allocation, and normalized comparisons.
 - **Hypothesis:** a gain came from preserving speed through a linked transition, rather than simply entering the first corner faster.
 
-The evidence supports linked-corner and control-continuity hypotheses. It does not identify every rider action without synchronized video, and it does not turn the 71-lap progression into an independent vehicle-performance benchmark.
+The evidence supports linked-corner and control-continuity hypotheses. The video archive makes those hypotheses testable, but the selected stills do not identify every rider action without explicit time alignment. The 71-lap progression is also not an independent vehicle-performance benchmark.
 
 ## Video frame gallery
 
