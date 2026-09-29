@@ -4,7 +4,7 @@
 
 Computer-science and engineering student working on personal motorsport data systems, vehicle-dynamics analysis, and lap-time modelling. The practical focus is turning imperfect telemetry into bounded, reviewable engineering decisions.
 
-The most relevant direction for a race-team conversation is engineer/data support: data preparation, channel and timing checks, lap and sector comparison, setup-test bookkeeping, and clear separation between what the data shows and what still needs confirmation.
+The practical focus is data preparation, channel and timing checks, lap and sector comparison, setup-test bookkeeping, and clear separation between what the data shows and what still needs confirmation.
 
 ## Selected case studies
 
@@ -23,12 +23,6 @@ The most relevant direction for a race-team conversation is engineer/data suppor
 - Use frame-level video evidence to inspect line and visual context, while reserving time-specific control claims for explicitly aligned footage.
 - Turn a suspected cause into a controlled next test, such as changing brake bias while holding the rest of the setup fixed.
 - Write down the uncertainty that would be removed by a synchronized video view, a better sensor, or a physical inspection.
-
-## Relation to AGAC / Super Taikyu conversations
-
-The portfolio is relevant to a student engineer/data discussion because it demonstrates the workflow around telemetry and video: organizing observations, checking data quality, comparing laps, inspecting real onboard footage, tracking control traces, and designing the next measurement. It does not present private team experience or imply independent responsibility for a professional race car.
-
-The strongest honest framing is: an existing personal track-data programme and simulation-analysis practice, with the goal of learning and contributing within a professional race-engineering workflow.
 
 ## Publication boundary
 

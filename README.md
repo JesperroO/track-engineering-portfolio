@@ -2,7 +2,7 @@
 
 An evidence-bounded motorsport data and vehicle-dynamics portfolio built around real-track motorcycle telemetry, onboard video, simulation telemetry, and lap-time modelling.
 
-The project is aimed at student engineer / data roles and technical conversations with race teams. It documents how measurements are acquired, checked, connected to visual evidence, transformed into derived quantities, and used to form testable engineering hypotheses.
+The project documents how measurements are acquired, checked, connected to visual evidence, transformed into derived quantities, and used to form testable engineering hypotheses.
 
 The current evidence package includes a nine-session P1 GPR150 programme with 71 timed laps, a reference progression from `60.022 s` to `55.496 s`, real onboard video/proxy material, and selected frame exports from daylight, overcast, and night running. The public figures show lap progression, geographic sector gains, and the relationship between a local T1 gate and the full-lap result.
 

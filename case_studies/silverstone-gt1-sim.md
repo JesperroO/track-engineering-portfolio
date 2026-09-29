@@ -35,4 +35,4 @@ This is a test plan, not a claimed result. The portfolio preserves the distincti
 
 ## Why this case matters
 
-The simulation environment provides higher-rate channels than the real-track motorcycle sessions and makes individual-wheel and tyre-state reasoning visible. Its role here is to demonstrate telemetry handling and controlled-test design, not to substitute for real vehicle or professional race-team experience.
+The simulation environment provides higher-rate channels than the real-track motorcycle sessions and makes individual-wheel and tyre-state reasoning visible. Its role here is to demonstrate telemetry handling and controlled-test design, not to substitute for real-vehicle data or vehicle-dynamics validation.
