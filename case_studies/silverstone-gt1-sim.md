@@ -4,7 +4,7 @@
 **Platform:** Assetto Corsa simulation
 **Vehicle:** GT1-class simulation car
 **Context:** pre-qualification practice
-**Primary question:** can a telemetry comparison turn a driving observation into a controlled setup test?
+**Read this case for:** how higher-rate telemetry turns a driving observation into a concrete, single-variable setup test.
 
 ## Dataset
 
@@ -23,7 +23,7 @@ The raw high-frequency file is intentionally not included in the public reposito
 
 Three valid medium-tyre laps progressed from `2:13.739` to `2:10.561` to `2:07.571`. The top speed changed by only about `0.2 km/h` between the last two laps, while full-throttle time increased by `7.8 s` and braking time fell by `0.6 s`. The observed gain therefore pointed toward corner execution and throttle connection rather than a straight-line-speed change.
 
-The telemetry also showed front-wheel lockup signals around heavy-braking zones, with the right front most prominent. This made brake release and peak pedal application a more useful next question than moving the braking point earlier.
+The telemetry also showed front-wheel lockup signals around heavy-braking zones, with the right front most prominent. This made brake release and peak pedal application a more useful next analysis target than moving the braking point earlier.
 
 ## Single-variable test logic
 

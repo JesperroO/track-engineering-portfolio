@@ -3,7 +3,7 @@
 **Date:** 2026-07-28
 **Vehicle:** 2020 Honda CBR650R
 **Context:** four-session practice day on a compact circuit
-**Primary question:** how much of the improvement was supported by comparable data, and where did the measurement limits stop the conclusion?
+**Read this case for:** a session-to-session comparison that keeps comparable laps separate from degraded GPS and provisional data.
 
 ## Result
 

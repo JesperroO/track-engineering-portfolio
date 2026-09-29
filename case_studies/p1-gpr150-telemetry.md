@@ -3,7 +3,7 @@
 **Date:** 2026-09-03
 **Vehicle:** GPR150
 **Context:** repeated practice sessions on a compact P1 circuit
-**Primary question:** where did repeatable lap-time gains come from, and which interpretations still require video?
+**Read this case for:** a lap-time progression traced through data quality checks, geographic sectors, linked-corner analysis, and selected onboard-video evidence.
 
 ## Result
 
@@ -84,7 +84,7 @@ The heatmap shows why a local improvement cannot be read as a whole-lap explanat
 
 ![P1 T1 gate versus full-lap outcome](../assets/p1/p1-t1-full-lap.png)
 
-The T1 gate is a derived geographic comparison. Gear labels are rider-reported or inferred from GPS/RPM ratio, not a direct ECU gear channel. The figure therefore supports a continuity question rather than a claim that one gear is universally faster.
+The T1 gate is a derived geographic comparison. Gear labels are rider-reported or inferred from GPS/RPM ratio, not a direct ECU gear channel. The figure therefore supports a continuity interpretation rather than a claim that one gear is universally faster.
 
 ## Why this case matters
 
