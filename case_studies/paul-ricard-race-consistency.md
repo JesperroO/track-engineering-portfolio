@@ -1,5 +1,7 @@
 # Three race reviews: consistency, incident recovery and late-race pace
 
+[Portfolio contents](../README.md)
+
 **2026-08-05 / 19 / 26 · Assetto Corsa · MX-5 and Octavia Cup · Lime Rock and Paul Ricard WTCC**
 
 I compared three formal online races after driving and reviewing each one. The cars and tracks differ, so the comparison uses within-event consistency, late-race development and disruption rather than a ranking of absolute lap times.

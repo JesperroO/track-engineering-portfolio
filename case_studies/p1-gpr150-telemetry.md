@@ -1,12 +1,24 @@
 # Case study: P1 aprilia GPR150 real-track telemetry
 
-**[Read the revised T2 study](p1-t2-development.md)** — lines, control timing and braking-reference consistency.
+[Portfolio contents](../README.md)
 
 **Date:** 2026-09-03
-**Vehicle:** Aprilia GPR150
+**Vehicle:** aprilia GPR150
 **Context:** repeated practice sessions on a compact P1 circuit
 **Tools:** RaceChrono Pro, VBO/Circuit Tools exports, Python/NumPy/Matplotlib/OpenCV, and multi-camera onboard video
 **Read this case for:** personally acquired real-track data, T2 braking-reference development, linked-corner trade-offs, consecutive-PB gain allocation and aligned onboard evidence.
+
+## In this case
+
+- [Programme and lap progression](#result)
+- [T2: lines, control and reference development](#t2-lines-control-and-reference-development)
+- [Onboard video and the physical braking reference](#t2-onboard-example-developing-a-repeatable-braking-reference)
+- [T2 and downstream time gains](#quantified-t2-progression-across-sessions)
+- [OBD, heart rate and lean](#obd-control-timing-and-rider-state-analysis)
+- [Linked-corner trade-offs and consecutive PBs](#whole-lap-performance-studies)
+- [Gear choice and setup context](#supporting-driving-and-setup-comparisons)
+- [Video gallery and whole-programme figures](#video-frame-gallery)
+- [Acquisition and trackside workflow](data-acquisition-workflow.md)
 
 ## Result
 
@@ -27,6 +39,48 @@ The last step was supported by a three-lap progression (`55.957 / 55.920 / 55.49
 The real-track programme used 25 Hz GNSS, IMU, and OBD-II acquisition. The private P1 archive also contains per-session VBO/Circuit Tools records and onboard video/proxy exports; one session has multiple camera files, and the public evidence package now includes selected frames from daylight, overcast, and night running. The raw files and camera identifiers remain private.
 
 For this case, cross-source comparison used geographic gates because the available GPS schemas produced materially different distance totals. The S04 L4 excerpt below now joins one continuous onboard segment to the VBO clock and OBD/calculated channels. This establishes a bounded video example; the wider multi-camera archive still requires separate alignment.
+
+## T2: lines, control and reference development
+
+Over several sessions I moved the braking reference downstream, eventually using the raised kerb at the T1 kink as the visual marker before the main T2 left. The following study connects approach position, driven line, throttle opening and downstream speed across **47 timed laps from S02 and S04–S08**.
+
+### Braking later did not require a later lean landmark
+
+![Recorded lines and event positions](../assets/p1/p1-t2-line-analysis.png)
+
+**S02 L2 → S08 L8:** the recorded deceleration onset moves approximately **12.3 m downstream**, while the sustained 20° left-lean landmark stays in a similar approach position. The two laps therefore show a substantial change in the approach without an equivalent downstream shift of the lean landmark.
+
+Both lines use the same metric coordinate frame. The larger diagram shows the corner sequence; the detail views isolate the approach events. Circles identify deceleration onset, squares sustained left lean of 20°, and triangles sustained 40% throttle.
+
+### Earlier opening appears in the control sequence
+
+![Speed, throttle and lean aligned at minimum speed](../assets/p1/p1-t2-control-analysis.png)
+
+The curves align each lap at its T2 minimum speed, marked by the vertical zero line. Sustained 40% throttle arrives **1.50 s after minimum speed in S02 L2**, compared with **0.10 s in S08 L8**. The speed traces then separate through the exit while both laps remain substantially leaned over.
+
+At the fixed T2 exit gate, speed increases **58.8 → 64.6 km/h**. At the downstream gate it increases **43.4 → 46.0 km/h**. The measured T2-plus-downstream package improves by **0.722 s**: **0.569 s in T2** and **0.152 s after it**, with rounding applied to the components.
+
+The full-lap PB and the fastest opening package capture different strengths. S07 L5 traverses the same opening package in **13.940 s**, compared with **14.192 s for S08 L8**, despite its lower T2 exit speed. Exit speed and the following transition must therefore be read together.
+
+A second pair illustrates the distinction: **S04 L7 → S06 L7** has later deceleration and a later lean landmark, but the delay to sustained 40% opening grows **0.35 → 0.95 s**. The effect of moving the reference depends on the accompanying entry and corner sequence.
+
+### The reference moved, returned and became more repeatable
+
+![All 47 laps in riding order](../assets/p1/p1-t2-reference-history.png)
+
+Each point is one timed lap; session boundaries preserve the riding order. Position is projected onto the common approach axis, with **S08 L8 onset at 0 m**. Pale bars show how the detected point changes when the deceleration threshold varies from -0.10 to -0.20 G.
+
+The clearest reversal occurs within S07. Its first five laps have median onset **+9.9 m**, while the final four return to **+0.6 m**. S08 stays near that returned region. The sequence records downstream shifts and returns within the practice day; rider feedback supplies the reasons for individual adjustments.
+
+The logged full position range narrows from **22.3 m in S07** to **2.8 m in S08**. The middle-half ranges narrow from **9.0 m** to **1.1 m**. Varying the event threshold preserves the broad difference between the sessions. The result describes relative consistency in the recorded onset position.
+
+S04–S07 were ridden consecutively without interim telemetry debriefs. This analysis reconstructs the practice retrospectively.
+
+### Event definitions
+
+GNSS supplies position and speed; OBD supplies throttle and engine speed. Deceleration onset uses calculated longitudinal G ≤-0.15 for 0.20 s, and the lean landmark uses calculated left lean ≥20° for 0.20 s. Stable opening uses normalized OBD throttle ≥40% for 0.30 s. The main-corner minimum is selected before the fixed geographic T2 exit plane.
+
+[Event definitions and source details](p1-t2-development-method.md) · [Aggregate per-lap evidence](../assets/p1/aprilia_GPR150_T2_exploration.json)
 
 ## T2 onboard example: developing a repeatable braking reference
 
@@ -160,7 +214,7 @@ The analysis retains physical left/right sign, peak magnitude, duration beyond 3
 
 Whole-lap distributions retain S09's deliberate right-turn exploration separately from PB attempts. Calculated lean and lateral G share source assumptions and are not independent corroboration of grip. The [aggregate channel results](../assets/p1/aprilia-gpr150-channel-summary.json) record thresholds, selected laps and session summaries. Signals are resampled to a common 20 Hz analysis grid; this does not create independent 20 Hz OBD or HR measurements.
 
-## Three performance studies
+## Whole-lap performance studies
 
 These comparisons locate where time was gained, where it was returned, and how the final PB was assembled. They combine recorded lap timing, fixed geographic gates, calculated lean, GNSS speed and the rider's physical braking reference.
 
@@ -180,17 +234,7 @@ The speed and calculated-lean traces begin at the same geographic G60 gate. They
 
 The deliberate S09 right-turn exercise gives another useful contrast: L10 takes **5.702 s** through G60–G70, but **7.528 s** through the following block. Its **13.230 s** combined time is slower than S08 L8. This is a local-exercise outcome, rather than a like-for-like session pace comparison.
 
-### 2. T2 braking reference: position changes and downstream retention
-
-![T2 deceleration position and linked-section times](../assets/p1/p1-t2-reference-evolution.png)
-
-The selected PBs place net-deceleration onset at approximately **3.8, 4.6, 16.4, 25.2 and 15.9 m** along the common forward entry-axis projection in S02, S04, S06, S07 and S08. Together with the [onboard example and P1 map](#t2-onboard-example-developing-a-repeatable-braking-reference), this connects the rider's gradual adoption of the raised T1 kerb to a measurable approach-event shift.
-
-The representative laps also show that the progression is not monotonic: S07's selected onset is farther downstream than S08's. S07 L5 completes T2 plus the following section in **13.940 s**, against **14.192 s** for S08 L8. S08 has the higher T2 exit speed (**64.6 versus 62.8 km/h**), yet gives back **0.311 s** downstream after gaining **0.059 s** in T2. A later onset or higher exit speed therefore needs to be evaluated against the complete linked section.
-
-These are net-deceleration proxies and projected positions, not brake-pressure measurements or surveyed braking distances. The rider account describes repeated on-track attempts; the numerical comparison is retrospective and does not establish a telemetry debrief between each stint.
-
-### 3. S08 consecutive PBs: where the final 0.424 s came from
+### 2. S08 consecutive PBs: where the final 0.424 s came from
 
 | S08 lap | Whole lap | T2 + following section |
 |---|---:|---:|
@@ -269,7 +313,7 @@ These are selected stills extracted from the P1 onboard archive. They are includ
 
 ### Lap progression
 
-![P1 Aprilia GPR150 lap progression across 71 timed laps](../assets/p1/p1-lap-progression.png)
+![P1 aprilia GPR150 lap progression across 71 timed laps](../assets/p1/p1-lap-progression.png)
 
 The running-PB line records the sequence `60.022 → 58.977 → 56.644 → 55.859 → 55.496 s`. The S09 points remain visible for context, while the session's deliberate right-turn exploration is kept separate from a like-for-like pace conclusion.
 
@@ -288,3 +332,5 @@ The T2 gate is a derived geographic comparison. Gear labels are rider-reported o
 ## Why this case matters
 
 This is the clearest example of the project treating telemetry as an engineering record rather than a dashboard: source clocks and data quality are audited first, derived features are labelled, and interpretations are left open until the missing visual or physical evidence is available.
+
+[Portfolio contents](../README.md) · [Next: simulation race engineering](../SIM_RACING.md)

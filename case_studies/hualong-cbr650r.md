@@ -1,5 +1,7 @@
 # Case study: Hualong CBR650R practice analysis
 
+[Portfolio contents](../README.md)
+
 **Date:** 2026-07-28
 **Vehicle:** 2020 Honda CBR650R
 **Context:** four-session practice day on a compact circuit

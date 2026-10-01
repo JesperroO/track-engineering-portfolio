@@ -1,5 +1,7 @@
 # Real-track acquisition and trackside review
 
+[Portfolio contents](../README.md)
+
 I build and operate a self-funded motorcycle data workflow, covering riding, telemetry capture, onboard video and analysis. The aim is to obtain useful engineering evidence within a limited equipment budget, using accessible hardware and DIY integration.
 
 ![Circuit Tools review on the pit-room laptop](../assets/workflow/p1-trackside-circuit-tools.png)

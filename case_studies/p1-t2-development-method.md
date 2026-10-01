@@ -1,5 +1,7 @@
 # T2 analysis: event definitions and sources
 
+[Portfolio contents](../README.md)
+
 The sequential comparison retains S02 and S04–S08, totalling 47 timed laps in the same external-GPS programme. S01/S03 use different GPS schemas. S09 became deliberate right-turn practice. The five selected session-PB event timings reproduce the existing channel summary.
 
 - Deceleration onset: calculated longitudinal G ≤-0.15 for 0.20 s before the principal early deceleration trough. Sensitivity repeats the detection at -0.10 and -0.20 G.
@@ -17,4 +19,4 @@ The S04 clip uses the VBO main-video clock. Visual checks at the upright/deceler
 
 The downstream timing and speed values in the main text are reproduced from the existing fixed-gate progression summary. The differences shown are observed comparisons; no isolated setup effect is inferred.
 
-[Back to the study](p1-t2-development.md)
+[Back to the study](p1-gpr150-telemetry.md#t2-lines-control-and-reference-development)

@@ -1,5 +1,7 @@
 # Trackside feedback loop
 
+[Portfolio contents](README.md)
+
 The central capability in this portfolio is the turnaround between sessions. A session is not treated as an isolated run or as a final lap-time number:
 
 ```text
@@ -52,7 +54,7 @@ The best comparable lap moved from `47.869 s` to `44.421 s` and then `42.641 s`,
 
 This is the engineering loop in practice: calibrate the OBD throttle channel, choose usable laps, identify the one-turn pattern, run the next session, and allow the quality gate to reject a tempting but unsupported conclusion. S03 remains in the archive as a provisional trend because its merged laps and degraded GPS make it unsuitable for precise cross-session inference.
 
-## P1 Aprilia GPR150: separating a real next-session decision from retrospective analysis
+## P1 aprilia GPR150: separating a real next-session decision from retrospective analysis
 
 The September P1 programme contains nine sessions and 71 timed laps. It also demonstrates why an honest portfolio must distinguish a closed loop from a retrospective review.
 

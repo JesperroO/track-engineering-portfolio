@@ -1,5 +1,7 @@
 # MX-5 / Lime Rock: qualifying, race execution and pedal analysis
 
+[Portfolio contents](../README.md)
+
 **2026-08-05 · Assetto Corsa · HiPole RCC S31 R5 · Mazda MX-5 Cup · Lime Rock Park, no chicane**
 
 I drove the race and analysed the session afterward. The official finish was P5, with game-side evidence showing P16 at the start and 11 positions gained. The accepted race PB was **57.784 s**. The analysis focused on how qualifying validity, repeatable pace and individual slow laps contributed to the result.

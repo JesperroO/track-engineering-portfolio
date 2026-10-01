@@ -1,4 +1,6 @@
-# Portfolio overview
+# Engineering contribution and evidence
+
+[Portfolio contents](README.md)
 
 I drive, acquire and analyse motorsport data, and build software for telemetry processing and vehicle/lap-time modelling. My entry point for a team is data preparation, performance analysis, testing support and simulation/control development.
 
@@ -6,7 +8,7 @@ I drive, acquire and analyse motorsport data, and build software for telemetry p
 
 | Case | Evidence | Engineering focus |
 |---|---|---|
-| [P1 Aprilia GPR150](case_studies/p1-gpr150-telemetry.md) | 71 timed laps in nine sessions; 60.022 to 55.496 s reference progression; selected actual onboard frames | OBD throttle/RPM, T2 deceleration proxies, HR response, lean duration and schematic-map line comparison |
+| [P1 aprilia GPR150](case_studies/p1-gpr150-telemetry.md) | 71 timed laps in nine sessions; 60.022 to 55.496 s reference progression; selected actual onboard frames | OBD throttle/RPM, T2 deceleration proxies, HR response, lean duration and schematic-map line comparison |
 | [Session feedback loop](TRACKSIDE_FEEDBACK_LOOP.md) | Dated reviews and next-run decisions | Translate a diagnosis into one controlled practice task and inspect the response |
 
 ## Simulation cases
@@ -30,9 +32,9 @@ The [simulation overview](SIM_RACING.md) describes a wider multi-car archive and
 | Team task | Evidence from the work |
 |---|---|
 | Prepare a trustworthy session dataset | Log real-track GNSS/IMU/OBD and video; check clocks, GPS quality and lap boundaries; recover missing simulator channels |
-| Explain where performance is lost | Aprilia GPR150 geographic sectors and linked-corner gains; MX-5 qualifying/loss allocation; F4 reference-speed comparison |
+| Explain where performance is lost | aprilia GPR150 geographic sectors and linked-corner gains; MX-5 qualifying/loss allocation; F4 reference-speed comparison |
 | Turn vehicle traces into a test | Compare brake-release shapes, wheel unloading and front-lockup signals; define a separate pressure or brake-bias trial |
-| Debrief repeatability as well as PB | Review Aprilia GPR150 multi-session progression and consecutive laps; compare three simulator races using median/MAD, damage and cuts |
+| Debrief repeatability as well as PB | Review aprilia GPR150 multi-session progression and consecutive laps; compare three simulator races using median/MAD, damage and cuts |
 | Support real-world acquisition | Personally ride and log motorcycle sessions; combine GNSS/IMU/OBD and video while controlling data quality |
 | Implement models and tools | Python analysis/rendering, native binary reading, CasADi dynamics/OCP experiments and solver diagnostics |
 

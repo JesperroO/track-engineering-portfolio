@@ -1,5 +1,7 @@
 # Technical profile
 
+[Portfolio contents](README.md)
+
 This portfolio is backed by a working personal motorsport data and vehicle-dynamics toolchain. The public repository shows selected outputs and sanitized evidence; the raw telemetry, private media, exact coordinates, and full research archive remain private.
 
 ## Toolchain
@@ -28,7 +30,7 @@ The private implementation archive currently contains 26 Python `laptime` module
 
 ## Evidence in the case studies
 
-### P1 Aprilia GPR150 real-track programme
+### P1 aprilia GPR150 real-track programme
 
 Nine RaceChrono sessions and 71 timed laps were processed with GPS-quality checks, source/schema comparison, external-GPS reference selection, geographic sector gates, lap-progression tables, T2 summaries, and video-review shortlists. The wider archive also contains VBO exports and multiple onboard-camera files for one session. The public case study exposes the result figures, selected video frames and concrete research questions on gear choice, linked-corner speed, transition losses and controlled pressure measurements.
 

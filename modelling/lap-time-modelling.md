@@ -1,5 +1,7 @@
 # Vehicle and lap-time modelling
 
+[Portfolio contents](../README.md)
+
 The modelling work is a secondary research track behind the measured telemetry case studies. It is included to show technical breadth, while keeping model outputs separate from observed track performance.
 
 ## Current directions

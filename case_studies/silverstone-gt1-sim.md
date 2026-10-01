@@ -1,5 +1,7 @@
 # GT1 / Silverstone: time-loss allocation, tyre state and controlled testing
 
+[Portfolio contents](../README.md)
+
 **2026-09-12 · Assetto Corsa · RSS GT Shadow V8 · Silverstone GP OSRW**
 
 I drove and analysed a prequalification practice programme, combining CM laps and validity flags, the saved setup and **50 Hz Live Telemetry with 64,544 samples**. The work covers driving performance, brake/tyre behaviour and the next setup test.

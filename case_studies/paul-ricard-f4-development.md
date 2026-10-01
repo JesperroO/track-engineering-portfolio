@@ -1,5 +1,7 @@
 # SMP F4 / Paul Ricard: brake release, wheel loading and setup-test control
 
+[Portfolio contents](../README.md)
+
 **Practice on 2026-08-31 and 2026-09-01 · SMP F4 Gen 2 · Paul Ricard WTCC**
 
 This development work combines repeated driving, replay-derived control analysis, Content Manager timing, server-reference speed traces and separate setup variants. The main problem was repeated loss of the rear axle through one S2 transition, which interrupted otherwise usable pace.
