@@ -1,4 +1,6 @@
-# Case study: P1 Aprilia GPR150 real-track telemetry
+# Case study: P1 aprilia GPR150 real-track telemetry
+
+**[Read the revised T2 study](p1-t2-development.md)** — lines, control timing and braking-reference consistency.
 
 **Date:** 2026-09-03
 **Vehicle:** Aprilia GPR150
