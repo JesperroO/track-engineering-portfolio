@@ -98,7 +98,7 @@ Interpolated timing and GPS speeds are derived measurements. Results are interpr
 
 ## OBD, control timing and rider-state analysis
 
-**Corner naming:** T1 is the kink on the approach; **T2 is the main left after the straight**, followed by the next linked turns. Earlier working files called the measured opening package “T1”; this public page and its figures use the corrected T2 name. The fixed geographic gates are unchanged by this naming correction. They define a comparison package, not surveyed turn-in/apex boundaries.
+**Circuit layout:** T1 is the approach kink; **T2 is the main left after the straight**, followed by the next linked turns. Fixed geographic gates define the measured comparison section; turn-in and apex positions are assessed separately.
 
 ### Use the channels according to their source
 
