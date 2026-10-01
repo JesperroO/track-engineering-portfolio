@@ -72,7 +72,7 @@ The next research target is to combine the final PB's stronger T1 exit with the 
 
 ### Measurement definition
 
-T1 entry and exit use the original fixed perpendicular geographic planes from the Sep 2 S04 L3 reference (2.82 and 12.37 s on that reference). This review rebuilds the downstream endpoint at reference **18.50 s**, beyond the turning point: some later lines do not cross the old 17.50 s plane. All 71 laps cross the new three-plane package in time order, using linear interpolation between samples and no nearest-point fallback. The resulting downstream/combined times therefore differ from earlier narrative totals.
+T1 entry and exit use the original fixed perpendicular geographic planes from the Sep 2 S04 L3 reference (2.82 and 12.37 s on that reference). This review rebuilds the downstream endpoint at reference **18.50 s**, slightly farther downstream: some later lines do not cross the old 17.50 s plane. All 71 laps cross the new three-plane package in time order, using linear interpolation between samples and no nearest-point fallback. The resulting downstream/combined times therefore differ from earlier narrative totals.
 
 The previous-day 60.022 s reference gives broader context: T1 9.550 → 9.154 s (about **0.40 s**), downstream 6.142 → 5.038 s (about **1.10 s**), combined 15.692 → 14.192 s (about **1.50 s**), with T1 exit 50.9 → 64.6 km/h. Because that comparison crosses acquisition schemas, the same-programme table above carries the main conclusion.
 
