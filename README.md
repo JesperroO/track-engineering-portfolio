@@ -31,7 +31,7 @@ The P1 programme connects actual onboard footage with lap progression and geogra
   <img src="assets/p1/p1-sector-gains.png" alt="P1 sector gain heatmap across four reference transitions" width="96%" />
 </p>
 
-The full [P1 case study](case_studies/p1-gpr150-telemetry.md) contains the larger frame gallery and the T2 gate analysis. The public repository stores only these derived images; the original video archive remains private.
+The full [P1 case study](case_studies/p1-gpr150-telemetry.md) contains a [20-second T2 onboard/telemetry clip](case_studies/p1-gpr150-telemetry.md#t2-onboard-example-developing-a-repeatable-braking-reference), the larger frame gallery and the T2 gate analysis. The public repository stores only these derived images; the original video archive remains private.
 
 ## Simulation race engineering
 

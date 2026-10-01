@@ -37,7 +37,7 @@ The working outputs are a session/lap table, selected comparison plots, a short 
 
 The archive includes a July CBR650R rear-camera review aligned to TrackAddict using the visible local-time overlay: the video began 17.0 s after the telemetry start. This supplied a time mapping for the covered laps; approximately 1 Hz GPS still limited precise apex identification.
 
-For the September Aprilia GPR150 programme, selected onboard frames and proxy files are already available. Full per-camera lap-to-picture alignment remains unfinished. The recorded next step is to anchor a visible start/finish crossing to the stored lap marker, then check the correspondence at later events before using video to attribute a control action.
+For the September Aprilia GPR150 programme, the [S04 L4 T2 example](p1-gpr150-telemetry.md#t2-onboard-example-developing-a-repeatable-braking-reference) now includes a 20-second synchronized video. The VBO main-video `avisynctime` mapping supplies a continuous clock through overlapping camera indices; deceleration/upright and sustained-left-lean landmarks provide visual checks. Full alignment of the other camera files remains unfinished.
 
 The Aprilia GPR150 S04-S07 runs were completed consecutively without reading the interim analysis. Their progression is a retrospective observation. The review feeds a subsequent exercise; it is not presented as evidence that each of those runs responded to advice between sessions.
 

@@ -24,7 +24,21 @@ The last step was supported by a three-lap progression (`55.957 / 55.920 / 55.49
 
 The real-track programme used 25 Hz GNSS, IMU, and OBD-II acquisition. The private P1 archive also contains per-session VBO/Circuit Tools records and onboard video/proxy exports; one session has multiple camera files, and the public evidence package now includes selected frames from daylight, overcast, and night running. The raw files and camera identifiers remain private.
 
-For this case, cross-source comparison used geographic gates because the available GPS schemas produced materially different distance totals. The frame gallery proves that the visual record exists and can be inspected; it does not by itself prove cross-camera synchronization. The next video step is to align a visible start/finish crossing with the stored lap markers, then test whether telemetry changes correspond to a visible corner, line, body movement, or control action.
+For this case, cross-source comparison used geographic gates because the available GPS schemas produced materially different distance totals. The S04 L4 excerpt below now joins one continuous onboard segment to the VBO clock and OBD/calculated channels. This establishes a bounded video example; the wider multi-camera archive still requires separate alignment.
+
+## T2 onboard example: developing a repeatable braking reference
+
+[![Play the 20-second T2 onboard example](../assets/p1/aprilia-gpr150-t2-braking-reference.jpg)](https://raw.githubusercontent.com/JesperroO/track-engineering-portfolio/core/assets/p1/aprilia-gpr150-t2-braking-reference.mp4)
+
+**[Watch/download the 1080p original-audio clip](../assets/p1/aprilia-gpr150-t2-braking-reference.mp4)** — S04 L4, source-video 06:21–06:41. This is a practice example, rather than the final PB.
+
+**Rider feedback:** over several sessions I progressively moved my braking reference downstream, eventually using the raised kerb at the T1 kink as the visual marker for the T2 approach. The clip shows the tucked straight approach, the transition upright beside that reference, the main T2 left and the following exit/linked turn. Selecting a repeatable physical marker makes the driving experiment concrete: vary the approach, then compare deceleration, minimum speed, opening and downstream carry.
+
+The rider account describes the learning process. The selected video illustrates its execution at this point in the programme; it does not, alone, establish which session first adopted the marker or that every change resulted from an interim telemetry debrief. S04–S07 were ridden consecutively without reading those interim reviews.
+
+**Alignment:** the VBO contains `avisynctime` in milliseconds and several overlapping camera indices. The continuous main-video clock is recovered from its index-1 mapping, then carried through the later index switches. The clip spans the end of L3 and the T2 sequence in L4; the L4 start marker is approximately **2.21 s into the excerpt**. The onboard display shows the previous lap rounded to **57.5 s**, matching the CSV L3 interval of **57.488 s**. Picture checks at the upright/deceleration transition and sustained main-left lean agree with the telemetry sequence at approximately half-second inspection resolution. The mapping is a logger alignment with visual checks, rather than a frame-accurate brake-pressure measurement.
+
+The overlay shows GNSS speed, OBD RPM and normalized throttle, calculated lean (L/R), and calculated longitudinal G. It preserves engine sound. The raised-kerb caption marks the rider's visual reference; net deceleration is the logged proxy because no brake-pressure/switch channel is available. HDR source material is converted to SDR for browser playback. Only the short rendered excerpt and a poster are published; original video/VBO records remain private.
 
 ## What was measured or observed
 
