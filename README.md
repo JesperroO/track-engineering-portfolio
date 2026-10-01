@@ -8,8 +8,7 @@ The portfolio shows practical outputs: a lap comparison, a braking trace, a tyre
 
 I independently perform the riding, logging and analysis for the motorcycle work. The acquisition programme uses RaceChrono Pro, GNSS/IMU, OBD-II and onboard cameras, with Python processing and source-quality checks.
 
-- [P1 GPR150](case_studies/p1-gpr150-telemetry.md): nine sessions, 71 timed laps and a reference progression from 60.022 to 55.496 s; geographic sectors, linked-corner continuity and selected onboard frames.
-- [Hualong CBR650R](case_studies/hualong-cbr650r.md): four practice sessions; OBD throttle calibration, comparable-lap selection and explicit handling of GPS degradation.
+- [P1 GPR150](case_studies/p1-gpr150-telemetry.md): nine sessions, 71 timed laps and a reference progression from 60.022 to 55.496 s; gear-choice trials, linked-corner optimization, right-to-left transition losses and selected onboard frames.
 - [Trackside feedback loop](TRACKSIDE_FEEDBACK_LOOP.md): post-session review becomes a one-turn or one-variable task, followed by a check of what the next session actually demonstrated.
 
 The 25 Hz and multi-camera details describe the wider acquisition programme; individual case pages use session-specific claims only where their source records support them.
@@ -47,13 +46,17 @@ The [simulation portfolio](SIM_RACING.md) now covers formal race review, driver-
 
 ![F4 S1 control comparison](assets/sim/f4-s1-release.png)
 
+## Further real-track case: CBR650R
+
+- [Hualong CBR650R](case_studies/hualong-cbr650r.md): four practice sessions; OBD throttle calibration, comparable-lap selection and explicit handling of GPS degradation.
+
 ## Vehicle modelling and numerical implementation
 
 [Vehicle and lap-time modelling](modelling/lap-time-modelling.md) covers GGV envelopes, motorcycle dynamics, fixed-line/free-path formulations and exploratory SSN/KKT work. These are modelling experiments with explicit feasibility and validation status. The [technical profile](TECHNICAL_PROFILE.md) records the tools and implementation behind the cases.
 
 ## Reading the portfolio
 
-Start with [GPR150](case_studies/p1-gpr150-telemetry.md) for personally acquired real-track data and visual evidence, then [CBR650R](case_studies/hualong-cbr650r.md) for signal calibration and imperfect-sensor handling. Continue with the [simulation cases](SIM_RACING.md) and [modelling work](modelling/lap-time-modelling.md). The [overview](PORTFOLIO.md) connects these outputs to engineering tasks.
+Start with [GPR150](case_studies/p1-gpr150-telemetry.md) for personally acquired real-track data and visual evidence, continue with the [simulation cases](SIM_RACING.md), then [CBR650R](case_studies/hualong-cbr650r.md) for signal calibration and imperfect-sensor handling, followed by the [modelling work](modelling/lap-time-modelling.md). The [overview](PORTFOLIO.md) connects these outputs to engineering tasks.
 
 ## Scope and privacy
 

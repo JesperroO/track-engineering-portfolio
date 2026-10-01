@@ -30,11 +30,7 @@ The private implementation archive currently contains 26 Python `laptime` module
 
 ### P1 GPR150 real-track programme
 
-Nine RaceChrono sessions and 71 timed laps were processed with GPS-quality checks, source/schema comparison, external-GPS reference selection, geographic sector gates, lap-progression tables, T1 summaries, and video-review shortlists. The wider archive also contains VBO exports and multiple onboard-camera files for one session. The public case study exposes the result figures and selected video frames while keeping the raw files private.
-
-### Hualong CBR650R practice analysis
-
-The workflow combined RaceChrono, OBD, heart-rate data, action-camera evidence, derived CSV tables, and an Excel analysis workbook. OBD throttle was calibrated from its recorded endpoints; GPS was used for position and speed trends; degraded GPS and merged laps were gated out of precise comparison. This is a concrete example of sensor semantics and data-quality control changing the conclusion.
+Nine RaceChrono sessions and 71 timed laps were processed with GPS-quality checks, source/schema comparison, external-GPS reference selection, geographic sector gates, lap-progression tables, T1 summaries, and video-review shortlists. The wider archive also contains VBO exports and multiple onboard-camera files for one session. The public case study exposes the result figures, selected video frames and concrete research questions on gear choice, linked-corner speed, transition losses and controlled pressure measurements.
 
 ### Simulation racing: performance, vehicle state and data integration
 
@@ -47,6 +43,10 @@ The [simulation overview](SIM_RACING.md) covers a multi-car workflow and dedicat
 - **Acquisition checks:** inspect incomplete attempts, packet repetition and session-time resets; reject stale car/track capture labels through independent session identity.
 
 The native `.tc` reading, dataset joins, derived analysis and charts are the personal implementation work. Replay decoding and high-rate capture use credited upstream tools. The wider local practice inventory has 331 saved per-lap CSV exports across cup, TCR, road-car and kart combinations; file count is not treated as valid-lap count.
+
+### Hualong CBR650R practice analysis
+
+The workflow combined RaceChrono, OBD, heart-rate data, action-camera evidence, derived CSV tables, and an Excel analysis workbook. OBD throttle was calibrated from its recorded endpoints; GPS was used for position and speed trends; degraded GPS and merged laps were gated out of precise comparison. This is a concrete example of sensor semantics and data-quality control changing the conclusion.
 
 ### Modelling and numerical methods
 

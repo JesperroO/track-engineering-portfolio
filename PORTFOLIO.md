@@ -6,8 +6,7 @@ I drive, acquire and analyse motorsport data, and build software for telemetry p
 
 | Case | Evidence | Engineering focus |
 |---|---|---|
-| [P1 GPR150](case_studies/p1-gpr150-telemetry.md) | 71 timed laps in nine sessions; 60.022 to 55.496 s reference progression; selected actual onboard frames | Quality checks, geographic alignment, linked corners, inferred gear and video context |
-| [Hualong CBR650R](case_studies/hualong-cbr650r.md) | Four sessions; comparable best 47.869 to 42.641 s | OBD signal calibration, comparable-lap selection and low-rate GPS limitations |
+| [P1 GPR150](case_studies/p1-gpr150-telemetry.md) | 71 timed laps in nine sessions; 60.022 to 55.496 s reference progression; selected actual onboard frames | Gear-choice trial, following-corner speed, direction-change loss, geographic alignment and video context |
 | [Session feedback loop](TRACKSIDE_FEEDBACK_LOOP.md) | Dated reviews and next-run decisions | Translate a diagnosis into one controlled practice task and inspect the response |
 
 ## Simulation cases
@@ -19,6 +18,12 @@ The [simulation overview](SIM_RACING.md) describes a wider multi-car archive and
 - [GT1 / Silverstone](case_studies/silverstone-gt1-sim.md): 50 Hz / 64,544 samples; valid-medium progression, wheel-speed lockup, pressure/temperature asymmetry, compound validity and fuel context.
 
 - [Three-race comparison](case_studies/paul-ricard-race-consistency.md): compare representative pace, incident recovery, late-race gains and cut-lap patterns.
+
+## Further real-track case: CBR650R
+
+| Case | Evidence | Engineering focus |
+|---|---|---|
+| [Hualong CBR650R](case_studies/hualong-cbr650r.md) | Four sessions; comparable best 47.869 to 42.641 s | OBD signal calibration, comparable-lap selection and low-rate GPS limitations |
 
 ## What I can contribute
 
