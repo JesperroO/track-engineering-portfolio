@@ -23,3 +23,7 @@ work/
 !assets/p1/*.png
 !assets/p1/video_frames/
 !assets/p1/video_frames/*.jpg
+
+# Curated simulation analysis figures; full-rate telemetry stays private.
+!assets/sim/
+!assets/sim/*.png

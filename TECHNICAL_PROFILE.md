@@ -9,7 +9,7 @@ This portfolio is backed by a working personal motorsport data and vehicle-dynam
 | Real-track acquisition | RaceChrono Pro, external GNSS/GPS, IMU, OBD-II, and onboard cameras | Session logging, lap timing, position and speed trends, control channels, and visual context |
 | Export and inspection | RaceChrono CSV, VBO/Circuit Tools exports, GPX, JSON, and derived CSV tables | Preserve source records, compare schemas and clocks, and build auditable lap and sector summaries |
 | Video workflow | DJI Action 5 Pro material, multi-camera onboard footage, MP4 proxy exports, and OpenCV-based utilities | Extract review frames, inspect line and rider context, and define explicit video-to-telemetry time anchors |
-| Simulation telemetry | Assetto Corsa, Content Manager, Live Telemetry 1.8.5, and SimTelemetry records | Analyse wheel speeds, throttle, braking, brake bias, tyre pressure/temperature, fuel, and sector timing |
+| Simulation acquisition and recovery | Assetto Corsa / ACC, Content Manager, native `.tc`, direct CSV capture, Live Telemetry 1.8.5, upstream `acreplay-parser` 0.3.0 and archived lapstat | Combine accepted timing, pedal traces, wheel loading, tyre state, damage/traffic and server speed references |
 | Analysis software | Python 3.10+, uv, NumPy, Matplotlib, OpenCV, and pytest | Build repeatable ingestion, filtering, derived-channel, plotting, media, and regression-test workflows |
 | Vehicle and lap-time modelling | CasADi, IPOPT/Fatrop-backed nonlinear optimisation, custom Python dynamics modules | Implement GGV envelopes, fixed-line and free-path models, QSS and reduced-transient models, hybrid OCPs, gear policies, and solver diagnostics |
 | Supporting tools | Excel workbooks and Open-Meteo historical weather data | Review session summaries, preserve hand-checkable tables, and separate measured conditions from reconstructed context |
@@ -36,9 +36,18 @@ Nine RaceChrono sessions and 71 timed laps were processed with GPS-quality check
 
 The workflow combined RaceChrono, OBD, heart-rate data, action-camera evidence, derived CSV tables, and an Excel analysis workbook. OBD throttle was calibrated from its recorded endpoints; GPS was used for position and speed trends; degraded GPS and merged laps were gated out of precise comparison. This is a concrete example of sensor semantics and data-quality control changing the conclusion.
 
-### Silverstone GT1 simulation telemetry
+### Simulation racing: performance, vehicle state and data integration
 
-An Assetto Corsa practice capture was recorded through Live Telemetry 1.8.5 at 50 Hz, producing 64,544 samples. The analysis joined lap timing with four wheel speeds, brake and throttle traces, brake bias, tyre state, fuel, and setup metadata. The result was a controlled next-test proposal, not a claim that a setup change had already been validated.
+The [simulation overview](SIM_RACING.md) covers a multi-car workflow and dedicated cases:
+
+- **MX-5 race analysis:** integrate official/game results, full shared replay and native best-lap data; allocate the qualifying gap, quantify slow-lap losses and recover an analog pedal-input trace when replay braking is binary.
+- **Race consistency:** compare three events using a common median/MAD rule, retain excluded loss laps, and join damage episodes, repairs and cuts to the timeline.
+- **F4 development:** match a 78,431-frame, 30 ms replay export to CM timing, compare brake-release and sector-exit behaviour, inspect low wheel-load phases, use a server speed reference and keep setup variants distinct.
+- **GT1 practice:** analyse 50 Hz / 64,544 samples with brake bias, four wheel speeds, compound/validity checks, asymmetric tyre heat/pressure, fuel and late-lap loss allocation.
+- **GT3 practice:** join ACC result/log records to quantify a twelve-lap baseline and final-stint repeatability while retaining a fixed setup.
+- **Acquisition checks:** inspect incomplete attempts, packet repetition and session-time resets; reject stale car/track capture labels through independent session identity.
+
+The native `.tc` reading, dataset joins, derived analysis and charts are the personal implementation work. Replay decoding and high-rate capture use credited upstream tools. The wider local practice inventory has 331 saved per-lap CSV exports across cup, TCR, road-car and kart combinations; file count is not treated as valid-lap count.
 
 ### Modelling and numerical methods
 

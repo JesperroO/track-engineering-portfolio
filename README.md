@@ -1,47 +1,42 @@
 # Track Engineering Portfolio
 
-An evidence-bounded motorsport data and vehicle-dynamics portfolio built around real-track motorcycle telemetry, onboard video, simulation telemetry, and lap-time modelling. The work is implemented as a Python-based acquisition, analysis, visualisation, and modelling toolchain rather than a collection of presentation-only charts.
+I am a computer science and engineering student who drives, acquires data and builds analysis tools for motorsport. My work combines real-track motorcycle telemetry with simulation race analysis, vehicle modelling and control-oriented numerical methods.
 
-The project documents how measurements are acquired, checked, connected to visual evidence, transformed into derived quantities, and used to form testable engineering hypotheses.
+The portfolio shows practical outputs: a lap comparison, a braking trace, a tyre or wheel-state diagnosis, a loss budget, and a specific instruction for the next session.
 
-The current evidence package includes a nine-session P1 GPR150 programme with 71 timed laps, a reference progression from `60.022 s` to `55.496 s`, real onboard video/proxy material, and selected frame exports from daylight, overcast, and night running. The public figures show lap progression, geographic sector gains, and the relationship between a local T1 gate and the full-lap result.
+## Simulation race engineering
 
-The technical profile records the software and implementation behind these outputs: RaceChrono and VBO/Circuit Tools exports, OBD-II and video workflows, Assetto Corsa telemetry, Python/NumPy/Matplotlib/OpenCV, CasADi-based vehicle models, and pytest-backed checks.
+The [simulation portfolio](SIM_RACING.md) now covers formal race review, driver-input analysis, stint consistency, F4 development, GT1 tyre/brake analysis, GT3 practice and acquisition recovery.
 
-The most important recurring pattern is the [trackside feedback loop](TRACKSIDE_FEEDBACK_LOOP.md): analyse one session, isolate one turn or linked section, change one controllable thing in the next session, and use the new data to keep or reject the interpretation.
+| Selected work | Evidence | Engineering result |
+|---|---|---|
+| [MX-5 / Lime Rock](case_studies/lime-rock-mx5-race-analysis.md) | Full shared replay, native best lap, qualifying and official results | S1 contributes 60.5% of the qualifying gap; 7 slow intervals cost 28.50 s; recover the continuous 57.784 s PB pedal trace |
+| [Three-event consistency](case_studies/paul-ricard-race-consistency.md) | 26 / 12 / 14 completed intervals across three races | Separate robust pace, recovery losses, late-race speed and valid-lap repeatability |
+| [F4 / Paul Ricard](case_studies/paul-ricard-f4-development.md) | 78,431 replay frames matched to CM timing; archived server reference | Identify a 0.623 s S1 gain, inspect wheel unloading and keep setup variants and event restrictions explicit |
+| [GT1 / Silverstone](case_studies/silverstone-gt1-sim.md) | 50 Hz, 64,544 samples, tyre/sector records and saved setup | Map gains and late-lap losses; inspect front-wheel lockup, tyre asymmetry, fuel and a brake-bias test |
+| [GT3 / Kyalami](case_studies/kyalami-720s-practice.md) | ACC results, logs and retained setup | Build a twelve-lap practice baseline and quantify the final five-lap pace band |
 
-## What this portfolio covers
+![F4 S1 control comparison](assets/sim/f4-s1-release.png)
 
-- Real-track motorcycle data: 25 Hz GNSS, IMU, and OBD-II acquisition, with lap and sector comparison, racing-line analysis, throttle and braking/deceleration behaviour, and consistency/repeatability analysis.
-- Video evidence: the private real-track archive contains multi-camera onboard material and proxy exports, including multiple camera files for one P1 session. The public version contains selected still frames only; cross-camera time synchronization remains an explicit analysis step rather than an implied completed result.
-- Simulation telemetry: higher-rate traces with individual wheel speeds, brake bias, tyre state, fuel use, throttle, and braking channels.
-- Modelling experiments: GGV envelopes, transient minimum-lap-time formulations, optimal-control formulations, and an exploratory SSN/KKT solver direction.
+## Real-track motorcycle engineering
 
-See [Technical profile](TECHNICAL_PROFILE.md) for the acquisition stack, software, implementation scope, and the engineering experience represented by the case studies.
+I independently perform the riding, logging and analysis for the motorcycle work. The acquisition programme uses RaceChrono Pro, GNSS/IMU, OBD-II and onboard cameras, with Python processing and source-quality checks.
 
-The 25 Hz and multi-camera details are project-level acquisition facts confirmed for the real-track programme. They are not assigned to every session by default. The case pages use session-level values only where the internal session reports or acquired media support them, and keep the raw files in a separate private archive.
+- [P1 GPR150](case_studies/p1-gpr150-telemetry.md): nine sessions, 71 timed laps and a reference progression from 60.022 to 55.496 s; geographic sectors, linked-corner continuity and selected onboard frames.
+- [Hualong CBR650R](case_studies/hualong-cbr650r.md): four practice sessions; OBD throttle calibration, comparable-lap selection and explicit handling of GPS degradation.
+- [Trackside feedback loop](TRACKSIDE_FEEDBACK_LOOP.md): post-session review becomes a one-turn or one-variable task, followed by a check of what the next session actually demonstrated.
 
-## Engineering method
+The 25 Hz and multi-camera details describe the wider acquisition programme; individual case pages use session-specific claims only where their source records support them.
 
-The workflow is deliberately evidence-first:
+## Data, simulation and numerical implementation
 
-1. Audit sampling rate, timestamps, source clocks, channel availability, lap boundaries, and data quality.
-2. Keep measured channels separate from derived quantities such as geographic gates, GPS yaw, inferred gear, sector composites, or normalized throttle.
-3. State an engineering hypothesis separately from the observation that motivated it.
-4. Compare laps and sectors only after the alignment and quality gates are explicit.
-5. Use video or rider context to test interpretations that telemetry alone cannot identify.
+The [technical profile](TECHNICAL_PROFILE.md) describes Python/NumPy/Matplotlib/OpenCV, binary best-lap reading, replay integration, Live Telemetry, RaceChrono/VBO exports and CasADi vehicle models. The [acquisition case](case_studies/sim-data-acquisition.md) shows how I recover missing channels and detect discontinuities or incorrect session metadata.
 
-This prevents a fast lap, a noisy channel, or a model output from being promoted into a stronger claim than the evidence supports.
+[Vehicle and lap-time modelling](modelling/lap-time-modelling.md) covers GGV envelopes, motorcycle dynamics, fixed-line/free-path formulations and exploratory SSN/KKT work. These are modelling experiments with explicit feasibility and validation status.
 
-## Selected work
+## Reading the portfolio
 
-- [Portfolio overview](PORTFOLIO.md)
-- [Trackside feedback loop](TRACKSIDE_FEEDBACK_LOOP.md)
-- [Technical profile](TECHNICAL_PROFILE.md)
-- [P1 GPR150 real-track telemetry](case_studies/p1-gpr150-telemetry.md)
-- [Hualong CBR650R practice analysis](case_studies/hualong-cbr650r.md)
-- [Silverstone GT1 simulation telemetry](case_studies/silverstone-gt1-sim.md)
-- [Vehicle and lap-time modelling](modelling/lap-time-modelling.md)
+Start with the [overview](PORTFOLIO.md), then a case relevant to the task. The simulator cases give a car-focused view of race data and engineering decisions; the real-track cases add physical acquisition, riding context and imperfect-sensor handling. [Figure provenance](assets/sim/README.md) records the sources and recomputed checks behind the simulator charts.
 
 ## Visual evidence
 
@@ -65,6 +60,4 @@ The full [P1 case study](case_studies/p1-gpr150-telemetry.md) contains the large
 
 ## Scope and privacy
 
-This is a sanitized public presentation layer. It intentionally excludes health and DEXA records, exact GPS traces and unnecessary location detail, private original media, local filesystem paths, raw high-frequency logs, temporary solver outputs, and personal equipment or riding records.
-
-The underlying `track_engineering` repository remains an internal research archive. This portfolio is a selected account of methods and results, not a mirror of that archive and not a claim of professional race-engineer experience.
+This public repository contains selected analysis, aggregate evidence, charts and curated video frames. Original replays, raw telemetry, exact GNSS traces, private media, health records, local paths and unfiltered session conversations stay in the private archive. The experience presented here comes from personal driving and engineering project work.

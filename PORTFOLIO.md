@@ -1,45 +1,38 @@
 # Portfolio overview
 
-## Position
+I drive, acquire and analyse motorsport data, and build software for telemetry processing and vehicle/lap-time modelling. My entry point for a team is data preparation, performance analysis, testing support and simulation/control development.
 
-I build a personal motorsport data and vehicle-dynamics toolchain spanning real-track acquisition, video review, simulation telemetry, Python analysis, and lap-time modelling. The practical focus is turning imperfect telemetry into bounded, reviewable engineering decisions.
+## What I can contribute
 
-The practical focus is data preparation, channel and timing checks, lap and sector comparison, setup-test bookkeeping, and clear separation between what the data shows and what still needs confirmation.
+| Team task | Evidence from the work |
+|---|---|
+| Prepare a trustworthy session dataset | Recover a complete shared replay, decode native best-lap data, check lap transitions and identify stale capture metadata |
+| Explain where performance is lost | MX-5 qualifying-sector allocation, race slow-lap loss budget, F4 server speed comparison, Silverstone late-lap loss map |
+| Turn vehicle traces into a test | Compare brake-release shapes, wheel unloading and front-lockup signals; define a separate pressure or brake-bias trial |
+| Debrief repeatability as well as PB | Compare three races using median/MAD, retained chronological pace, damage episodes and cuts; review GT3 stint convergence |
+| Support real-world acquisition | Personally ride and log motorcycle sessions; combine GNSS/IMU/OBD and video while controlling data quality |
+| Implement models and tools | Python analysis/rendering, native binary reading, CasADi dynamics/OCP experiments and solver diagnostics |
 
-The implementation behind the selected work includes RaceChrono and VBO/Circuit Tools exports, OBD-II and multi-camera video workflows, Assetto Corsa telemetry, Python/NumPy/Matplotlib/OpenCV, CasADi nonlinear optimisation, and pytest-based model checks. [Technical profile](TECHNICAL_PROFILE.md) maps those tools to the work they support.
+## Simulation cases
 
-The strongest repeated evidence is the [trackside feedback loop](TRACKSIDE_FEEDBACK_LOOP.md): post-session analysis becomes a one-turn or one-variable decision for the next run, and the next run is judged against the actual intended mechanism rather than against lap time alone.
+The [simulation overview](SIM_RACING.md) describes a wider multi-car archive and six focused engineering cases. The strongest examples are:
 
-## What this demonstrates
+- [MX-5 / Lime Rock](case_studies/lime-rock-mx5-race-analysis.md): P16 to official P5; accepted 57.784 s race PB; qualifying S1 accounts for 60.5% of the pole gap; seven major slow intervals cost 28.50 s against the planning baseline.
+- [F4 / Paul Ricard](case_studies/paul-ricard-f4-development.md): match a 78,431-frame replay export to actual CM laps, compare a 0.623 s S1 gain through brake release and exit speed, and distinguish wheel-load observations from setup-test results.
+- [GT1 / Silverstone](case_studies/silverstone-gt1-sim.md): 50 Hz / 64,544 samples; valid-medium progression, wheel-speed lockup, pressure/temperature asymmetry, compound validity and fuel context.
+- [Three-race comparison](case_studies/paul-ricard-race-consistency.md) and [Kyalami GT3 practice](case_studies/kyalami-720s-practice.md): show that peak speed, a narrow representative band, incident recovery and a successful race entry are different outcomes.
+- [Acquisition and recovery](case_studies/sim-data-acquisition.md): choose among replay, native `.tc`, direct capture and Live Telemetry according to actual channel coverage.
 
-- I can take a mixed acquisition package—GPS/GNSS, IMU, OBD-II, timing records, VBO exports, and onboard video—and turn it into a traceable analysis dataset.
-- I can distinguish raw measurements from derived quantities such as geographic gates, GPS yaw, normalized throttle, inferred gear, sector allocation, and kinematic demand.
-- I can write analysis and rendering tools rather than relying only on a telemetry viewer: the underlying archive contains 26 modelling modules, 41 analysis tools, and 15 test modules.
-- I can carry a result from observation to decision: identify a repeatable pattern, state the uncertainty, and propose the next controlled measurement or setup test.
-- I can work across the full loop from data-quality audit to vehicle model, while keeping model assumptions and solver feasibility separate from real-vehicle performance.
-
-## Selected case studies
+## Real-track cases
 
 | Case | Evidence | Engineering focus |
 |---|---|---|
-| [P1 GPR150, 2026-09-03](case_studies/p1-gpr150-telemetry.md) | 71 timed laps across nine sessions; reference pace `60.022 → 55.496 s`; actual onboard/proxy video with multi-camera material | GPS quality, geographic alignment, linked corners, inferred gear, throttle continuity, frame-level video evidence, synchronization boundaries |
-| [Hualong CBR650R, 2026-07-28](case_studies/hualong-cbr650r.md) | Four practice sessions; comparable best `47.869 → 42.641 s` | OBD throttle calibration, lap comparison, data-quality gating, limits of low-rate GPS |
-| [Silverstone GT1 simulation, 2026-09-12](case_studies/silverstone-gt1-sim.md) | 50 Hz telemetry; 64,544 samples | Four-wheel speed, lockup signals, brake bias, tyre state, fuel, single-variable test design |
+| [P1 GPR150](case_studies/p1-gpr150-telemetry.md) | 71 timed laps in nine sessions; 60.022 to 55.496 s reference progression; selected actual onboard frames | Quality checks, geographic alignment, linked corners, inferred gear and video context |
+| [Hualong CBR650R](case_studies/hualong-cbr650r.md) | Four sessions; comparable best 47.869 to 42.641 s | OBD signal calibration, comparable-lap selection and low-rate GPS limitations |
+| [Session feedback loop](TRACKSIDE_FEEDBACK_LOOP.md) | Dated reviews and next-run decisions | Translate a diagnosis into one controlled practice task and inspect the response |
 
-## Session-to-session engineering
+## Implementation and scope
 
-The P1 CBR650R work shows the complete cycle most clearly: a first-session video and telemetry review isolated T2/T18 control continuity, the next session reduced the task to one repeatable turn correction, and later footage and sector timing checked what had actually improved. The Hualong work added explicit baseline, single-variable, provisional-data, and confirmation stages. The September P1 and Silverstone cases show how the same method scales to multi-session telemetry and simulation setup tests.
+The private archive includes 26 modelling modules, 41 analysis/rendering tools and 15 model-test modules in the previously inventoried toolchain. This is separate from the wider local simulation export archive, which currently has 331 saved per-lap CSV files; the latter is a file inventory, not a valid-lap count.
 
-## Transferable engineering habits
-
-- Start with the acquisition contract: sample rate, clock, channel meaning, missing data, and lap segmentation.
-- Prefer geographic gates or source-consistent timing when distance channels cannot be compared directly.
-- Treat gear labels, line explanations, and control interpretations as derived or provisional when they are not direct measurements.
-- Use repeated laps and sector allocation, not a single personal-best number, to identify whether a change is repeatable.
-- Use frame-level video evidence to inspect line and visual context, while reserving time-specific control claims for explicitly aligned footage.
-- Turn a suspected cause into a controlled next test, such as changing brake bias while holding the rest of the setup fixed.
-- Write down the uncertainty that would be removed by a synchronized video view, a better sensor, or a physical inspection.
-
-## Publication boundary
-
-The public repository contains only explanatory Markdown. Raw telemetry, video, spreadsheets, exact coordinates, private media references, health records, local paths, and internal solver diagnostics stay in the private archive.
+[Technical profile](TECHNICAL_PROFILE.md) maps the tools and implementation to the case results. Published charts and aggregate values have [source notes](assets/sim/README.md). The portfolio retains observations, completed analyses and proposed tests as distinct results, with raw logs and private records kept locally.

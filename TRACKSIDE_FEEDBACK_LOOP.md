@@ -74,6 +74,16 @@ The resulting next-session instruction was concrete:
 
 That intervention is recorded as a proposed test, not as a completed validation. The same distinction applies on track: a good engineer records what changed before the next run and what the next run actually proved.
 
+## F4 simulation: learn from a local gain and an incomplete setup fix
+
+The [F4 case](case_studies/paul-ricard-f4-development.md) shows a further turn-by-turn loop. A repeated S2 wheel-unload event prompted separate damping and rear-pressure variants. Event restrictions removed damping from the legal race setup; the pressure trial retained a valid 91.005 s lap but did not remove the repeated loss at the same transition. That outcome keeps the driving/transition hypothesis alive instead of declaring the car fixed from a new PB.
+
+A separate S1 comparison finds 18.054 s versus 18.677 s, with earlier brake release and higher exit speed. The whole L28 lap remains slower, so the next task is to reproduce that control sequence inside a clean lap. Archived server speed traces then shift some attention to a larger final-sector deficit rather than allowing the repeatedly troublesome curb to dominate all training.
+
+## Race review: preserve representative pace and the disruption timeline
+
+The [three-race comparison](case_studies/paul-ricard-race-consistency.md) places the median/MAD pace band alongside repairs, damage episodes and cut laps. A narrow retained pace band can coexist with a badly interrupted race; a late PB can coexist with invalid following laps. The resulting next-session decision concerns repeatable legal execution, not merely reproducing the fastest number.
+
 ## What this demonstrates
 
 This workflow shows experience with:
