@@ -45,6 +45,39 @@ The analysis separated:
 
 The evidence supports linked-corner and control-continuity hypotheses. The video archive makes those hypotheses testable, but the selected stills do not identify every rider action without explicit time alignment. The 71-lap progression is also not an independent vehicle-performance benchmark.
 
+## Quantified T1 progression across sessions
+
+The original gate method was recovered from the session record and applied to all **71 recorded laps**. The table below uses each session's fastest complete lap, rather than selecting its fastest T1 independently. S02 and S04-S08 retain the common external-GPS programme. S01/S03 have different GPS schemas; S09 changes the exercise objective. They remain in the aggregate evidence but are outside this main progression comparison.
+
+| Session / fastest full lap | T1 | After T1 | Combined | T1 exit | Downstream gate |
+|---|---:|---:|---:|---:|---:|
+| S02 L2 (58.977 s) | 9.723 s | 5.191 s | 14.914 s | 58.8 km/h | 43.4 km/h |
+| S04 L7 (56.644 s) | 9.142 s | 5.206 s | 14.348 s | 59.8 km/h | 43.1 km/h |
+| S05 L6 (56.879 s) | 9.084 s | 5.222 s | 14.307 s | 60.4 km/h | 41.4 km/h |
+| S06 L7 (55.859 s) | 9.126 s | 4.909 s | 14.035 s | 61.9 km/h | 44.5 km/h |
+| S07 L5 (56.016 s) | 9.213 s | 4.727 s | 13.940 s | 62.8 km/h | 43.5 km/h |
+| S08 L8 (55.496 s) | 9.154 s | 5.038 s | 14.192 s | 64.6 km/h | 46.0 km/h |
+
+![T1 and downstream progression](../assets/p1/p1-t1-progression.png)
+
+### What improved, and how much survived the exit?
+
+- **S02 L2 → final PB S08 L8:** T1 improves by **0.569 s** and the downstream section by **0.152 s**. The complete measured package improves by **0.722 s** (4.8%). T1 exit speed rises **58.8 → 64.6 km/h** (+5.9), while speed at the downstream gate rises **43.4 → 46.0 km/h** (+2.6).
+- **S02 L2 → best complete opening package, S07 L5:** T1 improves by **0.510 s**, the downstream section by **0.464 s**, and their sum by **0.974 s** (6.5%). Almost 48% of this combined gain occurs after the T1 exit. S07 L5's lower T1 exit speed (62.8 km/h) still produces a faster combined section than the final whole-lap PB.
+- **Repeatability:** the complete-package median changes **14.955 → 14.278 s** from S02 to S07, then returns to **14.550 s** in S08. This supports a repeated improvement, with incomplete retention in the final session. S02-to-S08 median T1 exit speed rises **58.8 → 62.2 km/h**, so the higher exit speed is not confined to the PB.
+
+The final PB's downstream minimum speed is approximately **39.1 km/h**, versus **38.9 km/h** in S02 L2. Its larger exit speed has therefore not become a similarly large minimum-speed gain through the following corner. Different driven lines also change travel distance between the gates, so the time gain is not attributed wholly to exit speed.
+
+The next research target is to combine the final PB's stronger T1 exit with the S07 opening package's shorter traversal time, while checking line, direction-change timing and control continuity. This is an observed opportunity, not a predicted additive lap-time gain.
+
+### Measurement definition
+
+T1 entry and exit use the original fixed perpendicular geographic planes from the Sep 2 S04 L3 reference (2.82 and 12.37 s on that reference). This review rebuilds the downstream endpoint at reference **18.50 s**, beyond the turning point: some later lines do not cross the old 17.50 s plane. All 71 laps cross the new three-plane package in time order, using linear interpolation between samples and no nearest-point fallback. The resulting downstream/combined times therefore differ from earlier narrative totals.
+
+The previous-day 60.022 s reference gives broader context: T1 9.550 → 9.154 s (about **0.40 s**), downstream 6.142 → 5.038 s (about **1.10 s**), combined 15.692 → 14.192 s (about **1.50 s**), with T1 exit 50.9 → 64.6 km/h. Because that comparison crosses acquisition schemas, the same-programme table above carries the main conclusion.
+
+Interpolated timing and GPS speeds are derived measurements. Results are interpreted at tenths-of-a-second scale; displayed milliseconds support checking the arithmetic rather than claiming millisecond physical accuracy. [Aggregate inputs and results](../assets/p1/t1-progression-summary.json) retain per-lap values without coordinates, raw traces or private participant records.
+
 ## Driver development: research questions from the acquired data
 
 The most useful output of this programme is a set of corner-development questions, supported by retained traces and specific next-test criteria. The original rider discussion, nine CSV exports, derived lap/sector tables and drivetrain correction remain available in the local archive.
@@ -68,7 +101,7 @@ Two same-session laps give a useful contrast:
 
 The quicker lap enters T1 more slowly but carries more speed through the following right-hander. The opening 40% gains approximately 0.95 s, with about 0.39 s returned later in the lap. The next question is which combination of exit placement, direction-change timing and throttle continuity preserves that downstream speed.
 
-The test requires a camera-to-lap time anchor and fixed geographic gates around both corners. Compare the approach, minimum-speed region, control continuity and exit together, then check the whole linked-section time. The GPR record calls this the following right-hander; assigning it a specific **T2** label requires an agreed track-map/video reference. The detailed July T2 video review belongs to the CBR650R programme and is kept separate.
+The test requires a camera-to-lap time anchor and fixed geographic gates around both corners. Compare the approach, minimum-speed region, control continuity and exit together, then check the whole linked-section time. This question concerns the T1 opening package and its following right-hander. Fixed geographic gates retain the comparison independently of corner naming.
 
 ### 3. Right-to-left transition: why is a gain immediately returned?
 
