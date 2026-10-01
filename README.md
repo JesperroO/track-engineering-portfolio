@@ -2,13 +2,13 @@
 
 I am a computer science and engineering student who drives, acquires data and builds analysis tools for motorsport. My work combines real-track motorcycle telemetry with simulation race analysis, vehicle modelling and control-oriented numerical methods.
 
-The portfolio shows practical outputs: a lap comparison, a braking trace, a tyre or wheel-state diagnosis, a loss budget, and a specific instruction for the next session.
+The portfolio shows practical outputs: a lap comparison, a braking trace, a tyre or wheel-state diagnosis, a loss budget, and an explanation of where performance was gained or returned.
 
 ## Real-track motorcycle engineering
 
 I independently perform the riding, logging and analysis for the motorcycle work. The acquisition programme uses RaceChrono Pro, GNSS/IMU, OBD-II and onboard cameras, with Python processing and source-quality checks.
 
-- [P1 Aprilia GPR150](case_studies/p1-gpr150-telemetry.md): nine sessions, 71 timed laps and a reference progression from 60.022 to 55.496 s; OBD opening/RPM analysis, T2 deceleration and turn-in proxies, HR event windows, lean distributions and P1-map line comparisons.
+- [P1 Aprilia GPR150](case_studies/p1-gpr150-telemetry.md): nine sessions, 71 timed laps and a reference progression from 60.022 to 55.496 s; OBD opening/RPM analysis, T2 deceleration and turn-in proxies, HR event windows, lean distributions, linked-sequence trade-offs and consecutive-PB gain allocation.
 - [Trackside feedback loop](TRACKSIDE_FEEDBACK_LOOP.md): post-session review becomes a one-turn or one-variable task, followed by a check of what the next session actually demonstrated.
 
 The 25 Hz and multi-camera details describe the wider acquisition programme; individual case pages use session-specific claims only where their source records support them.
@@ -31,7 +31,7 @@ The P1 programme connects actual onboard footage with lap progression and geogra
   <img src="assets/p1/p1-sector-gains.png" alt="P1 sector gain heatmap across four reference transitions" width="96%" />
 </p>
 
-The full [P1 case study](case_studies/p1-gpr150-telemetry.md) contains a [20-second T2 onboard/telemetry clip](case_studies/p1-gpr150-telemetry.md#t2-onboard-example-developing-a-repeatable-braking-reference), the larger frame gallery and the T2 gate analysis. The public repository stores only these derived images; the original video archive remains private.
+The full [P1 case study](case_studies/p1-gpr150-telemetry.md) contains a [20-second T2 onboard/telemetry clip](case_studies/p1-gpr150-telemetry.md#t2-onboard-example-developing-a-repeatable-braking-reference), the larger frame gallery, T2 gate analysis and [three detailed performance studies](case_studies/p1-gpr150-telemetry.md#three-performance-studies). The public repository stores only these derived images; the original video archive remains private.
 
 ## Simulation race engineering
 

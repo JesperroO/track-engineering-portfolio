@@ -4,7 +4,7 @@
 **Vehicle:** Aprilia GPR150
 **Context:** repeated practice sessions on a compact P1 circuit
 **Tools:** RaceChrono Pro, VBO/Circuit Tools exports, Python/NumPy/Matplotlib/OpenCV, and multi-camera onboard video
-**Read this case for:** a real-track driver-development programme: gear choice, linked-corner speed, direction-change losses, measurement quality and selected onboard-video evidence.
+**Read this case for:** personally acquired real-track data, T2 braking-reference development, linked-corner trade-offs, consecutive-PB gain allocation and aligned onboard evidence.
 
 ## Result
 
@@ -65,7 +65,7 @@ The evidence supports linked-corner and control-continuity hypotheses. The video
 
 ## Quantified T2 progression across sessions
 
-The original gate method was recovered from the session record and applied to all **71 recorded laps**. The table below uses each session's fastest complete lap, rather than selecting its fastest T2 independently. S02 and S04-S08 retain the common external-GPS programme. S01/S03 have different GPS schemas; S09 changes the exercise objective. They remain in the aggregate evidence but are outside this main progression comparison.
+Fixed geographic gates were applied to all **71 recorded laps**. The table below uses each session's fastest complete lap, rather than selecting its fastest T2 independently. S02 and S04-S08 retain the common external-GPS programme. S01/S03 have different GPS schemas; S09 changes the exercise objective. They remain in the aggregate evidence but are outside this main progression comparison.
 
 | Session / fastest full lap | T2 | After T2 | Combined | T2 exit | Downstream gate |
 |---|---:|---:|---:|---:|---:|
@@ -90,7 +90,7 @@ The next research target is to combine the final PB's stronger T2 exit with the 
 
 ### Measurement definition
 
-T2 entry and exit use the original fixed perpendicular geographic planes from the Sep 2 S04 L3 reference (2.82 and 12.37 s on that reference). This review rebuilds the downstream endpoint at reference **18.50 s**, slightly farther downstream: some later lines do not cross the old 17.50 s plane. All 71 laps cross the new three-plane package in time order, using linear interpolation between samples and no nearest-point fallback. The resulting downstream/combined times therefore differ from earlier narrative totals.
+T2 entry and exit use fixed perpendicular geographic planes from the Sep 2 S04 L3 reference (2.82 and 12.37 s on that reference); the downstream endpoint is at reference **18.50 s**. All 71 laps cross the three-plane package in time order, using linear interpolation between samples and no nearest-point fallback.
 
 The previous-day 60.022 s reference gives broader context: T2 9.550 → 9.154 s (about **0.40 s**), downstream 6.142 → 5.038 s (about **1.10 s**), combined 15.692 → 14.192 s (about **1.50 s**), with T2 exit 50.9 → 64.6 km/h. Because that comparison crosses acquisition schemas, the same-programme table above carries the main conclusion.
 
@@ -158,19 +158,65 @@ The analysis retains physical left/right sign, peak magnitude, duration beyond 3
 
 Whole-lap distributions retain S09's deliberate right-turn exploration separately from PB attempts. Calculated lean and lateral G share source assumptions and are not independent corroboration of grip. The [aggregate channel results](../assets/p1/aprilia-gpr150-channel-summary.json) record thresholds, selected laps and session summaries. Signals are resampled to a common 20 Hz analysis grid; this does not create independent 20 Hz OBD or HR measurements.
 
-## Driver development: research questions from the acquired data
+## Three performance studies
 
-The most useful output of this programme is a set of corner-development questions, supported by retained traces and specific next-test criteria. The original rider discussion, nine CSV exports, derived lap/sector tables and drivetrain correction remain available in the local archive.
+These comparisons locate where time was gained, where it was returned, and how the final PB was assembled. They combine recorded lap timing, fixed geographic gates, calculated lean, GNSS speed and the rider's physical braking reference.
 
-### 1. Gear choice: does avoiding a shift preserve the next corner?
+### 1. Linked sequence: a quicker right-hand block can cost the next transition
+
+| Lap | G60–G70: right-containing block | G70–G80: following transition | Combined |
+|---|---:|---:|---:|
+| S06 L7 | 6.327 s | 6.557 s | 12.884 s |
+| S07 L5 | 5.996 s | 6.728 s | 12.725 s |
+| S08 L8 | 5.896 s | 7.018 s | 12.914 s |
+
+![Linked-section time, speed and calculated lean](../assets/p1/p1-linked-sequence-detail.png)
+
+From S06 L7 to the final PB, the first block gains **0.431 s**, while the following transition loses **0.461 s**. The complete sequence is approximately **0.030 s slower**. S07 L5 completes the pair **0.189 s faster** than S08 L8 despite a slower whole lap. This separates the best local sequence from the best whole-lap result.
+
+The speed and calculated-lean traces begin at the same geographic G60 gate. They show the right-lean episode, reversal into the next left and speed recovery together. The dots mark each lap's G70 crossing; an equal elapsed time is not necessarily an equal track position. The traces support investigating how entry, exit placement and the direction change interact; identifying a specific body movement requires aligned footage of those laps.
+
+The deliberate S09 right-turn exercise gives another useful contrast: L10 takes **5.702 s** through G60–G70, but **7.528 s** through the following block. Its **13.230 s** combined time is slower than S08 L8. This is a local-exercise outcome, rather than a like-for-like session pace comparison.
+
+### 2. T2 braking reference: position changes and downstream retention
+
+![T2 deceleration position and linked-section times](../assets/p1/p1-t2-reference-evolution.png)
+
+The selected PBs place net-deceleration onset at approximately **3.8, 4.6, 16.4, 25.2 and 15.9 m** along the common forward entry-axis projection in S02, S04, S06, S07 and S08. Together with the [onboard example and P1 map](#t2-onboard-example-developing-a-repeatable-braking-reference), this connects the rider's gradual adoption of the raised T1 kerb to a measurable approach-event shift.
+
+The representative laps also show that the progression is not monotonic: S07's selected onset is farther downstream than S08's. S07 L5 completes T2 plus the following section in **13.940 s**, against **14.192 s** for S08 L8. S08 has the higher T2 exit speed (**64.6 versus 62.8 km/h**), yet gives back **0.311 s** downstream after gaining **0.059 s** in T2. A later onset or higher exit speed therefore needs to be evaluated against the complete linked section.
+
+These are net-deceleration proxies and projected positions, not brake-pressure measurements or surveyed braking distances. The rider account describes repeated on-track attempts; the numerical comparison is retrospective and does not establish a telemetry debrief between each stint.
+
+### 3. S08 consecutive PBs: where the final 0.424 s came from
+
+| S08 lap | Whole lap | T2 + following section |
+|---|---:|---:|
+| L6 | 55.957 s | 14.550 s |
+| L7 | 55.920 s | 14.228 s |
+| L8 | 55.496 s | 14.192 s |
+
+![Consecutive PB section gains and accumulated time difference](../assets/p1/p1-s08-pb-assembly.png)
+
+**L6 → L7:** the opening package gains approximately **0.322 s**, but the rest of the lap returns **0.285 s**. The whole-lap improvement is only **0.037 s**. This identifies a meaningful opening improvement that the final timing alone would hide.
+
+**L7 → L8:** the opening package improves by only **0.036 s**; the remaining lap contributes approximately **0.388 s** of the **0.424 s** improvement. The fixed G20–G40 interval contributes **0.371 s**, and G40–G60 adds **0.175 s**. Together those middle intervals gain approximately **0.546 s**, partly offset elsewhere. The final PB was assembled primarily beyond the measured T2 opening package.
+
+The accumulated comparison makes the give-back visible: L8 builds a lead of about **0.59 s** by G70, then finishes **0.424 s** ahead. Consecutive PBs therefore represent different distributions of gains, rather than uniformly quicker versions of the same lap.
+
+**Detailed comparison method:** G10–G90 are common transverse geographic planes placed at 10% increments of the S08 L8 reference GPS path. Crossings are interpolated in forward time order; every compared lap uses the same planes. G60–G80 are reference-path stations, not corner numbers or each lap's own distance percentages. Lap endpoints retain recorded timing; section totals are not rescaled to fit the lap. GNSS sampling and line variation limit physical precision, so millisecond display is for arithmetic checking. The [aggregate results](../assets/p1/p1-development-detail-summary.json) contain gate times, section times and gate speeds without coordinates or raw traces.
+
+## Supporting driving and setup comparisons
+
+### Gear choice: does avoiding a shift preserve the next corner?
 
 Before the September run, I asked whether T2 could be taken in third gear to avoid an exit throttle interruption. I then deliberately tried third gear in S02. Comparing S01 L4 with S02 L2, T2 itself improved by only **0.081 s**, while the interval from the T2 exit gate to the following right-hander's exit gained approximately **0.671 s**. The complete opening complex gained **0.752 s**.
 
 That makes the research question about the full linked section: does a retained gear reduce shift-related interruption enough to offset lower instantaneous drive? The next comparison should retain entry and exit gates, record control interruptions and RPM recovery, and require repeated clean laps. The observed pair motivates the test; it does not isolate gear choice from every other driving change.
 
-Gear identification uses rider-confirmed third-gear running and the corrected speed/RPM grouping. A later review corrected an earlier cluster mislabel; the withdrawn second-gear/sprocket interpretation is not used here. There is no direct ECU gear channel.
+Gear identification uses rider-confirmed third-gear running and the speed/RPM grouping. There is no direct ECU gear channel.
 
-### 2. The following right-hander: entry attack or linked-corner continuity?
+### The following right-hander: entry attack or linked-corner continuity?
 
 Two same-session laps give a useful contrast:
 
@@ -183,15 +229,7 @@ The quicker lap enters T2 more slowly but carries more speed through the followi
 
 The test requires a camera-to-lap time anchor and fixed geographic gates around both corners. Compare the approach, minimum-speed region, control continuity and exit together, then check the whole linked-section time. This question concerns the T2 opening package and its following right-hander. Fixed geographic gates retain the comparison independently of corner naming.
 
-### 3. Right-to-left transition: why is a gain immediately returned?
-
-In the final credible PB step, **55.859 → 55.496 s**, the 60-70% right-hand block gains **0.380 s**, but the immediately following 70-80% direction-change block returns **0.415 s**. Across those two blocks together, the newer PB is therefore about 0.035 s slower, despite its stronger first block.
-
-![Aprilia GPR150 linked-corner gain and loss](../assets/p1/p1-linked-corner-tradeoff.png)
-
-This gives a more precise target than increasing peak right lean: preserve the acquired speed through the next direction change. The proposed review compares line, pickup timing, body reset and throttle continuity on aligned video and telemetry. The acceptance criterion is a faster combined 60-80% interval on repeated laps, with the neighbouring sections retained in the comparison. The 20-40% linked opening complex, which gains approximately 0.340 s in this PB step, provides a second comparison region.
-
-### 4. Tyre-pressure context: build a controlled setting test
+### Tyre-pressure context
 
 The session record includes rider-reported cold pressures of **1.75 / 1.70 bar** front/rear and a later front reading of **1.84 bar**. The original rear hot measurement was compromised by an incorrectly seated gauge; the subsequent **1.80 bar hot** was a reset value, not a natural cold-to-hot rise.
 
@@ -199,9 +237,9 @@ A useful follow-up is first to obtain repeatable pressure measurements with the 
 
 ## What is completed and what remains
 
-Completed work includes source-quality checks, geographic comparisons, lap/sector allocation, rider-confirmed gear trials, throttle-signal interpretation and video-frame preparation. The questions above turn those outputs into a further development programme. Full GPR per-camera telemetry alignment and causal validation of line or setup changes remain open. S04-S07 were ridden without reading the interim analysis, so their changes are retrospective observations rather than successive coached tests.
+Completed work includes source-quality checks, geographic comparisons, linked-section trade-off analysis, consecutive-PB gain allocation, rider-confirmed gear trials, control-channel analysis and selected onboard-video alignment. Full GPR per-camera telemetry alignment and causal validation of line or setup changes remain open. S04-S07 were ridden without reading the interim analysis, so their changes are retrospective observations rather than successive coached tests.
 
-Source basis: the dated September live review, corrected drivetrain note, geographic PB-sector table and the original rider discussion. The new linked-corner figure is regenerated from the retained PB-sector table; it uses derived aggregates rather than publishing coordinates or raw telemetry.
+Source basis: the dated September live review, drivetrain analysis, original CSV exports, recorded lap summaries and rider feedback. The detailed performance figures use common interpolated geographic crossings and derived aggregates; original telemetry and exact coordinates remain private.
 
 ## Video frame gallery
 
@@ -237,7 +275,7 @@ The running-PB line records the sequence `60.022 → 58.977 → 56.644 → 55.85
 
 ![P1 sector gain heatmap](../assets/p1/p1-sector-gains.png)
 
-The heatmap shows why a local improvement cannot be read as a whole-lap explanation. In the final `55.859 → 55.496 s` step, the `60–70%` interval gained `0.380 s`, while the immediately following `70–80%` interval returned `0.415 s`. That pattern motivates video alignment across the linked transition.
+The overview heatmap uses approximate reference stations and shows the distribution of gains across the broader PB history. The detailed linked-sequence and consecutive-PB studies above use interpolated transverse-plane crossings; their gate definition and unscaled timing provide the quantitative section comparisons.
 
 ### T2 gate versus full lap
 
