@@ -12,7 +12,7 @@ I independently ride, log and review the motorcycle sessions. This chapter conne
 | Onboard cameras | Original footage retained by session; proxy files and selected frames prepared for review | Corner geometry, line, rider movement and a visual check on telemetry interpretations |
 | Rider and session notes | Record the intended exercise, gear choice, changing conditions and feedback alongside the export | Interpret a trace in the context of what the rider actually attempted |
 
-The wider programme includes 25 Hz GNSS acquisition, IMU and OBD-II. That does not assign 25 Hz to every channel: GPS source, availability and sampling behaviour are checked per export. The [GPR150](p1-gpr150-telemetry.md) and [CBR650R](hualong-cbr650r.md) cases show different source quality and coverage.
+The wider programme includes 25 Hz GNSS acquisition, IMU and OBD-II. That does not assign 25 Hz to every channel: GPS source, availability and sampling behaviour are checked per export. The [Aprilia GPR150](p1-gpr150-telemetry.md) and [CBR650R](hualong-cbr650r.md) cases show different source quality and coverage.
 
 ## From a session to a usable review
 
@@ -29,7 +29,7 @@ The working outputs are a session/lap table, selected comparison plots, a short 
 
 - **P1 GPS source changes:** source schemas differed between sessions and produced materially different distance totals. Geographic gates supplied a shared comparison; external-GPS precision and satellite fields supported reference-lap selection.
 - **P1 source-clock conflict:** some exports retained an old GPS date despite the current session metadata and upload context. Monotonic elapsed/lap timing supported interval analysis while absolute timestamps remained qualified.
-- **GPR150 gear inference:** an ECU speed PID stayed at zero and no direct gear channel was available. Gear labels therefore used GPS/RPM ratio plus rider report, with their inferred status retained.
+- **Aprilia GPR150 gear inference:** an ECU speed PID stayed at zero and no direct gear channel was available. Gear labels therefore used GPS/RPM ratio plus rider report, with their inferred status retained.
 - **CBR650R throttle calibration:** normalize the observed OBD signal over its recorded endpoints. It is a PID signal, not a measurement of torque or a calibrated physical throttle-plate angle.
 - **CBR650R degraded GPS:** merged laps and weak position data in S03 were retained for provisional context but excluded from precise cross-session claims.
 
@@ -37,9 +37,9 @@ The working outputs are a session/lap table, selected comparison plots, a short 
 
 The archive includes a July CBR650R rear-camera review aligned to TrackAddict using the visible local-time overlay: the video began 17.0 s after the telemetry start. This supplied a time mapping for the covered laps; approximately 1 Hz GPS still limited precise apex identification.
 
-For the September GPR150 programme, selected onboard frames and proxy files are already available. Full per-camera lap-to-picture alignment remains unfinished. The recorded next step is to anchor a visible start/finish crossing to the stored lap marker, then check the correspondence at later events before using video to attribute a control action.
+For the September Aprilia GPR150 programme, selected onboard frames and proxy files are already available. Full per-camera lap-to-picture alignment remains unfinished. The recorded next step is to anchor a visible start/finish crossing to the stored lap marker, then check the correspondence at later events before using video to attribute a control action.
 
-The GPR150 S04-S07 runs were completed consecutively without reading the interim analysis. Their progression is a retrospective observation. The review feeds a subsequent exercise; it is not presented as evidence that each of those runs responded to advice between sessions.
+The Aprilia GPR150 S04-S07 runs were completed consecutively without reading the interim analysis. Their progression is a retrospective observation. The review feeds a subsequent exercise; it is not presented as evidence that each of those runs responded to advice between sessions.
 
 ## Simulator acquisition and recovery
 

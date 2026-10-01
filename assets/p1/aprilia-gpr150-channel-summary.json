@@ -1,0 +1,397 @@
+{
+  "channel_semantics": "OBD RPM/throttle/coolant; RaceChrono calc lean and longitudinal/lateral G; HRM heart rate. Resampled to 20 Hz for consistent event rules, not independent 20 Hz OBD/HR measurements.",
+  "thresholds": "Throttle normalized over archived 1.57-94.51% endpoints. Stable opening: >=threshold for 0.30 s after principal deceleration trough or within 2 s before minimum speed. Deceleration onset: calc longitudinal G <=-0.15 for 0.20 s. Turn-in proxy: calc lean<=-20 degrees for 0.20 s. HR: 5 s median filter, pre-event median -3 to -1 s, post-event maximum +2 to +12 s; this overlaps other control events and cannot isolate braking physiology.",
+  "sessions": [
+    {
+      "session": "S01",
+      "laps": 5,
+      "medians": {
+        "stable_40_relative_to_min_s": -0.5999999999999996,
+        "filtered_peak_long_g": -0.3539751172413794,
+        "below_5pct_throttle_t2_s": 3.4000000000000004,
+        "exit_rpm": 8291.731777069806,
+        "t2_left_peak_deg": 40.03049796800001,
+        "t2_abs35_duration_s": 3.5,
+        "hr_response_delta_bpm": 5.139184872000044,
+        "lap_hr_mean_bpm": 150.38963214929157
+      }
+    },
+    {
+      "session": "S02",
+      "laps": 5,
+      "medians": {
+        "stable_40_relative_to_min_s": 1.5000000000000009,
+        "filtered_peak_long_g": -0.40137359999999855,
+        "below_5pct_throttle_t2_s": 2.75,
+        "exit_rpm": 8739.899400350803,
+        "t2_left_peak_deg": 42.0446761,
+        "t2_abs35_duration_s": 4.2,
+        "hr_response_delta_bpm": 3.4482484799999895,
+        "lap_hr_mean_bpm": 164.49110545314892
+      }
+    },
+    {
+      "session": "S03",
+      "laps": 9,
+      "medians": {
+        "stable_40_relative_to_min_s": -0.8500000000000014,
+        "filtered_peak_long_g": -0.40393822790697564,
+        "below_5pct_throttle_t2_s": 2.85,
+        "exit_rpm": 8335.80398010993,
+        "t2_left_peak_deg": 44.21706648181819,
+        "t2_abs35_duration_s": 3.25,
+        "hr_response_delta_bpm": 5.0,
+        "lap_hr_mean_bpm": 165.5976559252216
+      }
+    },
+    {
+      "session": "S04",
+      "laps": 7,
+      "medians": {
+        "stable_40_relative_to_min_s": 0.34999999999999964,
+        "filtered_peak_long_g": -0.47752244250000275,
+        "below_5pct_throttle_t2_s": 2.9000000000000004,
+        "exit_rpm": 8535.554252060476,
+        "t2_left_peak_deg": 43.98331619999999,
+        "t2_abs35_duration_s": 4.15,
+        "hr_response_delta_bpm": 2.3987537999999518,
+        "lap_hr_mean_bpm": 169.5263645224685
+      }
+    },
+    {
+      "session": "S05",
+      "laps": 7,
+      "medians": {
+        "stable_40_relative_to_min_s": 0.6999999999999993,
+        "filtered_peak_long_g": -0.4959669388888845,
+        "below_5pct_throttle_t2_s": 3.1,
+        "exit_rpm": 8876.925450709676,
+        "t2_left_peak_deg": 43.1737008,
+        "t2_abs35_duration_s": 4.45,
+        "hr_response_delta_bpm": 2.0,
+        "lap_hr_mean_bpm": 161.63069035175047
+      }
+    },
+    {
+      "session": "S06",
+      "laps": 10,
+      "medians": {
+        "stable_40_relative_to_min_s": 0.6750000000000007,
+        "filtered_peak_long_g": -0.5414323150000011,
+        "below_5pct_throttle_t2_s": 1.65,
+        "exit_rpm": 8906.270104840154,
+        "t2_left_peak_deg": 44.19399404291667,
+        "t2_abs35_duration_s": 4.325,
+        "hr_response_delta_bpm": 2.378472866666712,
+        "lap_hr_mean_bpm": 164.7216222112494
+      }
+    },
+    {
+      "session": "S07",
+      "laps": 9,
+      "medians": {
+        "stable_40_relative_to_min_s": 1.0500000000000007,
+        "filtered_peak_long_g": -0.5658164500000026,
+        "below_5pct_throttle_t2_s": 1.75,
+        "exit_rpm": 7105.7658136781265,
+        "t2_left_peak_deg": 44.710493631999995,
+        "t2_abs35_duration_s": 4.05,
+        "hr_response_delta_bpm": -0.7769568500000048,
+        "lap_hr_mean_bpm": 156.2357452996122
+      }
+    },
+    {
+      "session": "S08",
+      "laps": 9,
+      "medians": {
+        "stable_40_relative_to_min_s": 1.1999999999999993,
+        "filtered_peak_long_g": -0.6381389699999986,
+        "below_5pct_throttle_t2_s": 2.0500000000000003,
+        "exit_rpm": 9149.917369677178,
+        "t2_left_peak_deg": 43.905321999999906,
+        "t2_abs35_duration_s": 3.85,
+        "hr_response_delta_bpm": 0.6666928912499941,
+        "lap_hr_mean_bpm": 167.86706047301126
+      }
+    },
+    {
+      "session": "S09",
+      "laps": 10,
+      "medians": {
+        "stable_40_relative_to_min_s": 0.35000000000000053,
+        "filtered_peak_long_g": -0.622729454062501,
+        "below_5pct_throttle_t2_s": 2.175,
+        "exit_rpm": 8739.240150299529,
+        "t2_left_peak_deg": 43.48143997107147,
+        "t2_abs35_duration_s": 3.925
+      }
+    }
+  ],
+  "schematic_map_registration": {
+    "method": "Single S08 L8 equal-arc similarity registration to the existing selected main-corridor rail, applied unchanged to all laps; cyclic ordering and start/finish location constrain orientation. Schematic, not a surveyed pavement map.",
+    "rms_px": 18.358699144117637,
+    "nominal_rms_m": 2.975762776121518,
+    "start_fit_error_px": 132.71533384049093
+  },
+  "selected_laps": [
+    {
+      "session": "S02",
+      "lap": 2,
+      "t2_s": 9.723146276243815,
+      "braking_proxy_onset_s": 3.1,
+      "peak_deceleration_time_s": 3.9000000000000004,
+      "filtered_peak_long_g": -0.40137359999999855,
+      "t2_minimum_speed_time_s": 7.95,
+      "t2_minimum_speed_kmh": 39.34263600000002,
+      "stable_throttle_s": {
+        "20": 7.800000000000001,
+        "40": 9.450000000000001,
+        "80": 10.0
+      },
+      "stable_40_relative_to_min_s": 1.5000000000000009,
+      "below_5pct_throttle_t2_s": 3.75,
+      "left_turnin_20deg_s": 5.3500000000000005,
+      "t2_left_peak_deg": 42.0446761,
+      "t2_right_peak_deg": 21.56484649999999,
+      "t2_abs35_duration_s": 4.2,
+      "minimum_rpm_t2": 6383.333219000004,
+      "exit_rpm": 8687.720545674025,
+      "whole_lap_left_peak_deg": 44.345454400000015,
+      "whole_lap_left_over35_s": 14.0,
+      "whole_lap_left_over40_s": 7.2,
+      "whole_lap_right_peak_deg": 43.124299399999984,
+      "whole_lap_right_over35_s": 8.0,
+      "whole_lap_right_over40_s": 1.6,
+      "deceleration_position_along_entry_axis_m": 3.8023449231422397,
+      "left_turnin_position_along_entry_axis_m": 44.522951768250685,
+      "stable40_position_along_entry_axis_m": 63.7703812935423,
+      "braking_to_min_speed_s": 4.85,
+      "speed_loss_to_min_kmh": 42.59404799999985,
+      "effective_average_deceleration_g": 0.24876197778900314,
+      "hr_pre_bpm": 155.0,
+      "hr_post_max5s_bpm": 157.63454535000005,
+      "hr_response_delta_bpm": 2.634545350000053,
+      "lap_hr_mean_bpm": 160.54826480302864,
+      "lap_hr_peak_bpm": 167.967878882353
+    },
+    {
+      "session": "S04",
+      "lap": 7,
+      "t2_s": 9.142304921780287,
+      "braking_proxy_onset_s": 3.0500000000000003,
+      "peak_deceleration_time_s": 3.7,
+      "filtered_peak_long_g": -0.4041523199999994,
+      "t2_minimum_speed_time_s": 8.65,
+      "t2_minimum_speed_kmh": 38.93880600000003,
+      "stable_throttle_s": {
+        "20": 8.35,
+        "40": 9.0,
+        "80": 9.35
+      },
+      "stable_40_relative_to_min_s": 0.34999999999999964,
+      "below_5pct_throttle_t2_s": 3.2,
+      "left_turnin_20deg_s": 4.8500000000000005,
+      "t2_left_peak_deg": 44.039141936841965,
+      "t2_right_peak_deg": 21.986800459999998,
+      "t2_abs35_duration_s": 4.2,
+      "minimum_rpm_t2": 6409.685243720006,
+      "exit_rpm": 8820.080187563215,
+      "whole_lap_left_peak_deg": 44.69009219333331,
+      "whole_lap_left_over35_s": 13.8,
+      "whole_lap_left_over40_s": 7.300000000000001,
+      "whole_lap_right_peak_deg": 44.34276647333326,
+      "whole_lap_right_over35_s": 8.450000000000001,
+      "whole_lap_right_over40_s": 5.2,
+      "deceleration_position_along_entry_axis_m": 4.644068517834572,
+      "left_turnin_position_along_entry_axis_m": 37.91018644198064,
+      "stable40_position_along_entry_axis_m": 58.7288482300448,
+      "braking_to_min_speed_s": 5.6,
+      "speed_loss_to_min_kmh": 43.884811799999866,
+      "effective_average_deceleration_g": 0.2219744746822667,
+      "hr_pre_bpm": 173.0,
+      "hr_post_max5s_bpm": 175.39875379999995,
+      "hr_response_delta_bpm": 2.3987537999999518,
+      "lap_hr_mean_bpm": 176.44754290654976,
+      "lap_hr_peak_bpm": 180.93446697391315
+    },
+    {
+      "session": "S06",
+      "lap": 7,
+      "t2_s": 9.12609429943643,
+      "braking_proxy_onset_s": 3.6,
+      "peak_deceleration_time_s": 4.05,
+      "filtered_peak_long_g": -0.6830329799999937,
+      "t2_minimum_speed_time_s": 7.6000000000000005,
+      "t2_minimum_speed_kmh": 41.64069599999999,
+      "stable_throttle_s": {
+        "20": 6.7,
+        "40": 8.55,
+        "80": 9.9
+      },
+      "stable_40_relative_to_min_s": 0.9500000000000002,
+      "below_5pct_throttle_t2_s": 2.5,
+      "left_turnin_20deg_s": 5.25,
+      "t2_left_peak_deg": 45.402641253333314,
+      "t2_right_peak_deg": 28.33724913999985,
+      "t2_abs35_duration_s": 4.3,
+      "minimum_rpm_t2": 6691.17938693333,
+      "exit_rpm": 8805.495810705303,
+      "whole_lap_left_peak_deg": 46.845215811764746,
+      "whole_lap_left_over35_s": 15.200000000000001,
+      "whole_lap_left_over40_s": 10.05,
+      "whole_lap_right_peak_deg": 42.544385559999995,
+      "whole_lap_right_over35_s": 8.4,
+      "whole_lap_right_over40_s": 1.9000000000000001,
+      "deceleration_position_along_entry_axis_m": 16.366225224705172,
+      "left_turnin_position_along_entry_axis_m": 46.31860206836203,
+      "stable40_position_along_entry_axis_m": 66.66146496469258,
+      "braking_to_min_speed_s": 4.0,
+      "speed_loss_to_min_kmh": 44.86510079999991,
+      "effective_average_deceleration_g": 0.3177060464072842,
+      "hr_pre_bpm": 163.33854750666683,
+      "hr_post_max5s_bpm": 171.84279505999993,
+      "hr_response_delta_bpm": 8.504247553333101,
+      "lap_hr_mean_bpm": 170.25297901720472,
+      "lap_hr_peak_bpm": 174.99587829333336
+    },
+    {
+      "session": "S07",
+      "lap": 5,
+      "t2_s": 9.213003978907809,
+      "braking_proxy_onset_s": 4.3,
+      "peak_deceleration_time_s": 5.0,
+      "filtered_peak_long_g": -0.34553487999999943,
+      "t2_minimum_speed_time_s": 9.3,
+      "t2_minimum_speed_kmh": 43.80477479999995,
+      "stable_throttle_s": {
+        "20": 10.0,
+        "40": 10.350000000000001,
+        "80": null
+      },
+      "stable_40_relative_to_min_s": 1.0500000000000007,
+      "below_5pct_throttle_t2_s": 2.95,
+      "left_turnin_20deg_s": 5.45,
+      "t2_left_peak_deg": 43.412483584,
+      "t2_right_peak_deg": 13.96458584000014,
+      "t2_abs35_duration_s": 4.3,
+      "minimum_rpm_t2": 6185.033135054552,
+      "exit_rpm": 7105.7658136781265,
+      "whole_lap_left_peak_deg": 44.66087332000001,
+      "whole_lap_left_over35_s": 15.350000000000001,
+      "whole_lap_left_over40_s": 10.450000000000001,
+      "whole_lap_right_peak_deg": 43.761209359999995,
+      "whole_lap_right_over35_s": 7.95,
+      "whole_lap_right_over40_s": 3.8000000000000003,
+      "deceleration_position_along_entry_axis_m": 25.181279744868235,
+      "left_turnin_position_along_entry_axis_m": 45.937616044129484,
+      "stable40_position_along_entry_axis_m": 47.37221493227245,
+      "braking_to_min_speed_s": 5.000000000000001,
+      "speed_loss_to_min_kmh": 28.665535536000277,
+      "effective_average_deceleration_g": 0.16239284077641347,
+      "hr_pre_bpm": 153.0,
+      "hr_post_max5s_bpm": 157.0,
+      "hr_response_delta_bpm": 4.0,
+      "lap_hr_mean_bpm": 156.2357452996122,
+      "lap_hr_peak_bpm": 160.0
+    },
+    {
+      "session": "S08",
+      "lap": 8,
+      "t2_s": 9.153851607129516,
+      "braking_proxy_onset_s": 3.5500000000000003,
+      "peak_deceleration_time_s": 4.4,
+      "filtered_peak_long_g": -0.6306302549999983,
+      "t2_minimum_speed_time_s": 7.7,
+      "t2_minimum_speed_kmh": 38.862239399999986,
+      "stable_throttle_s": {
+        "20": 6.2,
+        "40": 7.800000000000001,
+        "80": 9.35
+      },
+      "stable_40_relative_to_min_s": 0.10000000000000053,
+      "below_5pct_throttle_t2_s": 1.5,
+      "left_turnin_20deg_s": 5.050000000000001,
+      "t2_left_peak_deg": 44.31841047999993,
+      "t2_right_peak_deg": 22.652873695000416,
+      "t2_abs35_duration_s": 3.7,
+      "minimum_rpm_t2": 6355.62452055009,
+      "exit_rpm": 9346.466185300478,
+      "whole_lap_left_peak_deg": 44.35830751000002,
+      "whole_lap_left_over35_s": 14.5,
+      "whole_lap_left_over40_s": 8.9,
+      "whole_lap_right_peak_deg": 44.28745415999998,
+      "whole_lap_right_over35_s": 8.25,
+      "whole_lap_right_over40_s": 5.300000000000001,
+      "deceleration_position_along_entry_axis_m": 15.859418023736437,
+      "left_turnin_position_along_entry_axis_m": 43.63732999146059,
+      "stable40_position_along_entry_axis_m": 69.15597355645593,
+      "braking_to_min_speed_s": 4.15,
+      "speed_loss_to_min_kmh": 46.99039860000011,
+      "effective_average_deceleration_g": 0.32072872360585974,
+      "hr_pre_bpm": 174.0,
+      "hr_post_max5s_bpm": 173.0,
+      "hr_response_delta_bpm": -1.0,
+      "lap_hr_mean_bpm": 175.7093856487522,
+      "lap_hr_peak_bpm": 180.93948209999985
+    }
+  ],
+  "hr_response_distributions": [
+    {
+      "session": "S01",
+      "count": 5,
+      "median_bpm": 5.139184872000044,
+      "q25_bpm": 3.0,
+      "q75_bpm": 9.57866468800006
+    },
+    {
+      "session": "S02",
+      "count": 5,
+      "median_bpm": 3.4482484799999895,
+      "q25_bpm": 2.634545350000053,
+      "q75_bpm": 6.092985549999952
+    },
+    {
+      "session": "S03",
+      "count": 9,
+      "median_bpm": 5.0,
+      "q25_bpm": 4.0,
+      "q75_bpm": 7.443056208000002
+    },
+    {
+      "session": "S04",
+      "count": 7,
+      "median_bpm": 2.3987537999999518,
+      "q25_bpm": 2.164029316249966,
+      "q75_bpm": 3.4860159462499922
+    },
+    {
+      "session": "S05",
+      "count": 7,
+      "median_bpm": 2.0,
+      "q25_bpm": 0.7466163712188205,
+      "q75_bpm": 3.7208337149999977
+    },
+    {
+      "session": "S06",
+      "count": 10,
+      "median_bpm": 2.378472866666712,
+      "q25_bpm": 1.0964278286183884,
+      "q75_bpm": 4.17588739104167
+    },
+    {
+      "session": "S07",
+      "count": 9,
+      "median_bpm": -0.7769568500000048,
+      "q25_bpm": -1.1871029359999454,
+      "q75_bpm": 0.0
+    },
+    {
+      "session": "S08",
+      "count": 9,
+      "median_bpm": 0.6666928912499941,
+      "q25_bpm": -1.0,
+      "q75_bpm": 2.1898687100000416
+    }
+  ],
+  "position_proxy_definition": "Projection onto the forward approach tangent at the baseline entry gate; a local longitudinal coordinate, not surveyed braking distance or a curvilinear lap station."
+}

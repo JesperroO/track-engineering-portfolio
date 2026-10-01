@@ -52,12 +52,12 @@ The best comparable lap moved from `47.869 s` to `44.421 s` and then `42.641 s`,
 
 This is the engineering loop in practice: calibrate the OBD throttle channel, choose usable laps, identify the one-turn pattern, run the next session, and allow the quality gate to reject a tempting but unsupported conclusion. S03 remains in the archive as a provisional trend because its merged laps and degraded GPS make it unsuitable for precise cross-session inference.
 
-## P1 GPR150: separating a real next-session decision from retrospective analysis
+## P1 Aprilia GPR150: separating a real next-session decision from retrospective analysis
 
 The September P1 programme contains nine sessions and 71 timed laps. It also demonstrates why an honest portfolio must distinguish a closed loop from a retrospective review.
 
-- After S06, the analysis identified a late-lap continuity pattern: the quickest complete T1 gate was not necessarily the quickest T1-plus-following-right complex.
-- S07 supplied a repeatable seven-lap band and a faster complete opening complex without requiring the fastest standalone T1 gate.
+- After S06, the analysis identified a late-lap continuity pattern: the quickest complete T2 gate was not necessarily the quickest T2-plus-following-right complex.
+- S07 supplied a repeatable seven-lap band and a faster complete opening complex without requiring the fastest standalone T2 gate.
 - After S07, the documented decision was one more short, controlled session using the existing `56 s` rhythm as the ceiling rather than an immediate personal-best attack.
 - S08 then produced `55.496 s`, but the post-session comparison showed that the gain was distributed: `0.400 s` in the `60–70%` region and `0.243 s` in the final `10%`, while `0.450 s` was returned in the immediately following `70–80%` transition.
 - S09 changed purpose after the displayed lap entered the `58 s` range: it became deliberate right-turn exploration rather than continued personal-best assembly.
