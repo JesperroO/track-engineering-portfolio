@@ -32,6 +32,10 @@ For this case, cross-source comparison used geographic gates because the availab
 
 **[Watch/download the 1080p original-audio clip](../assets/p1/aprilia-gpr150-t2-braking-reference.mp4)** — S04 L4, source-video 06:21–06:41. This is a practice example, rather than the final PB.
 
+![P1 line comparison and the later T1 braking reference](../assets/p1/aprilia-gpr150-p1-line-events.png)
+
+**Read the picture and map together:** the cyan square marks the derived S08 L8 deceleration onset. The rider identifies this location with the T1 raised-kerb reference eventually adopted after progressively moving the braking point downstream. The orange square is the S02 L2 onset, farther upstream. This connects a physical visual reference to a later-session telemetry event. The video shows S04 L4, so it illustrates the approach and execution in an intermediate session; it is not footage of the cyan S08 lap. Map registration is schematic, and net deceleration remains a proxy for brake application.
+
 **Rider feedback:** over several sessions I progressively moved my braking reference downstream, eventually using the raised kerb at the T1 kink as the visual marker for the T2 approach. The clip shows the tucked straight approach, the transition upright beside that reference, the main T2 left and the following exit/linked turn. Selecting a repeatable physical marker makes the driving experiment concrete: vary the approach, then compare deceleration, minimum speed, opening and downstream carry.
 
 The rider account describes the learning process. The selected video illustrates its execution at this point in the programme; it does not, alone, establish which session first adopted the marker or that every change resulted from an interim telemetry debrief. S04–S07 were ridden consecutively without reading those interim reviews.
@@ -132,7 +136,7 @@ The map below places these events on a shared schematic registration. Turn-in/li
 
 ### Map the events back to the existing P1 layout
 
-![P1 observed lines and control-event landmarks](../assets/p1/aprilia-gpr150-p1-line-events.png)
+The [video and line map shown together above](#t2-onboard-example-developing-a-repeatable-braking-reference) connect the physical braking reference to the later-session event markers.
 
 A single similarity fit registers the S08 L8 GPS path to the existing P1 main-corridor rail. The same transform is applied to S02 and all event positions; laps are not fitted independently. The map marks deceleration onset, sustained main-left lean and stable 40% opening, making the T1-kink/T2-left sequence explicit.
 
