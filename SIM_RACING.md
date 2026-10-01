@@ -12,8 +12,6 @@ The useful work is the combination: find where time is lost, inspect the control
 | [Three-event race consistency](case_studies/paul-ricard-race-consistency.md) | Compare 26, 12 and 14 completed intervals; separate late-race pace gains from consistency and incident recovery | Apply a common median/MAD rule across different cars and tracks, retain excluded laps, join damage episodes and cuts with the lap timeline |
 | [SMP F4 / Paul Ricard development](case_studies/paul-ricard-f4-development.md) | Four consecutive valid practice laps; a 0.623 s S1 gain with earlier brake release and higher exit speed | Match a 78,431-frame replay export to CM lap records, compare controls and wheel loads, inspect a server speed reference, manage distinct setup tests |
 | [GT1 / Silverstone](case_studies/silverstone-gt1-sim.md) | Three valid medium-tyre laps: 133.739 to 127.571 s; 50 Hz and 64,544 samples | Analyse time-loss geography, wheel-speed lockup signals, tyre heat/pressure, compound comparability, fuel and brake-bias test design |
-| [GT3 / Kyalami practice](case_studies/kyalami-720s-practice.md) | 12 recorded laps; best 106.337 s; final five-lap range 0.370 s | Reconcile ACC results and logs, quantify stint repeatability, preserve the setup baseline and distinguish practice pace from event admission |
-| [Acquisition and source recovery](case_studies/sim-data-acquisition.md) | Recover useful channels when one recorder omits a lap or quantizes an input | Combine direct CSV capture, AC native `.tc`, CM results, replay-derived data and Live Telemetry; audit frame continuity and session metadata |
 
 ![F4 brake-release comparison](assets/sim/f4-s1-release.png)
 
@@ -46,3 +44,7 @@ My outputs include lap/sector tables, input traces, loss allocation, repeatabili
 The tools are Python, NumPy, Matplotlib, native binary-file parsing, Content Manager/AC/ACC result records, Live Telemetry and an upstream replay parser. I distinguish my analysis and integration work from the third-party capture and parsing tools it uses.
 
 [Figure provenance and aggregate evidence](assets/sim/README.md) explain the source of each published result. Original replays, full-rate logs, private session conversations and unfiltered participant records remain in the local archive.
+
+## Acquisition and analysis workflow
+
+The final supporting chapter covers [real-track acquisition, processing and simulator recovery](case_studies/data-acquisition-workflow.md), after the performance cases and modelling work.

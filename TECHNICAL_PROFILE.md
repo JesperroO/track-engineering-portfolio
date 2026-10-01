@@ -44,7 +44,6 @@ The [simulation overview](SIM_RACING.md) covers a multi-car workflow and dedicat
 - **Race consistency:** compare three events using a common median/MAD rule, retain excluded loss laps, and join damage episodes, repairs and cuts to the timeline.
 - **F4 development:** match a 78,431-frame, 30 ms replay export to CM timing, compare brake-release and sector-exit behaviour, inspect low wheel-load phases, use a server speed reference and keep setup variants distinct.
 - **GT1 practice:** analyse 50 Hz / 64,544 samples with brake bias, four wheel speeds, compound/validity checks, asymmetric tyre heat/pressure, fuel and late-lap loss allocation.
-- **GT3 practice:** join ACC result/log records to quantify a twelve-lap baseline and final-stint repeatability while retaining a fixed setup.
 - **Acquisition checks:** inspect incomplete attempts, packet repetition and session-time resets; reject stale car/track capture labels through independent session identity.
 
 The native `.tc` reading, dataset joins, derived analysis and charts are the personal implementation work. Replay decoding and high-rate capture use credited upstream tools. The wider local practice inventory has 331 saved per-lap CSV exports across cup, TCR, road-car and kart combinations; file count is not treated as valid-lap count.
@@ -56,3 +55,7 @@ The secondary modelling track includes scenario-based GGV envelopes, planar and 
 ## Public evidence boundary
 
 The public repository contains representative figures, selected video frames, explanations, and the method used to interpret them. It does not contain private original video, raw high-frequency telemetry, exact track coordinates, health records, local filesystem paths, or temporary solver artifacts. The omission is deliberate: the portfolio demonstrates the engineering workflow without exposing unrelated personal data or an unfiltered research archive.
+
+## Acquisition and analysis workflow
+
+See the [final workflow chapter](case_studies/data-acquisition-workflow.md) for physical logging, source checks, video alignment and simulator data recovery.
