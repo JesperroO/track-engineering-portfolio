@@ -1,0 +1,215 @@
+{
+  "p1-planar-qss-gps-calibrated-v1": {
+    "observed_reference": {
+      "corrected_lap": 6,
+      "lap_time_s": 59.0,
+      "gps_update_count": 60,
+      "raw_1hz_gps_chord_m": 895.390006715455,
+      "model_observation_traversal_time_s": 59.0
+    },
+    "calibration": {
+      "source_panel_units_per_px": 1.0,
+      "initial_scale_from_gps_chord_m_per_px": 0.1743573534495253,
+      "scale_search_bracket_m_per_px": [
+        0.11333227974219144,
+        0.23538242715685917
+      ],
+      "fitted_scale_m_per_px": 0.1834753576265,
+      "simulated_1hz_gps_chord_m": 896.0221906599253,
+      "candidate_physical_polyline_length_m": 908.4241340438448,
+      "one_step_refit_scale_m_per_px": 0.18335616802941537,
+      "history": [
+        {
+          "iteration": 1,
+          "line_scale_m_per_px": 0.1743573534495253,
+          "line_qss_lap_time_s": 58.54001700922501,
+          "fit_scale_m_per_px": 0.17154149921840073,
+          "fit_qss_lap_time_s": 58.123470988352835,
+          "fit_gps_chord_m": 895.3931544688397,
+          "fit_physical_polyline_m": 907.476230048359
+        },
+        {
+          "iteration": 2,
+          "line_scale_m_per_px": 0.17154149921840073,
+          "line_qss_lap_time_s": 56.852469695129294,
+          "fit_scale_m_per_px": 0.17715830898101428,
+          "fit_qss_lap_time_s": 57.73049915068471,
+          "fit_gps_chord_m": 895.343010784368,
+          "fit_physical_polyline_m": 907.1721565512366
+        },
+        {
+          "iteration": 3,
+          "line_scale_m_per_px": 0.17715830898101428,
+          "line_qss_lap_time_s": 56.85481447727064,
+          "fit_scale_m_per_px": 0.18189609546512858,
+          "fit_qss_lap_time_s": 57.6169984125383,
+          "fit_gps_chord_m": 895.3977136819685,
+          "fit_physical_polyline_m": 907.9265734049927
+        },
+        {
+          "iteration": 4,
+          "line_scale_m_per_px": 0.18189609546512858,
+          "line_qss_lap_time_s": 57.07682018895491,
+          "fit_scale_m_per_px": 0.18371373682066927,
+          "fit_qss_lap_time_s": 57.3933857775957,
+          "fit_gps_chord_m": 895.3627784323169,
+          "fit_physical_polyline_m": 907.5057437158018
+        },
+        {
+          "iteration": 5,
+          "line_scale_m_per_px": 0.18371373682066927,
+          "line_qss_lap_time_s": 57.343146931820485,
+          "fit_scale_m_per_px": 0.18323697843233072,
+          "fit_qss_lap_time_s": 57.299584929352456,
+          "fit_gps_chord_m": 895.3979580481166,
+          "fit_physical_polyline_m": 907.7165421649676
+        },
+        {
+          "iteration": 6,
+          "line_scale_m_per_px": 0.18323697843233072,
+          "line_qss_lap_time_s": 57.278609263329834,
+          "fit_scale_m_per_px": 0.1834753576265,
+          "fit_qss_lap_time_s": 57.36518637561651,
+          "fit_gps_chord_m": 895.3475191388014,
+          "fit_physical_polyline_m": 907.5219511785006
+        }
+      ]
+    },
+    "scenario": "p1_dry_ideal_nominal",
+    "result": {
+      "qss_lap_time_s_without_shift_loss": 57.30320596414673,
+      "candidate_minus_best_observed_s": -1.696794035853273,
+      "speed_kmh": [
+        28.894921874999692,
+        125.99999999999862
+      ],
+      "qss_gears_used": [
+        1,
+        2,
+        3
+      ],
+      "hard_pavement_clearance_m": 0.40307700634002686,
+      "controls": 20,
+      "evaluations": 121
+    }
+  },
+  "p1-vehicle-ideal-untrained-v1": {
+    "observed_reference": {
+      "corrected_lap": 6,
+      "lap_time_s": 59.0,
+      "gps_update_count": 60,
+      "raw_1hz_gps_chord_m": 895.390006715455,
+      "model_observation_traversal_time_s": 59.0
+    },
+    "calibration": {
+      "source_panel_units_per_px": 1.0,
+      "initial_scale_from_gps_chord_m_per_px": 0.1743573534495253,
+      "scale_search_bracket_m_per_px": [
+        0.11333227974219144,
+        0.23538242715685917
+      ],
+      "fitted_scale_m_per_px": 0.1842053939086434,
+      "simulated_1hz_gps_chord_m": 894.6802200940698,
+      "candidate_physical_polyline_length_m": 907.4079267265507,
+      "one_step_refit_scale_m_per_px": 0.18436927960463478,
+      "history": [
+        {
+          "iteration": 1,
+          "line_scale_m_per_px": 0.1743573534495253,
+          "line_qss_lap_time_s": 46.26048229645605,
+          "fit_scale_m_per_px": 0.17371670936519537,
+          "fit_qss_lap_time_s": 46.17971859121819,
+          "fit_gps_chord_m": 895.4066715885468,
+          "fit_physical_polyline_m": 907.4043018942841
+        },
+        {
+          "iteration": 2,
+          "line_scale_m_per_px": 0.17371670936519537,
+          "line_qss_lap_time_s": 45.05612791246227,
+          "fit_scale_m_per_px": 0.18115116048334956,
+          "fit_qss_lap_time_s": 46.04386698665677,
+          "fit_gps_chord_m": 895.37163798844,
+          "fit_physical_polyline_m": 907.6258666767287
+        },
+        {
+          "iteration": 3,
+          "line_scale_m_per_px": 0.18115116048334956,
+          "line_qss_lap_time_s": 45.468866963480494,
+          "fit_scale_m_per_px": 0.18419049520900782,
+          "fit_qss_lap_time_s": 45.86771623820029,
+          "fit_gps_chord_m": 895.3778438688028,
+          "fit_physical_polyline_m": 908.0752838885478
+        },
+        {
+          "iteration": 4,
+          "line_scale_m_per_px": 0.18419049520900782,
+          "line_qss_lap_time_s": 45.85671035545272,
+          "fit_scale_m_per_px": 0.1842053939086434,
+          "fit_qss_lap_time_s": 45.862109562084036,
+          "fit_gps_chord_m": 895.38585557652,
+          "fit_physical_polyline_m": 908.0950088052648
+        }
+      ]
+    },
+    "scenario": "p1_vehicle_ideal_untrained",
+    "result": {
+      "qss_lap_time_s_without_shift_loss": 45.86893485274271,
+      "candidate_minus_best_observed_s": -13.131065147257289,
+      "speed_kmh": [
+        36.387400617344824,
+        142.69566114103904
+      ],
+      "qss_gears_used": [
+        1,
+        2,
+        3
+      ],
+      "hard_pavement_clearance_m": 0.18420539796352386,
+      "controls": 30,
+      "evaluations": 181
+    }
+  },
+  "finite_shift_check": {
+    "policy": {
+      "gears": [
+        2,
+        4
+      ],
+      "dyno_legal_rpm_interval": [
+        3000.0,
+        11600.0
+      ],
+      "shift_time_s": 0.2
+    },
+    "status": "closed_policy_available",
+    "infeasible_station_count": 0,
+    "schedule": {
+      "shift_stations": [
+        0,
+        10
+      ],
+      "shift_count": 2,
+      "additive_shift_time_s": 0.4,
+      "qss_base_time_s": 45.86893485274271,
+      "qss_time_plus_additive_shift_s": 46.26893485274271
+    }
+  },
+  "rate_screen": {
+    "caps": {
+      "roll_rate_rad_s": 3.0,
+      "equivalent_steer_rate_rad_s": 5.0,
+      "source": "existing reduced-transient scenario bounds; numerical guardrails, not CBR rider calibration"
+    },
+    "proxy_demand": {
+      "max_roll_rate_rad_s": 9.66298503312965,
+      "max_roll_rate_station": 0,
+      "max_equivalent_steer_rate_rad_s": 0.7749924117411362,
+      "max_equivalent_steer_rate_station": 130
+    },
+    "verdict": {
+      "passes_qss_proxy_screen": false,
+      "release_status": "withheld pending exact transient convergence",
+      "reason": "A QSS proxy pass would only permit continuation into the reduced transient OCP; it can never certify a rider-executable line by itself."
+    }
+  }
+}

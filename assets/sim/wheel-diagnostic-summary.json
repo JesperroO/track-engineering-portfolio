@@ -1,0 +1,11 @@
+{
+  "f4_s2_event": {
+    "cm_lap": 15,
+    "replay_currentLap": 15,
+    "elapsed_s": 29.61,
+    "rr_load_n": 344.75,
+    "rl_load_n": 605.0,
+    "throttle_pct": 99.2156862745098,
+    "brake_pct": 0.0
+  }
+}

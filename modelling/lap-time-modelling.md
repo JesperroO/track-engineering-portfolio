@@ -2,33 +2,22 @@
 
 [Portfolio contents](../README.md)
 
-The modelling work is a secondary research track behind the measured telemetry case studies. It is included to show technical breadth, while keeping model outputs separate from observed track performance.
+I built a CBR650R-specific P1 model from my measured track data, vehicle parameters, rear-wheel dyno curve and photographed circuit board. The work connects physical inputs to path search, speed solution, gear selection and checks that change the engineering interpretation.
 
-## Current directions
+![Computed candidate on my photographed P1 board](../assets/modelling/p1-model-board.png)
 
-### GGV and vehicle envelopes
+The red line is a computed candidate, not a recorded riding line. It uses an exploratory 2.00 g lateral envelope; the rate screen below identifies why its calculated time needs transient refinement.
 
-Scenario-based GGV-style envelopes are used to reason about available longitudinal and lateral demand, power limits, and motorcycle operating assumptions. The focus is on explicit input contracts and interpretable diagnostics, not on presenting an unvalidated envelope as a measured vehicle capability.
+## Concrete implementation and results
 
-### Transient minimum-lap-time models
+- **Inputs:** 208 kg curb mass, 1.45 m wheelbase, six gear ratios, 15/42 final drive and 84.21 PS rear-wheel peak. Equipment mass and digitised dyno output are carried as ranges.
+- **Track geometry:** connected pavement cross-sections and GPS-observation scale fitting. The working candidate's sampled chord differs from the measured chord by −0.710 m, approximately −0.079%.
+- **Calculation:** asymmetric acceleration/braking envelopes, combined-force limits, forward/backward speed passes and lateral control-point path search.
+- **Outputs:** a 57.303 s nominal dry candidate and 45.869 s higher-envelope candidate. These are separately searched conditional scenarios, not observed riding performance.
+- **Checks:** the nominal candidate has five low-speed stations incompatible with a 2nd–4th gear policy. The faster candidate admits two shifts, giving 46.269 s with a 0.20 s/shift allowance, but fails the reduced-model roll-rate screen at 9.663 rad/s versus a 3.0 rad/s guardrail.
 
-The repository contains reduced-transient and planar minimum-lap-time experiments, including longitudinal actuation, road-frame motorcycle dynamics, powertrain assumptions, and fixed-line or free-path formulations. These models ask how speed, path, and actuation constraints interact over a lap.
+[Inputs, equations and worked results →](cbr650r-p1-model.md) · [Runnable model subset →](code/README.md) · [Archived aggregate values →](data/archived-result-summary.json)
 
-### Optimal control
+## Numerical methods
 
-The OCP work explores fixed-line, free-path, hybrid, and structured-transient formulations. Feasibility gates, solver diagnostics, and tests are treated as part of the result. A solver returning a trajectory is not by itself evidence that the trajectory is physically realizable or faster on track.
-
-### SSN / KKT experiments
-
-SSN and KKT-related experiments investigate structured nonlinear-solver steps and warm-start possibilities for the lap-time formulations. This is an exploratory numerical-method direction. It is not presented as an end-to-end race-engineering speedup or as independently validated vehicle performance.
-
-## Modelling discipline
-
-Each model should state:
-
-1. which quantities are measured, assumed, identified, or generated;
-2. which constraints are physical, numerical, or merely exploratory;
-3. which tests and feasibility checks passed;
-4. what remains unvalidated against instrumented vehicle data.
-
-That boundary keeps the modelling work useful for future engineering collaboration without allowing mathematical sophistication to outrun the evidence from the real-track programme.
+My separate [sparse optimal-control solver](sparse-optimal-control.md) demonstrates active sets, generalized-Jacobian assembly and sparse block-system solving. The motorcycle project also includes exploratory reduced-transient and SSN/KKT formulations.

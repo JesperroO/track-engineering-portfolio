@@ -15,6 +15,8 @@ These figures were regenerated on 2026-10-01 from existing local session records
 
 ## Cross-checks
 
+The CV-alignment expansion adds `f4-rear-load-event.png` from the original replay's matched CM L15 (`currentLap=15`, next lap's retained `lastLapTime=91303 ms`). The marked 29.610 s sample is RR 344.75 N / LR 605 N / throttle 253/255. `wheel-diagnostic-summary.json` retains those values. `silverstone-wheel-braking.png` uses original Live Telemetry `lap=3`, 72–99% progress, plotting native angular speeds and normalized controls; it is a selected event trace rather than a fitted tyre-slip model.
+
 - Lime Rock: three valid qualifying entries out of nine; seven >61 s completed intervals sum to 28.50 s loss above 59.31 s. The separate all-positive-loss total is 30.48 s.
 - Three-event completed/retained counts: 26/19, 12/9 and 14/11. Relative MAD values recompute to 0.559%, 0.271% and 1.045%.
 - F4: seven valid lap transitions in the inspected replay export match CM recorded times. L15/L28 S1 values are 18.677/18.054 s; the complete L28 remains slower.

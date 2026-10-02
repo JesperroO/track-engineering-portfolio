@@ -63,4 +63,23 @@ A later capture carries a Silverstone/Shadow filename but matches a CM Macau/Evo
 
 The event record is prequalification practice: the deadline was missed, access to the race server was not granted and no race start occurred. The completed engineering output is the practice analysis and next-test plan.
 
+## From wheel speed to driving and setup decisions
+
+![Fastest valid medium lap: wheel-speed recovery and braking in the final part of the lap](../assets/sim/silverstone-wheel-braking.png)
+
+This is the recorded **2:07.571 medium-tyre lap**, at 72–99% progress. Wheel speeds remain in their native rad/s units: the figure compares the four channels directly without assuming an effective tyre radius or plotting angular speed as road speed.
+
+The visible right-front collapse occurs at **90.15–90.71% progress**: its angular speed falls below **5 rad/s**, reaching zero, while vehicle speed remains **135–176 km/h** and brake input is **79–97%**. Both rear wheels continue rotating above 93 rad/s. This identifies a front-lockup window to examine alongside pedal release, rather than a general lack of straight-line speed.
+
+I examine four-wheel angular speed alongside vehicle speed, brake input, steering, wheel load and the saved setup. In a braking window, an abrupt front-wheel speed drop relative to the car and the other wheels supports a lockup diagnosis. I distinguish it from a sustained left/right difference while turning, and use load information to identify a lightly supported wheel. Brake release and wheel-speed recovery show whether the event persists into turn-in.
+
+For this session, the repeated front-wheel events at **Village, Becketts and Vale**, especially at the right front, support two concrete actions:
+
+- **Driving:** compare peak brake input and release through turn-in, then assess the exit and the next acceleration segment. A later braking point is useful only if the downstream loss does not outweigh the entry gain.
+- **Setup:** propose **front brake bias 61.0% → 60.5%**, keeping **100% brake power, medium tyres and the other settings** fixed. Compare recurrence/duration of front-wheel drops, any new rear instability, sector exit speed and consecutive valid laps. The saved baseline has no ABS; this proposal remains a test, rather than a completed improvement.
+
+The tyre evidence selects the comparison baseline too. The valid fastest medium lap ends near **27.88–28.96 psi** across the four tyres; a later invalid soft lap reaches **29.82 psi / 91.4°C at the left rear**. I retain medium tyres for the brake-bias comparison so that compound and thermal state do not change alongside bias.
+
+This links the CV's “wheel speed, wheel load and setup” to specific measured channels, diagnostic windows and controlled test decisions.
+
 See [aggregate evidence and source notes](../assets/sim/README.md).

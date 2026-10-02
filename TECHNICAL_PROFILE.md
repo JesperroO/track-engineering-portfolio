@@ -52,7 +52,9 @@ The workflow combined RaceChrono, OBD, heart-rate data, action-camera evidence, 
 
 ### Modelling and numerical methods
 
-The secondary modelling track includes scenario-based GGV envelopes, planar and road-frame motorcycle dynamics, powertrain and gear-policy models, fixed-line and free-path minimum-lap-time formulations, reduced-transient and structured hybrid OCPs, and SSN/KKT experiments. Each model records its input contract, assumptions, feasibility gates, solver diagnostics, and validation status. Model output is kept separate from measured track performance.
+The [CBR650R / P1 worked model](modelling/cbr650r-p1-model.md) publishes the measured-data inputs, dyno curve, mass/geometry/gearbox values, adhesion scenarios, GPS scale-fit residual, calculated speed/gear policy and failed rate screen. The [selected runnable implementation](modelling/code/README.md) reproduces the archived 180-station fixed-line speed profile and 45.8689 s conditional QSS timing.
+
+My [sparse optimal-control implementation](modelling/sparse-optimal-control.md) shows the state/control/adjoint block system, active-set threshold and generalized derivative, with direct pointers to the FEniCSx/PETSc solver. Reduced-transient and structured hybrid motorcycle OCPs, including SSN/KKT experiments, remain additional local research work.
 
 ## Public evidence boundary
 

@@ -28,6 +28,12 @@ work/
 !assets/sim/
 !assets/sim/*.png
 
+# Curated vehicle-model diagnostics.
+!assets/modelling/
+!assets/modelling/*.png
+__pycache__/
+*.pyc
+
 # Selected trackside workflow photograph.
 !assets/workflow/
 !assets/workflow/p1-trackside-circuit-tools.png

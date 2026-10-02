@@ -1,0 +1,148 @@
+{
+  "vehicle": {
+    "model": "Honda CBR650R-RA",
+    "model_year": 2020,
+    "wheelbase_m": {
+      "value": 1.45,
+      "source": "Honda service manual printed p. 1-5 / PDF p. 13",
+      "confidence": "high"
+    },
+    "curb_mass_kg": {
+      "value": 208.0,
+      "source": "Honda service manual printed p. 1-5 / PDF p. 13; CBR650RA AC type; includes fluids/fuel",
+      "confidence": "high",
+      "not_solver_ready_without": "rider and equipment mass"
+    },
+    "gear_ratios": {
+      "value": [
+        3.071,
+        2.352,
+        1.888,
+        1.56,
+        1.37,
+        1.214
+      ],
+      "source": "Honda service manual printed p. 1-6 / PDF p. 14",
+      "confidence": "high"
+    },
+    "primary_reduction": {
+      "value": 1.69,
+      "source": "Honda service manual printed p. 1-6 / PDF p. 14",
+      "confidence": "high"
+    },
+    "final_reduction": {
+      "value": 2.8,
+      "source": "Honda service manual printed p. 1-6 / PDF p. 14; matches vehicle 15T/42T sprockets",
+      "confidence": "high"
+    },
+    "rear_wheel_peak_power": {
+      "value_ps": 84.21,
+      "rpm": 11338.4,
+      "source": "Dyno Pro 2026-06-17; vehicle-specific custom ECU map",
+      "confidence": "high",
+      "not_solver_ready_without": "full wheel power/torque curve"
+    },
+    "rear_wheel_torque_curve": {
+      "value": [
+        {
+          "rpm": 3000,
+          "torque_nm": 50.0,
+          "power_ps": 21.4
+        },
+        {
+          "rpm": 4000,
+          "torque_nm": 54.0,
+          "power_ps": 30.8
+        },
+        {
+          "rpm": 5000,
+          "torque_nm": 56.0,
+          "power_ps": 39.9
+        },
+        {
+          "rpm": 6000,
+          "torque_nm": 58.0,
+          "power_ps": 49.6
+        },
+        {
+          "rpm": 7000,
+          "torque_nm": 61.0,
+          "power_ps": 60.9
+        },
+        {
+          "rpm": 7863,
+          "torque_nm": 63.23,
+          "power_ps": 70.7
+        },
+        {
+          "rpm": 9000,
+          "torque_nm": 61.0,
+          "power_ps": 78.2
+        },
+        {
+          "rpm": 10000,
+          "torque_nm": 58.0,
+          "power_ps": 82.6
+        },
+        {
+          "rpm": 11000,
+          "torque_nm": 53.5,
+          "power_ps": 83.9
+        },
+        {
+          "rpm": 11338.4,
+          "torque_nm": 52.2,
+          "power_ps": 84.21
+        },
+        {
+          "rpm": 11600,
+          "torque_nm": 50.0,
+          "power_ps": 82.8
+        }
+      ],
+      "uncertainty": {
+        "measured_anchor_points": [
+          {
+            "rpm": 7863,
+            "torque_nm": 63.23
+          },
+          {
+            "rpm": 11338.4,
+            "power_ps": 84.21
+          }
+        ],
+        "other_points": "screen-photo digitisation; use +/- 5 percent torque scenarios, not as an ECU calibration table"
+      },
+      "source": "2026-06-17 Dyno Pro screenshot archived in KHI work order WO-20260614-003; points 3000-7000 were contemporaneously transcribed, 9000-11600 digitised conservatively from the plotted blue/black traces",
+      "confidence": "medium",
+      "solver_use": "usable for bounded acceleration scenarios; replace with the Dyno Pro raw export if available"
+    },
+    "powertrain_scenario_assumptions": {
+      "loaded_rear_radius_m": 0.31,
+      "usable_engine_rpm_interval": [
+        3000,
+        11600
+      ],
+      "scope": "The radius is the nominal 180/55-17 radius rounded down for loaded rolling radius. It is only used to map road speed to engine rpm; P/(m*v) uses the measured rear-wheel curve directly."
+    }
+  },
+  "tyres": {
+    "model": "Michelin Road 6",
+    "front_size": "120/70-17",
+    "rear_size": "180/55-17",
+    "p1_cold_pressure_bar": [
+      2.1,
+      2.2
+    ],
+    "p1_hot_pressure_bar": [
+      2.4,
+      2.6
+    ],
+    "source": "2026-07-11 P1 rider measurement",
+    "not_solver_ready_without": "conservative speed-dependent combined longitudinal-lateral GGv"
+  },
+  "combined_mass_kg_interval": [
+    260.25,
+    263.25
+  ]
+}

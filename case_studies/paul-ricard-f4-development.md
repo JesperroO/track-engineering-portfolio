@@ -45,6 +45,16 @@ L15 passes the same S2 transition with the right rear dropping to approximately 
 
 ## Setup variants and decision records
 
+### How I turn wheel-load data into a test
+
+![S2 rear-wheel load with synchronized throttle](../assets/sim/f4-rear-load-event.png)
+
+At **29.610 s** on the matched 91.303 s L15, the replay reports **344.75 N right-rear load versus 605 N left-rear**, with **99.2% throttle** and zero recorded brake. The figure retains the surrounding load changes instead of presenting that sample as a whole-sector minimum.
+
+I align wheel loads, throttle, steering and replay position to identify the unload/recontact phase. The useful question is whether I ask for strong drive while the rear axle is lightly supported, and whether a curb/line choice makes that transition harder to repeat. That supports a driving comparison with a different curb approach or opening sequence, while preserving sector exit speed as an outcome.
+
+It also motivates the **rear fast-rebound 6 → 5** test below: observe the contact/load recovery and exit stability under comparable inputs. The sign of the resulting load response needs measurement; a setup slider change alone does not establish a cure. Rear pressure **17 → 16 psi** is a separate candidate, with front pressures unchanged. This is how wheel-load evidence selects a test rather than merely decorating a lap-time chart.
+
 The working record separates two variants:
 
 - A: rear fast rebound reduced from 6 to 5, intended to investigate the unload/recontact transition.

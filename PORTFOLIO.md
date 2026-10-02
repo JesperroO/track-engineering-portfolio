@@ -36,7 +36,7 @@ The [simulation overview](SIM_RACING.md) describes a wider multi-car archive and
 | Turn vehicle traces into a test | Compare brake-release shapes, wheel unloading and front-lockup signals; define a separate pressure or brake-bias trial |
 | Debrief repeatability as well as PB | Review aprilia GPR150 multi-session progression and consecutive laps; compare three simulator races using median/MAD, damage and cuts |
 | Support real-world acquisition | Personally ride and log motorcycle sessions; combine GNSS/IMU/OBD and video while controlling data quality |
-| Implement models and tools | Python analysis/rendering, native binary reading, CasADi dynamics/OCP experiments and solver diagnostics |
+| Implement models and tools | [CBR650R inputs, envelope and path/speed results](modelling/cbr650r-p1-model.md); [runnable QSS code](modelling/code/README.md); [active-set / sparse solver implementation](modelling/sparse-optimal-control.md) |
 
 ## Implementation and scope
 
