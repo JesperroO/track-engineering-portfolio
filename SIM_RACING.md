@@ -1,6 +1,6 @@
 # Simulation racing: driving, data and engineering decisions
 
-[Portfolio contents](README.md)
+[Portfolio contents](README.md) · [中文概述](zh/sim-racing.md)
 
 I drive the sessions and carry out the data preparation, analysis and follow-up work. The simulation archive covers rear-wheel-drive cup cars, front-wheel-drive touring cars, F4, GT1 and GT3. It includes formal online races, practice, native best-lap records, replay reconstruction and continuous telemetry capture.
 

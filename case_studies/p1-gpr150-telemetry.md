@@ -1,7 +1,7 @@
 # aprilia GPR150 / P1
 ## Real-track data acquisition & performance analysis
 
-[Portfolio contents](../README.md) · [Detailed analysis](p1-gpr150-analysis.md) · [Measurement methods](p1-gpr150-methods.md)
+[Portfolio contents](../README.md) · [中文概述](../zh/aprilia-gpr150-p1.md) · [Detailed analysis](p1-gpr150-analysis.md) · [Measurement methods](p1-gpr150-methods.md)
 
 ![aprilia GPR150 on track at P1](../assets/p1/p1-showcase-on-track.png)
 
