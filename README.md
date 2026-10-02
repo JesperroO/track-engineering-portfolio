@@ -8,6 +8,8 @@ I ride, acquire and analyse motorsport data, and build software for vehicle simu
    - [T2 lines, throttle opening and braking-reference development](case_studies/p1-gpr150-telemetry.md#t2-lines-control-and-reference-development)
    - [OBD, heart rate and lean](case_studies/p1-gpr150-telemetry.md#obd-control-timing-and-rider-state-analysis)
    - [Linked-corner trade-offs and consecutive PBs](case_studies/p1-gpr150-telemetry.md#whole-lap-performance-studies)
+   - [Deliberate exercise, gear trial and same-session diagnosis](case_studies/p1-gpr150-telemetry.md#targeted-driving-comparisons)
+   - [Detailed analysis](case_studies/p1-gpr150-analysis.md) · [Measurement methods](case_studies/p1-gpr150-methods.md)
 2. **[Simulation race engineering](SIM_RACING.md)** — replay, telemetry and race results used together.
    - [MX-5 / Lime Rock](case_studies/lime-rock-mx5-race-analysis.md): qualifying gap, race losses and pedal-trace recovery.
    - [F4 / Paul Ricard](case_studies/paul-ricard-f4-development.md): brake release, exit speed and wheel unloading.

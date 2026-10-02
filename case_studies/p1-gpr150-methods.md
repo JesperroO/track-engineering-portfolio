@@ -38,6 +38,14 @@ The same similarity registration used by the published T2 comparison also places
 
 Board colours distinguish laps or interval gains as indicated by each legend. Native metric and control figures provide the quantitative comparisons alongside the board views.
 
+## Supporting comparisons
+
+The S09 exercise reuses the published G60/G70/G80 crossing times. The directional-lean panel uses per-session medians from the retained whole-lap lean summary; open circles show right lean and crosses left lean. S09 has no HR channel.
+
+Gear-trial and same-session trace figures interpolate native GNSS crossings of the original three T2 planes. Their display crossings can differ by approximately 0.01–0.03 s from the retained analysis-grid aggregates. The text uses the retained aggregate package results; neither timing series is rescaled. Squares mark each lap's T2 exit. All throttle traces use the same archived-endpoint normalization.
+
+The deceleration display uses a five-sample moving mean on the 0.05 s grid. Its onset markers and reported effective-average values come from the retained channel aggregates. Speed loss divided by onset-to-minimum elapsed time supplies the average net-deceleration proxy.
+
 ## Session context
 
 S04–S07 were ridden consecutively without interim telemetry debriefs. Their changes are retrospective observations. The generic pit-room review workflow is documented separately in the [acquisition chapter](data-acquisition-workflow.md).

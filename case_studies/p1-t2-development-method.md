@@ -19,4 +19,4 @@ The S04 clip uses the VBO main-video clock. Visual checks at the upright/deceler
 
 The downstream timing and speed values in the main text are reproduced from the existing fixed-gate progression summary. The differences shown are observed comparisons; no isolated setup effect is inferred.
 
-[Back to the study](p1-gpr150-telemetry.md#t2-lines-control-and-reference-development)
+[Back to the study](p1-gpr150-analysis.md#t2-lines-control-and-reference-development)

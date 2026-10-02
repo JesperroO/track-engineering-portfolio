@@ -15,14 +15,15 @@ The archive covers **nine sessions and 71 timed laps**. Its value is the ability
 
 - [T2 event comparison](#t2-lines-control-and-reference-development) — relate braking position, lean and throttle opening; track repeatability across 47 laps.
 - [Linked corners and gain attribution](#whole-lap-performance-studies) — locate gains and losses using common geographic gates, measured lines and control traces.
-- [OBD and rider-state analysis](#obd-control-timing-and-rider-state-analysis) — examine engine recovery, lean duration and event-aligned heart rate.
+- [OBD and rider-state analysis](#obd-control-timing-and-rider-state-analysis) — examine deceleration, engine recovery, lean duration and event-aligned heart rate.
+- [Targeted driving comparisons](#targeted-driving-comparisons) — compare an intentional exercise, gear choice and consecutive laps.
 - [Acquisition and evidence delivery](#acquisition-and-evidence-delivery) — connect the recording stack, synchronized video and trackside review.
 
 ## T2: lines, control and reference development
 
 **Engineering work:** I compared laps in one spatial frame and detected sustained deceleration, lean and throttle events. A chronological view of all 47 comparable laps shows how the braking reference moved and how its repeatability developed.
 
-![T2 recorded lines and braking reference on the photographed P1 board](../assets/p1/aprilia-gpr150-p1-line-events.png)
+![T2 recorded lines and braking reference on the photographed P1 board](../assets/p1/p1-t2-board-reference.png)
 
 In the selected S02 L2 / S08 L8 pair, deceleration starts **12.3 m farther downstream**, while the 20° lean landmark stays near the same approach position. Sustained 40% throttle moves from **1.50 to 0.10 s after minimum speed**. Comparing those events together connects the approach change to the exit sequence.
 
@@ -64,15 +65,43 @@ The final **0.424 s** improvement contains only **0.036 s from the opening packa
 
 Selected laps can have similar exit speed and different engine-speed recovery: S07 L5 exits at approximately **7,106 rpm**, against **9,346 rpm in S08 L8**. The combined channels make drivetrain and opening behaviour visible alongside the speed result.
 
-The supporting studies compare **peak lean with time spent at deep lean**, and **event-aligned HR traces with session distributions**. Each uses a defined event and a comparable window, extending the analysis beyond single peak values.
+![Event-aligned heart-rate shapes and session response distributions](../assets/p1/p1-hr-event-shape.png)
 
-[Engine recovery](p1-gpr150-analysis.md#engine-speed-recovery-what-the-speed-trace-leaves-out) · [Lean shape and duration](p1-gpr150-analysis.md#lean-the-shape-and-duration-of-the-cornering-episode) · [Heart-rate response](p1-gpr150-analysis.md#heart-rate-inspect-the-response-shape-against-the-session-pattern)
+Heart-rate analysis uses a pre-event baseline and the shape of a defined response window, then compares that result with the session distribution. Lean analysis pairs peak magnitude with time spent at deep lean. These methods extract sequence and repeatability from the archive.
+
+[Deceleration](p1-gpr150-analysis.md#deceleration-position-speed-loss-and-recovery) · [Engine recovery](p1-gpr150-analysis.md#engine-speed-recovery-what-the-speed-trace-leaves-out) · [Lean duration](p1-gpr150-analysis.md#lean-the-shape-and-duration-of-the-cornering-episode) · [Heart-rate response and mapped window](p1-gpr150-analysis.md#heart-rate-inspect-the-response-shape-against-the-session-pattern)
+
+## Targeted driving comparisons
+
+I combine the recorded exercise objective with common geographic sections and control traces. This distinguishes the question being tested from the whole-lap result, and shows where the effect continues into the next corner.
+
+![PB and deliberate right-turn exercise on the photographed P1 board](../assets/p1/p1-right-exercise-board-lines.png)
+
+The **S09 right-turn exercise** gains approximately **0.194 s** in the first block, then returns **0.510 s** in the following transition. The detailed comparison follows the path, throttle and right-to-left lean sequence, with whole-session lean distributions as context.
+
+The supporting **gear trial** compares RPM/throttle alongside speed through the entire opening package. A **same-session L6/L7 pair** demonstrates how a slightly slower entry can retain more speed through the following corner.
+
+[Right-turn exercise](p1-gpr150-analysis.md#3-a-deliberate-right-turn-exercise) · [Gear-trial comparison](p1-gpr150-analysis.md#gear-choice-does-avoiding-a-shift-preserve-the-next-corner) · [Same-session comparison](p1-gpr150-analysis.md#same-session-contrast-entry-speed-versus-linked-corner-carry) · [Setup context](p1-gpr150-analysis.md#tyre-pressure-context)
 
 ## Acquisition and evidence delivery
 
 ![Circuit Tools review on the pit-room laptop](../assets/workflow/p1-trackside-circuit-tools.png)
 
-I use **RaceChrono** with GPS, IMU and a chest heart-rate strap, plus a **Vlinker MC+ BLE OBD2 interface** to the motorcycle's CAN-connected diagnostic port. A **DJI Action 5 Pro** records the helmet view. I align the video and telemetry afterwards, including additional camera views where available.
+I use **RaceChrono** with GPS, IMU and a chest heart-rate strap, plus a **vLinker MC+ BLE OBD2 interface** to the motorcycle's CAN-connected diagnostic port. A **DJI Action 5 Pro** records the helmet view. I align the video and telemetry afterwards, including additional camera views where available.
+
+```mermaid
+flowchart LR
+    CAN[Motorcycle CAN / OBD2] --> MC[vLinker MC+]
+    MC -->|BLE| RC[RaceChrono]
+    GPS[GPS / IMU] --> RC
+    HR[Chest heart-rate strap] --> RC
+    RC --> EX[CSV / VBO exports]
+    EX --> CT[Circuit Tools 3 / laptop]
+    CAM[Action 5 Pro / helmet video] --> ALIGN[Video-clock alignment]
+    EX --> ALIGN
+    ALIGN --> OUT[Selected video and analysis figures]
+```
+
 
 **Circuit Tools 3** on the pit-room laptop supports review between sessions and planning the next run. The analysis presented here also includes retrospective reconstruction of sessions ridden consecutively. Consumer hardware and DIY processing make the acquisition practical within my budget.
 

@@ -1,0 +1,76 @@
+{
+  "method": "Original T2 geographic planes; time-ordered interpolated forward crossings. Squares mark T2 exit; traces end at the downstream plane.",
+  "gate_times_s": {
+    "S01 L4": [
+      2.930809013736229,
+      12.721370547307036,
+      18.674124935317725
+    ],
+    "S02 L2": [
+      2.9383898248325577,
+      12.649915898348544,
+      17.83084287659277
+    ],
+    "S04 L6": [
+      2.906439398427863,
+      12.214212738724143,
+      17.76590167516913
+    ],
+    "S04 L7": [
+      2.852554625696737,
+      11.98133886884601,
+      17.176690179836505
+    ]
+  },
+  "right_exercise": "Existing G60/G70/G80 gate results; source S08 L8 and S09 L10.",
+  "directional_lean": [
+    {
+      "session": "S07",
+      "complete_laps": "9",
+      "csv_positive_side": "physical_right",
+      "csv_negative_side": "physical_left",
+      "median_peak_right_deg": "43.778",
+      "median_peak_left_abs_deg": "45.769",
+      "median_right_ge35_s": "8.010",
+      "median_left_ge35_s": "13.840",
+      "median_right_ge40_s": "3.760",
+      "median_left_ge40_s": "8.946",
+      "median_right_ge43_s": "0.640",
+      "median_left_ge43_s": "4.084",
+      "median_right_ge35_episodes": "2",
+      "median_left_ge35_episodes": "6"
+    },
+    {
+      "session": "S08",
+      "complete_laps": "9",
+      "csv_positive_side": "physical_right",
+      "csv_negative_side": "physical_left",
+      "median_peak_right_deg": "43.187",
+      "median_peak_left_abs_deg": "44.111",
+      "median_right_ge35_s": "7.534",
+      "median_left_ge35_s": "14.543",
+      "median_right_ge40_s": "2.172",
+      "median_left_ge40_s": "7.679",
+      "median_right_ge43_s": "0.100",
+      "median_left_ge43_s": "0.700",
+      "median_right_ge35_episodes": "2",
+      "median_left_ge35_episodes": "6"
+    },
+    {
+      "session": "S09",
+      "complete_laps": "10",
+      "csv_positive_side": "physical_right",
+      "csv_negative_side": "physical_left",
+      "median_peak_right_deg": "43.944",
+      "median_peak_left_abs_deg": "44.087",
+      "median_right_ge35_s": "7.313",
+      "median_left_ge35_s": "12.952",
+      "median_right_ge40_s": "2.665",
+      "median_left_ge40_s": "6.715",
+      "median_right_ge43_s": "0.510",
+      "median_left_ge43_s": "1.080",
+      "median_right_ge35_episodes": "2",
+      "median_left_ge35_episodes": "6"
+    }
+  ]
+}
