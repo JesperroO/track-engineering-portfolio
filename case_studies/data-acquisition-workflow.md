@@ -2,7 +2,7 @@
 
 [Portfolio contents](../README.md)
 
-I build and operate a self-funded motorcycle data workflow, covering riding, telemetry capture, onboard video and analysis. The aim is to obtain useful engineering evidence within a limited equipment budget, using accessible hardware and DIY integration.
+I record my motorcycle sessions with RaceChrono, BLE OBD and onboard cameras, then align and analyse the data on a laptop. I chose consumer hardware and DIY integration to keep equipment costs within my budget.
 
 ![Circuit Tools review on the pit-room laptop](../assets/workflow/p1-trackside-circuit-tools.png)
 
@@ -44,7 +44,6 @@ The published P1 T2 clip is a completed example of that process: one continuous 
 
 I used RaceChrono, BLE OBD, an action camera and a laptop to keep equipment costs within my budget. I integrated their exports and clocks into lap comparisons, mapped lines and synchronized video for trackside and post-session review.
 
-This approach supports the portfolio's real-track outputs: lap comparison, control-event analysis, mapped lines, aligned video and a concrete next-session plan.
 
 ## Archive processing
 
@@ -52,7 +51,7 @@ I retain original RaceChrono exports, available VBO records and camera files by 
 
 The [aprilia GPR150 P1 case](p1-gpr150-telemetry.md) and [CBR650R case](hualong-cbr650r.md) apply this workflow to different acquisition conditions.
 
-## Concrete checks that changed the analysis
+## Source checks
 
 - **P1 GPS source changes:** source schemas differed between sessions and produced materially different distance totals. Geographic gates supplied a shared comparison; external-GPS precision and satellite fields supported reference-lap selection.
 - **P1 source-clock conflict:** some exports retained an old GPS date despite the current session metadata and upload context. Monotonic elapsed/lap timing supported interval analysis while absolute timestamps remained qualified.
@@ -93,7 +92,7 @@ For F4, the 78,431-frame, 30 ms replay export is matched against CM valid-lap tr
 
 ### Engineering outputs
 
-The resulting analysis stack supports:
+I export:
 
 - valid-lap and source-coverage tables;
 - speed/input traces and brake-event windows;

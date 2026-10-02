@@ -2,7 +2,7 @@
 
 [Portfolio contents](../README.md) · [中文概述](../zh/vehicle-modelling.md)
 
-I built a CBR650R-specific P1 model from my measured track data, vehicle parameters, rear-wheel dyno curve and photographed circuit board. The work connects physical inputs to path search, speed solution, gear selection and checks that change the engineering interpretation.
+I built a CBR650R-specific P1 model from my measured track data, vehicle parameters, rear-wheel dyno curve and photographed circuit board. I search the path, solve the speed profile, select gears and check pavement clearance, engine speed and roll-rate demand.
 
 ![Computed candidate on my photographed P1 board](../assets/modelling/p1-model-board.png)
 

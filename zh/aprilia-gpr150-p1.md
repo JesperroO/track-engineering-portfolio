@@ -12,7 +12,7 @@
 
 ![T2 线路与刹车参照对比](../assets/p1/p1-t2-board-reference.png)
 
-S02 L2 与 S08 L8 的减速起点相差 **12.3 m**，后者更靠近主左弯；20° 倾角标记仍接近同一入弯位置。最低速度之后，持续达到 40% 油门的时间从 **1.50 s 缩短到 0.10 s**。我把这些事件一起比较，追踪入弯变化如何衔接到出弯。
+S02 L2 与 S08 L8 的减速起点相差 **12.3 m**，后者更靠近主左弯；20° 倾角标记仍接近同一入弯位置。最低速度之后，持续达到 40% 油门的时间从 **1.50 s 缩短到 0.10 s**。
 
 [![播放 T2 同步车载片段](../assets/p1/aprilia-gpr150-t2-braking-reference.jpg)](https://raw.githubusercontent.com/JesperroO/track-engineering-portfolio/core/assets/p1/aprilia-gpr150-t2-braking-reference.mp4)
 
@@ -26,9 +26,9 @@ S02 L2 与 S08 L8 的减速起点相差 **12.3 m**，后者更靠近主左弯；
 
 ![连续弯的实测线路对比](../assets/p1/p1-linked-board-lines.png)
 
-S06 L7 与 S08 L8 的比较中，一个区段节省 **0.431 s**，接下来的转换却损失 **0.461 s**。我据此查看右弯线路、开油后再次收油，以及车辆从右倾转向左倾的过程。
+S06 L7 与 S08 L8 的比较中，一个区段节省 **0.431 s**，接下来的转换却损失 **0.461 s**。对比图同时标出右弯线路、开油后再次收油，以及从右倾转向左倾的过程。
 
-最后两个 PB 之间的 **0.424 s** 改善，主要来自 G20–G40 的 **0.371 s**。逐段累积时间差后，我进一步比较这段线路和控制动作，解释整圈改善的来源。
+最后两个 PB 之间的 **0.424 s** 改善，主要来自 G20–G40 的 **0.371 s**。我按地理截面累积时间差，并放大比较 G20–G40 的线路、速度和控制动作。
 
 [连续弯诊断](../case_studies/p1-gpr150-analysis.md#1-linked-sequence-a-quicker-right-hand-block-can-cost-the-next-transition) · [连续 PB 的收益分解](../case_studies/p1-gpr150-analysis.md#2-s08-consecutive-pbs-where-the-final-0424-s-came-from)
 
@@ -46,6 +46,6 @@ S06 L7 与 S08 L8 的比较中，一个区段节省 **0.431 s**，接下来的�
 
 采集栈包括 RaceChrono、GPS／IMU、胸部心率带、vLinker MC+ BLE OBD2 和 DJI Action 5 Pro 头盔影像。我用 Circuit Tools 3 在 P 房笔记本上复盘，赛后继续完成多机位与遥测对齐。
 
-最终输出包括同步视频、事件位置图、线路与控制曲线、区段收益分解和可查看的汇总数据。S04–S07 连续骑行后的变化来自赛后复盘，其余工作流也包含节间分析与下一节计划。
+页面附有同步视频、事件位置图、线路与控制曲线、区段时间差和汇总数据。S04–S07 连续骑行，分析在赛后完成；有休息间隔时，我在 P 房复盘并安排下一节练习。
 
 [详细分析](../case_studies/p1-gpr150-analysis.md) · [测量方法](../case_studies/p1-gpr150-methods.md) · [采集工作流](../case_studies/data-acquisition-workflow.md) · [汇总数据](../assets/p1/p1-development-detail-summary.json)

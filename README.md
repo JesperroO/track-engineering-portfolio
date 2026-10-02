@@ -2,7 +2,7 @@
 
 English · [中文](README.zh-CN.md)
 
-I ride, acquire and analyse motorsport data, and build software for vehicle simulation and control-oriented numerical work. These cases follow the work from a recorded session to an explanation of performance: the driven line, control sequence, time gained and time returned.
+I ride, acquire and analyse motorsport data, and build software for vehicle simulation and control-oriented numerical work. The projects cover telemetry acquisition, line and control comparisons, race review and lap-time modelling.
 
 ## Contents
 
@@ -31,7 +31,7 @@ I ride, acquire and analyse motorsport data, and build software for vehicle simu
 
 ## Engineering contribution
 
-[What I can contribute](PORTFOLIO.md#what-i-can-contribute) connects the cases to data preparation, performance analysis, test support and modelling. The [technical profile](TECHNICAL_PROFILE.md) describes the implementation; the [session feedback loop](TRACKSIDE_FEEDBACK_LOOP.md) describes review and practice decisions.
+[Team tasks and work evidence](PORTFOLIO.md#what-i-can-contribute) · [Tools and implementation](TECHNICAL_PROFILE.md) · [Session reviews and practice decisions](TRACKSIDE_FEEDBACK_LOOP.md)
 
 ## Published material
 

@@ -13,7 +13,7 @@ I drive, acquire and analyse motorsport data, and build software for telemetry p
 
 ## Simulation cases
 
-The [simulation overview](SIM_RACING.md) describes a wider multi-car archive and four focused performance cases. The strongest examples are:
+The [simulation overview](SIM_RACING.md) links the following cases:
 
 - [MX-5 / Lime Rock](case_studies/lime-rock-mx5-race-analysis.md): P16 to official P5; accepted 57.784 s race PB; qualifying S1 accounts for 60.5% of the pole gap; seven major slow intervals cost 28.50 s against the planning baseline.
 - [F4 / Paul Ricard](case_studies/paul-ricard-f4-development.md): match a 78,431-frame replay export to actual CM laps, compare a 0.623 s S1 gain through brake release and exit speed, and distinguish wheel-load observations from setup-test results.
@@ -44,4 +44,4 @@ The [simulation overview](SIM_RACING.md) describes a wider multi-car archive and
 
 ## Acquisition and analysis workflow
 
-The final supporting chapter, [from real-track acquisition to an engineering decision](case_studies/data-acquisition-workflow.md), explains how I log GNSS/IMU/OBD and onboard video, retain source files, check clocks and channel quality, select comparable laps, and turn the review into the next test. It also covers simulator source recovery and missing-channel handling.
+[Acquisition and trackside review](case_studies/data-acquisition-workflow.md) covers the sensor connections, source files, clock checks, video alignment and pit-room review, followed by simulator data recovery.

@@ -22,7 +22,7 @@ My implementation covers acquisition, analysis, video alignment and numerical mo
 
 - **Acquisition and data contracts:** identify source clocks, sampling behaviour, channel meaning, lap boundaries, missing data, GPS quality, and schema changes before comparing sessions.
 - **Telemetry processing:** turn raw exports into session summaries, lap tables, geographic gates, sector allocations, GPS-yaw and kinematic signals, normalized throttle, and provisional gear inference.
-- **Video and telemetry integration:** keep camera frames, lap markers, visible start/finish crossings, and telemetry timestamps as separate evidence until their alignment is demonstrated.
+- **Video and telemetry integration:** align camera and telemetry clocks using lap markers and visible start/finish crossings, then check the timing at braking and turn-in.
 - **Vehicle-dynamics software:** implement road-frame motorcycle models, powertrain and gear logic, tyre-force interfaces, kinematic-demand checks, and fixed-line/free-path lap-time formulations.
 - **Numerical engineering:** use CasADi automatic differentiation and nonlinear-programming interfaces, inspect constraint residuals and preserve failed solver states for diagnosis.
 - **Experimental design:** convert a telemetry observation into a single-variable next test, such as changing front brake bias while holding the remaining setup fixed.
@@ -32,7 +32,7 @@ My implementation covers acquisition, analysis, video alignment and numerical mo
 
 ### P1 aprilia GPR150 real-track programme
 
-Nine RaceChrono sessions and 71 timed laps were processed with GPS-quality checks, source/schema comparison, external-GPS reference selection, geographic sector gates, lap-progression tables, T2 summaries, and video-review shortlists. The wider archive also contains VBO exports and multiple onboard-camera files for one session. The public case study exposes the result figures, selected video frames and concrete research questions on gear choice, linked-corner speed, transition losses and controlled pressure measurements.
+Nine RaceChrono sessions and 71 timed laps were processed with GPS-quality checks, source/schema comparison, external-GPS reference selection, geographic sector gates, lap-progression tables, T2 summaries, and video-review shortlists. The wider archive also contains VBO exports and multiple onboard-camera files for one session. The public case includes figures, onboard video, gear comparisons, linked-corner speed and transition losses, with tyre-pressure records alongside the session results.
 
 ### Simulation racing: performance, vehicle state and data integration
 
@@ -48,7 +48,7 @@ The native `.tc` reading, dataset joins, derived analysis and charts are the per
 
 ### Hualong CBR650R practice analysis
 
-The workflow combined RaceChrono, OBD, heart-rate data, action-camera evidence, derived CSV tables, and an Excel analysis workbook. OBD throttle was calibrated from its recorded endpoints; GPS was used for position and speed trends; degraded GPS and merged laps were gated out of precise comparison. This is a concrete example of sensor semantics and data-quality control changing the conclusion.
+The workflow combined RaceChrono, OBD, heart-rate data, action-camera evidence, derived CSV tables, and an Excel analysis workbook. OBD throttle was calibrated from its recorded endpoints; GPS was used for position and speed trends; degraded GPS and merged laps were gated out of precise comparison.
 
 ### Modelling and numerical methods
 

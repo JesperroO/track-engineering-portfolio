@@ -121,13 +121,13 @@ Red path intervals gain time from **L7 to L8**; grey intervals return it. The ad
 
 **L6 → L7:** T2 and its following section gain **0.322 s**, but the rest of the lap returns **0.285 s**, leaving **0.037 s** at the finish. **L7 → L8:** the opening package gains only **0.036 s**; the rest contributes **0.388 s** of the final **0.424 s** improvement.
 
-The strongest final-step contribution is **G20–G40: 0.371 s**. G40–G60 adds **0.175 s**. L8 reaches G70 approximately **0.59 s ahead**, then finishes **0.424 s ahead** after later losses. The map makes the location of the main contribution visible.
+The strongest final-step contribution is **G20–G40: 0.371 s**. G40–G60 adds **0.175 s**. L8 reaches G70 approximately **0.59 s ahead**, then finishes **0.424 s ahead** after later losses.
 
 ![L7 and L8 recorded lines through G20–G40 on the photographed board](../assets/p1/p1-pb-middle-board-lines.png)
 
 ![L7 and L8 lines and controls through G20–G40](../assets/p1/p1-pb-middle-controls.png)
 
-This closer view follows the largest contributing package. Circles, squares and triangles mark G20, G30 and G40. L8 carries more speed at all three gates: **48.6 / 39.2 / 56.9 km/h**, against **47.8 / 38.1 / 54.6 km/h in L7**.
+The following plots compare G20–G40. Circles, squares and triangles mark G20, G30 and G40. L8 carries more speed at all three gates: **48.6 / 39.2 / 56.9 km/h**, against **47.8 / 38.1 / 54.6 km/h in L7**.
 
 The two paths remain close through much of the right-hand arc, while the red trace maintains more throttle after the first opening falls back to partial input. Around 8–10 s from G20, that input accompanies stronger speed recovery and an earlier right-to-left reversal on the elapsed-time axis. The measured section time falls **11.850 → 11.479 s**. This locates a concrete control-and-transition difference within the PB, while retaining line and timing as separate observations.
 

@@ -32,7 +32,7 @@ The R8 result is game-side P18 to P13. Its 105.665 s PB occurs on completed lap 
 
 ## Sector allocation changes the next practice task
 
-The R8 PB is 2.902 s behind the session's fastest 102.763 s lap. The sector differences are **+0.018 / +1.651 / +1.233 s**. That focuses the next practice on S2/S3 while preserving the already close S1. It also separates a local sector success from the remaining whole-lap deficit.
+The R8 PB is 2.902 s behind the session's fastest 102.763 s lap. The sector differences are **+0.018 / +1.651 / +1.233 s**. That focuses the next practice on S2/S3 while preserving the already close S1.
 
 My practice targets are to retain the late-race pace, address recurring damage and cuts, and complete consecutive valid laps in that pace band.
 

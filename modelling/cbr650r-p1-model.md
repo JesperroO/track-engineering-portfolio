@@ -56,7 +56,7 @@ The dry geometry gives **1.208 g**. Thus the upper scenario's requested 1.22 g b
 4. Run forward acceleration and backward braking-feasibility passes until the closed speed profile converges. Integrate `dt = 2 ds / (v_i + v_next)`.
 5. Use lateral control-point pattern search to improve time; recheck the line against the original pavement. The working run uses **30 lateral controls, 180 stations and 181 evaluations**.
 
-The candidate keeps **0.184 m minimum hard-pavement clearance** for the model reference line. The clearance calculation uses the model reference line.
+The candidate keeps **0.184 m minimum hard-pavement clearance** for the model reference line.
 
 ## GPS observation model and scale check
 
@@ -71,7 +71,7 @@ The working candidate's scale is **0.184205 m/pixel**. Its physical polyline is 
 - **Envelope sensitivity:** the nominal 1.15 g scenario gives **57.303 s**; the higher 2.00 g working scenario gives **45.869 s**, with **36.4–142.7 km/h** speed. Each scenario has its own searched path and scale fit.
 - **Gear feasibility:** the nominal candidate's **28.9 km/h** minimum leaves **five stations** without a legal 2nd–4th gear within the retained dyno interval. That identifies a need for lower-rpm data, first gear or a changed path/speed profile.
 - **Finite shifts:** the higher-envelope candidate admits a closed 2nd–4th policy, using second and third gear with **two shifts**. A 0.20 s/shift allowance gives **46.269 s**. The shift allowance is added to the fixed-path timing.
-- **Transient screening:** its equivalent roll-rate proxy peaks at **9.663 rad/s**, exceeding the reduced-model **3.0 rad/s** guardrail. Steering-rate demand peaks at **0.775 rad/s**, below 5.0 rad/s. The roll screen withholds the candidate as a riding line; its maximum occurs at the periodic boundary and needs examination during transient continuation.
+- **Transient screening:** its equivalent roll-rate proxy peaks at **9.663 rad/s**, exceeding the reduced-model **3.0 rad/s** guardrail. Steering-rate demand peaks at **0.775 rad/s**, below 5.0 rad/s. The peak occurs at the periodic boundary; I will inspect that boundary when refining the transient model.
 
 The model gives me a speed profile, legal-gear checks and a list of limiting sections to inspect. The 45.869 s candidate uses the exploratory 2.00 g envelope and requires transient refinement at the failed roll-rate screen.
 

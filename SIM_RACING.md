@@ -49,4 +49,4 @@ The tools are Python, NumPy, Matplotlib, native binary-file parsing, Content Man
 
 ## Acquisition and analysis workflow
 
-The final supporting chapter covers [real-track acquisition, processing and simulator recovery](case_studies/data-acquisition-workflow.md), after the performance cases and modelling work.
+[Acquisition, processing and simulator recovery](case_studies/data-acquisition-workflow.md) describes how I record sessions and recover missing channels.
