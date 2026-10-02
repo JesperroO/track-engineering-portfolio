@@ -52,19 +52,17 @@ The Hualong practice plan assigned a role to each session:
 
 The best comparable lap moved from `47.869 s` to `44.421 s` and then `42.641 s`, but the action-chain score for the selected drive corner was `1/6`, `2/6`, and `0/6` in the comparable S01, S02, and S04 samples. Pace improved while the target action chain remained inconsistent.
 
-This is the engineering loop in practice: calibrate the OBD throttle channel, choose usable laps, identify the one-turn pattern, run the next session, and allow the quality gate to reject a tempting but unsupported conclusion. S03 remains in the archive as a provisional trend because its merged laps and degraded GPS make it unsuitable for precise cross-session inference.
+I calibrated the OBD throttle channel, selected comparable laps and reviewed the target corner between sessions. S03 remains a provisional trend: merged laps and degraded GPS limit precise cross-session comparison.
 
-## P1 aprilia GPR150: separating a real next-session decision from retrospective analysis
+## P1 aprilia GPR150: session progression and review
 
-The September P1 programme contains nine sessions and 71 timed laps. It also demonstrates why an honest portfolio must distinguish a closed loop from a retrospective review.
+The September P1 programme contains nine sessions and 71 timed laps. I rode S04–S07 consecutively and reviewed them afterward.
 
-- After S06, the analysis identified a late-lap continuity pattern: the quickest complete T2 gate was not necessarily the quickest T2-plus-following-right complex.
+- The S06 review identified a late-lap continuity pattern: the quickest complete T2 gate was not necessarily the quickest T2-plus-following-right complex.
 - S07 supplied a repeatable seven-lap band and a faster complete opening complex without requiring the fastest standalone T2 gate.
 - After S07, the documented decision was one more short, controlled session using the existing `56 s` rhythm as the ceiling rather than an immediate personal-best attack.
 - S08 then produced `55.496 s`, but the post-session comparison showed that the gain was distributed: `0.400 s` in the `60–70%` region and `0.243 s` in the final `10%`, while `0.450 s` was returned in the immediately following `70–80%` transition.
 - S09 changed purpose after the displayed lap entered the `58 s` range: it became deliberate right-turn exploration rather than continued personal-best assembly.
-
-I rode S04–S07 consecutively and reviewed them afterward.
 
 ## Silverstone GT1 simulation: from observation to the next controlled test
 
@@ -86,9 +84,9 @@ A separate S1 comparison finds 18.054 s versus 18.677 s, with earlier brake rele
 
 The [three-race comparison](case_studies/paul-ricard-race-consistency.md) places the median/MAD pace band alongside repairs, damage episodes and cut laps. A narrow retained pace band can coexist with a badly interrupted race; a late PB can coexist with invalid following laps. I use the review to target consecutive valid laps at the improved pace.
 
-## What this demonstrates
+## Review tasks
 
-This workflow shows experience with:
+My session reviews cover:
 
 - fast post-session data triage under limited track time;
 - selecting one turn or linked section instead of changing the whole lap at once;
@@ -96,4 +94,4 @@ This workflow shows experience with:
 - holding setup, gear, line, or measurement conditions stable where possible;
 - using video, telemetry, and my riding notes as separate evidence layers;
 - checking the target control sequence alongside lap-time improvement;
-- stopping or downgrading a conclusion when the data quality, synchronization, or experimental control is insufficient.
+- flagging laps affected by poor data quality or synchronization and selecting comparable runs.
