@@ -59,7 +59,7 @@ The final **0.424 s** improvement contains only **0.036 s from the opening packa
 
 ## OBD, control timing and rider-state analysis
 
-**Engineering work:** I synchronized GPS speed with OBD engine speed and throttle, then aligned the comparisons at the corner minimum. Calculated lean adds episode shape and duration; heart-rate windows add a separate view of the rider response.
+**Engineering work:** I synchronized GPS speed with OBD engine speed and throttle, then aligned the comparisons at the corner minimum. Calculated lean adds episode shape and duration; heart-rate windows add a separate view of my heart-rate response.
 
 ![GPS speed with OBD engine recovery and throttle timing](../assets/p1/p1-obd-engine-recovery.png)
 

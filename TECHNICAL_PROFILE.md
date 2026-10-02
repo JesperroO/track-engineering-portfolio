@@ -10,7 +10,7 @@ This portfolio is backed by a working personal motorsport data and vehicle-dynam
 |---|---|---|
 | Real-track acquisition | RaceChrono Pro, external GNSS/GPS, IMU, OBD-II, and onboard cameras | Session logging, lap timing, position and speed trends, control channels, and visual context |
 | Export and inspection | RaceChrono CSV, VBO/Circuit Tools exports, GPX, JSON, and derived CSV tables | Preserve source records, compare schemas and clocks, and build auditable lap and sector summaries |
-| Video workflow | DJI Action 5 Pro material, multi-camera onboard footage, MP4 proxy exports, and OpenCV-based utilities | Extract review frames, inspect line and rider context, and define explicit video-to-telemetry time anchors |
+| Video workflow | DJI Action 5 Pro material, multi-camera onboard footage, MP4 proxy exports, and OpenCV-based utilities | Extract review frames, inspect my line and posture, and define explicit video-to-telemetry time anchors |
 | Simulation acquisition and recovery | Assetto Corsa / ACC, Content Manager, native `.tc`, direct CSV capture, Live Telemetry 1.8.5, upstream `acreplay-parser` 0.3.0 and archived lapstat | Combine accepted timing, pedal traces, wheel loading, tyre state, damage/traffic and server speed references |
 | Analysis software | Python 3.10+, uv, NumPy, Matplotlib, OpenCV, and pytest | Build repeatable ingestion, filtering, derived-channel, plotting, media, and regression-test workflows |
 | Vehicle and lap-time modelling | CasADi, IPOPT/Fatrop-backed nonlinear optimisation, custom Python dynamics modules | Implement GGV envelopes, fixed-line and free-path models, QSS and reduced-transient models, hybrid OCPs, gear policies, and solver diagnostics |

@@ -50,7 +50,7 @@ The deceleration display uses a five-sample moving mean on the 0.05 s grid. Its 
 
 S04–S07 were ridden consecutively without interim telemetry debriefs. Their changes are retrospective observations. The generic pit-room review workflow is documented separately in the [acquisition chapter](data-acquisition-workflow.md).
 
-Rider feedback supplies the progressively moved physical braking reference, deliberate third-gear trial, tyre-pressure observations and S09 exercise objective. Gear is rider-confirmed or inferred from RPM/speed; transient ratios also depend on clutch state and cross-channel timing.
+My riding notes document how I progressively moved the physical braking reference, tried third gear, recorded tyre pressures and chose the S09 exercise objective. Gear labels use my recorded gear choices or RPM/speed inference; transient ratios also depend on clutch state and cross-channel timing.
 
 The broader previous-day 60.022 s reference gives approximately 1.50 s improvement across the T2/downstream package (15.692 → 14.192 s). This spans acquisition schemas; the same-programme comparison carries the main result.
 

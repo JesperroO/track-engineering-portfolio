@@ -35,7 +35,7 @@ The plan explicitly rejected using a larger peak lean angle as the task. T2 or T
 
 ### What the next data showed
 
-The later video review was time-aligned to TrackAddict using a visible camera timestamp and a fixed `17.0 s` offset. In the usable rear-camera segment, several laps showed a continuous `40–46°` roll-in and roll-out rather than a sudden extra input. The focused session also produced two approximately `59 s` laps and a later `47°` right-turn frame. The evidence confirmed that the rider could repeat the posture and vehicle motion, while leaving the exact first-throttle timing open because the available GPS was too slow and the camera coverage did not show every control channel.
+I aligned the later video review to TrackAddict using a visible camera timestamp and a fixed `17.0 s` offset. In the usable rear-camera segment, several laps showed a continuous `40–46°` roll-in and roll-out rather than a sudden extra input. The focused session also produced two approximately `59 s` laps and a later `47°` right-turn frame. The evidence confirmed that I could repeat the posture and vehicle motion, while leaving the exact first-throttle timing open because the available GPS was too slow and the camera coverage did not show every control channel.
 
 The full-day sector comparison then showed improvement in all four coarse geographic sections: approximately `1 s`, `1 s`, `1 s`, and `2 s`, for a `1:03.994 → 58.998 s` representative-lap change. That made the result a control-and-rhythm improvement across the lap, not a claim that one turn alone explained the gain.
 
@@ -64,7 +64,7 @@ The September P1 programme contains nine sessions and 71 timed laps. It also dem
 - S08 then produced `55.496 s`, but the post-session comparison showed that the gain was distributed: `0.400 s` in the `60–70%` region and `0.243 s` in the final `10%`, while `0.450 s` was returned in the immediately following `70–80%` transition.
 - S09 changed purpose after the displayed lap entered the `58 s` range: it became deliberate right-turn exploration rather than continued personal-best assembly.
 
-The archive explicitly records that the rider did not read interim analysis between S04 and S07. Those sessions are therefore evidence of retrospective diagnosis and session-level decision control, not proof that a particular analysis caused each intervening lap improvement. That distinction is part of the method.
+I did not read interim analysis between S04 and S07. I analysed those sessions retrospectively, so their lap improvements cannot be attributed to an interim telemetry review. That distinction is part of the method.
 
 ## Silverstone GT1 simulation: from observation to the next controlled test
 
@@ -92,8 +92,8 @@ This workflow shows experience with:
 
 - fast post-session data triage under limited track time;
 - selecting one turn or linked section instead of changing the whole lap at once;
-- translating a data trace into a rider-readable instruction;
+- translating a data trace into a clear riding instruction;
 - holding setup, gear, line, or measurement conditions stable where possible;
-- using video, telemetry, and rider report as separate evidence layers;
+- using video, telemetry, and my riding notes as separate evidence layers;
 - recognizing when a change improved a lap but did not validate the intended mechanism;
 - stopping or downgrading a conclusion when the data quality, synchronization, or experimental control is insufficient.

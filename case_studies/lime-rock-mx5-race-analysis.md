@@ -8,21 +8,21 @@ I drove the race and analysed the session afterward. The official finish was P5,
 
 ## Recovering the usable dataset
 
-High-rate live logging was disabled before this race because of observed CPU spikes. The local replay buffer retained only the tail, so I obtained a shared complete replay and used upstream `acreplay-parser` 0.3.0 to reconstruct the driver's record: **56,969 frames at 30 ms intervals, 122 columns**. I used the other cars' tracks when examining traffic and comparing race pace.
+High-rate live logging was disabled before this race because of observed CPU spikes. The local replay buffer retained only the tail, so I obtained a shared complete replay and used upstream `acreplay-parser` 0.3.0 to reconstruct my race record: **56,969 frames at 30 ms intervals, 122 columns**. I used the other cars' tracks when examining traffic and comparing race pace.
 
 I joined that reconstruction with CM/AC qualifying results, official result snapshots and the native AC `.tc` best-lap file. Different sources answer different questions: the result snapshot gives accepted times, the replay supplies the race timeline, and `.tc` preserves a continuous normalized brake-input trace for the accepted best lap.
 
 ## Qualifying: usable laps before more speed
 
-The result file contains nine driver entries, including the first/out-lap entry: three are valid and six invalid. After excluding the first entry, **3/8 flying attempts were valid**. The qualifying PB was 58.809 s, 1.856 s behind pole.
+My qualifying record contains nine lap entries, including the first/out-lap entry: three are valid and six invalid. After excluding the first entry, **3/8 flying attempts were valid**. My qualifying PB was 58.809 s, 1.856 s behind pole.
 
-| Sector | Driver PB | Pole PB | Gap |
+| Sector | My PB | Pole PB | Gap |
 |---|---:|---:|---:|
 | S1 | 27.228 s | 26.105 s | +1.123 s |
 | S2 | 18.782 s | 18.351 s | +0.431 s |
 | S3 | 12.799 s | 12.497 s | +0.302 s |
 
-S1 explains **60.5%** of the qualifying gap. Combining only the driver's best valid sectors gives 58.613 s, a 0.196 s theoretical gain. That distinguishes two tasks: create more valid attempts and improve the opening sector, rather than treating sector assembly as the main route to a large gain.
+S1 explains **60.5%** of the qualifying gap. Combining my best valid sectors gives 58.613 s, a 0.196 s theoretical gain. That distinguishes two tasks: create more valid attempts and improve the opening sector, rather than treating sector assembly as the main route to a large gain.
 
 ![Qualifying gap and race lap timeline](../assets/sim/lime-rock-performance.png)
 
@@ -43,7 +43,7 @@ I parsed the native best-lap record to recover the 57.784 s lap's speed, throttl
 
 ![Native best-lap pedal trace](../assets/sim/lime-rock-pedal-trace.png)
 
-The shared multiplayer replay stores this driver's brake channel as only 0/255, so it can support brake-on timing but not the continuous release shape. The native best-lap file supplies that missing input shape. Normalized pedal input is distinct from hydraulic pressure or wheel brake force.
+The shared multiplayer replay stores my brake channel as only 0/255, so it can support brake-on timing but not the continuous release shape. The native best-lap file supplies that missing input shape. Normalized pedal input is distinct from hydraulic pressure or wheel brake force.
 
 ## Follow-up work
 

@@ -2,7 +2,7 @@
 
 [Project showcase](p1-gpr150-telemetry.md) · [Portfolio contents](../README.md)
 
-**September 2026 · rider, data acquisition and analysis**
+**September 2026 · my riding, data acquisition and analysis**
 
 I rode and logged repeated P1 practice sessions, then joined the recorded lines, OBD channels and onboard footage to examine how the driving developed. T1 is the approach kink; T2 is the main left after the straight. This case follows the braking reference, corner-exit control, linked-corner trade-offs and the final sequence of personal bests.
 
@@ -61,7 +61,7 @@ A second pair illustrates the distinction: **S04 L7 → S06 L7** has later decel
 
 Each point is one timed lap; session boundaries preserve the riding order. Position is projected onto the common approach axis, with **S08 L8 onset at 0 m**. Pale bars show how the detected point changes when the deceleration threshold varies from -0.10 to -0.20 G.
 
-The clearest reversal occurs within S07. Its first five laps have median onset **+9.9 m**, while the final four return to **+0.6 m**. S08 stays near that returned region. The sequence records downstream shifts and returns within the practice day; rider feedback supplies the reasons for individual adjustments.
+The clearest reversal occurs within S07. Its first five laps have median onset **+9.9 m**, while the final four return to **+0.6 m**. S08 stays near that returned region. The sequence records downstream shifts and returns within the practice day; my riding notes supply the reasons for individual adjustments.
 
 The logged full position range narrows from **22.3 m in S07** to **2.8 m in S08**. The middle-half ranges narrow from **9.0 m** to **1.1 m**. Varying the event threshold preserves the broad difference between the sessions. The result describes relative consistency in the recorded onset position.
 
@@ -173,7 +173,7 @@ The [aligned S04 excerpt](#t2-onboard-example-developing-a-repeatable-braking-re
 
 All three laps align at their T2 minimum-speed event. S02 L2 and S08 L8 reach similar minimum engine speeds, approximately **6,383 / 6,356 rpm**, then exit at **8,688 / 9,346 rpm**. The throttle sequence supplies the context: near-closed time in T2 falls **3.75 → 1.50 s**, and stable 40% opening moves **+1.50 → +0.10 s** after minimum speed.
 
-S07 L5 has a different engine-speed recovery, exiting at approximately **7,106 rpm** despite a broadly comparable GPS exit speed. Reading RPM and throttle alongside speed exposes drivetrain behaviour that speed alone conceals. The archive contains rider-confirmed gear trials and speed/RPM groupings; transient ratio changes also reflect clutch state and channel timing.
+S07 L5 has a different engine-speed recovery, exiting at approximately **7,106 rpm** despite a broadly comparable GPS exit speed. Reading RPM and throttle alongside speed exposes drivetrain behaviour that speed alone conceals. I recorded my gear-choice trials alongside the speed/RPM groupings; transient ratio changes also reflect clutch state and channel timing.
 
 The PB's early opening is a selected-lap result. S08's median stable-40% delay is **1.20 s**, showing a meaningful gap between the best execution and the session's usual sequence.
 
@@ -207,7 +207,7 @@ Before the September run, I asked whether using third gear in T2 could avoid an 
 
 Both traces start at the common T2 entry plane. Squares mark T2 exit and the traces continue to the downstream plane. This keeps the drive phase and the following slowdown visible together.
 
-The retained geographic-gate results for **S01 L4 / S02 L2** give **0.081 s in T2**, **0.771 s downstream** and **0.851 s across the package**. Rider feedback confirms third-gear running. The pair shows the result of the complete driving sequence; RPM/throttle add drivetrain context, with line and entry changes also present.
+The retained geographic-gate results for **S01 L4 / S02 L2** give **0.081 s in T2**, **0.771 s downstream** and **0.851 s across the package**. I rode T2 in third gear during the trial. The pair shows the result of the complete driving sequence; RPM/throttle add drivetrain context, with line and entry changes also present.
 
 ### Same-session contrast: entry speed versus linked-corner carry
 
@@ -221,7 +221,7 @@ The fixed T2-plus-downstream package improves approximately **0.540 s**; full la
 
 ### Tyre-pressure context
 
-The rider record includes cold pressures of **1.75 / 1.70 bar**, front/rear, and a later front reading of **1.84 bar**. A compromised rear hot measurement was followed by a reset to **1.80 bar hot**. These values provide session context; the programme does not isolate a pressure effect on lap time.
+I recorded cold pressures of **1.75 / 1.70 bar**, front/rear, and a later front reading of **1.84 bar**. After a compromised rear hot measurement, I reset the rear to **1.80 bar hot**. These values provide session context; the programme does not isolate a pressure effect on lap time.
 
 ## Video frame gallery
 
