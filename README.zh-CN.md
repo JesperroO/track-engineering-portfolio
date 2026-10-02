@@ -13,7 +13,7 @@
 1. **[aprilia GPR150 / P1 实车数据分析](zh/aprilia-gpr150-p1.md)**：九节练习、71 个计时圈；刹车参照的演变、开油时机、连续弯线路与圈速收益。
 2. **[模拟赛车分析与测试](zh/sim-racing.md)**：MX-5、F4、GT1；回放与遥测整合、轮载与抱死分析、比赛损失和设定测试。
 3. **[车辆动力学与最小圈速建模](zh/vehicle-modelling.md)**：CBR650R 的台架曲线、车辆参数、赛道几何、附着情景、线路与速度计算。
-4. **[CBR650R / 华龙练习分析](case_studies/hualong-cbr650r.md)**：四节实车练习；油门归一化、可比圈筛选与出弯动作复盘。英文案例。
+4. **[CBR650R / 赛道日练习分析](case_studies/hualong-cbr650r.md)**：四节实车练习；油门归一化、可比圈筛选与出弯动作复盘。英文案例。
 5. **[实车采集与现场工作流](case_studies/data-acquisition-workflow.md)**：RaceChrono、GPS／IMU／胸部心率带、BLE OBD、头盔影像和 Circuit Tools 3。英文说明。
 
 ## 我的工作
