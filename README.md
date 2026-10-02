@@ -4,7 +4,7 @@ I ride, acquire and analyse motorsport data, and build software for vehicle simu
 
 ## Contents
 
-1. **[aprilia GPR150 / P1](case_studies/p1-gpr150-telemetry.md)** — personally acquired real-track data; nine sessions, 71 timed laps and a 60.022 → 55.496 s reference progression.
+1. **[aprilia GPR150 / P1](case_studies/p1-gpr150-telemetry.md)** — independent acquisition and analysis; spatial event comparison, linked-corner diagnosis and lap-time gain attribution across nine sessions and 71 timed laps.
    - [T2 lines, throttle opening and braking-reference development](case_studies/p1-gpr150-telemetry.md#t2-lines-control-and-reference-development)
    - [OBD, heart rate and lean](case_studies/p1-gpr150-telemetry.md#obd-control-timing-and-rider-state-analysis)
    - [Linked-corner trade-offs and consecutive PBs](case_studies/p1-gpr150-telemetry.md#whole-lap-performance-studies)
@@ -21,7 +21,7 @@ I ride, acquire and analyse motorsport data, and build software for vehicle simu
 
 ![aprilia GPR150 at P1 — field photographs](assets/p1/p1-field-photo-panels.png)
 
-[Open the complete P1 case](case_studies/p1-gpr150-telemetry.md) for recorded line comparisons, control traces, aligned onboard video and the wider session analysis.
+[Open the P1 project showcase](case_studies/p1-gpr150-telemetry.md) for engineering contributions and selected evidence, or go directly to the [detailed analysis](case_studies/p1-gpr150-analysis.md).
 
 ## Engineering contribution
 
