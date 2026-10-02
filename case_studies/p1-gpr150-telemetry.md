@@ -7,7 +7,7 @@
 
 **Independent project · September 2026 · riding / acquisition / analysis**
 
-P1 refers to P1 国际赛车场, the circuit used for these sessions.
+P1 refers to P1 International Circuit, the circuit used for these sessions.
 
 I connected RaceChrono to GPS, OBD and a heart-rate strap, aligned onboard video, and compared my recorded lines and control inputs across sessions.
 
