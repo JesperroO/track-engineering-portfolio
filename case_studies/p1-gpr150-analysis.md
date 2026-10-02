@@ -81,7 +81,7 @@ GNSS supplies position and speed; OBD supplies throttle and engine speed. Decele
 
 ![P1 line comparison and physical braking reference](../assets/p1/p1-t2-board-reference.png)
 
-The cyan square marks S08 L8's deceleration onset, at the raised-kerb reference I eventually adopted; the orange square marks S02 L2 farther upstream. The same schematic transform places both recorded paths on the existing P1 layout. The video is S04 L4, while the map compares S02 L2 and S08 L8.
+The red square marks S08 L8's deceleration onset, at the raised-kerb reference I eventually adopted; the grey square marks S02 L2 farther upstream. The same schematic transform places both recorded paths on the existing P1 layout. The video is S04 L4, while the map compares S02 L2 and S08 L8.
 
 The overlay joins GNSS speed, OBD RPM/throttle and calculated lean/longitudinal G to the recovered VBO video clock. L4 begins approximately **2.21 s into the excerpt**. Engine sound is retained and the HLG source is converted to SDR for playback. [Alignment details](p1-gpr150-methods.md#video-and-map-alignment).
 
