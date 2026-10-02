@@ -7,6 +7,8 @@
 
 **Independent project · September 2026 · riding / acquisition / analysis**
 
+P1 refers to P1 国际赛车场, the circuit used for these sessions.
+
 I built a budget-conscious telemetry workflow for my own track riding, then combined recorded lines, OBD channels, heart rate and onboard video to explain performance differences. My work covered sensor integration, data preparation, event detection, geographic comparisons and the presentation of evidence.
 
 The archive covers **nine sessions and 71 timed laps**. I trace changes from the braking reference through lean and throttle timing to the speed and time carried into the next corner.
