@@ -13,7 +13,7 @@ I use this toolchain to acquire track data, analyse driving and vehicle response
 | Video workflow | DJI Action 5 Pro material, multi-camera onboard footage, MP4 proxy exports, and OpenCV-based utilities | Extract review frames, inspect my line and posture, and define explicit video-to-telemetry time anchors |
 | Simulation acquisition and recovery | Assetto Corsa / ACC, Content Manager, native `.tc`, direct CSV capture, Live Telemetry 1.8.5, upstream `acreplay-parser` 0.3.0 and archived lapstat | Combine accepted timing, pedal traces, wheel loading, tyre state, damage/traffic and server speed references |
 | Analysis software | Python 3.10+, uv, NumPy, Matplotlib, OpenCV, and pytest | Build repeatable ingestion, filtering, derived-channel, plotting, media, and regression-test workflows |
-| Vehicle and lap-time modelling | CasADi, IPOPT/Fatrop-backed nonlinear optimisation, custom Python dynamics modules | Implement GGV envelopes, fixed-line and free-path models, QSS and reduced-transient models, hybrid OCPs, gear policies, and solver diagnostics |
+| Vehicle and lap-time modelling | CasADi, IPOPT/Fatrop-backed nonlinear optimisation, custom Python dynamics modules | Calculate drive/brake limits, fixed-line speed profiles, path optimisation, gear selection and constraint checks |
 | Supporting tools | Excel workbooks and Open-Meteo historical weather data | Review session summaries, preserve hand-checkable tables, and separate measured conditions from reconstructed context |
 
 ## What I have built
@@ -32,7 +32,7 @@ My implementation covers acquisition, analysis, video alignment and numerical mo
 
 ### P1 aprilia GPR150 real-track programme
 
-Nine RaceChrono sessions and 71 timed laps were processed with GPS-quality checks, source/schema comparison, external-GPS reference selection, geographic sector gates, lap-progression tables, T2 summaries, and video-review shortlists. The wider archive also contains VBO exports and multiple onboard-camera files for one session. The public case includes figures, onboard video, gear comparisons, linked-corner speed and transition losses, with tyre-pressure records alongside the session results.
+I used fixed geographic gates to compare sessions with different GPS sources, then placed recorded lines and braking/throttle events on my photographed circuit board. The selected T2 pair shows deceleration beginning 12.3 m later and sustained 40% throttle moving from 1.50 to 0.10 s after minimum speed. The onboard excerpt uses the VBO video clock to align footage and telemetry.
 
 ### Simulation racing: performance, vehicle state and data integration
 
@@ -40,8 +40,8 @@ The [simulation overview](SIM_RACING.md) covers a multi-car workflow and dedicat
 
 - **MX-5 race analysis:** integrate official/game results, full shared replay and native best-lap data; allocate the qualifying gap, quantify slow-lap losses and recover an analog pedal-input trace when replay braking is binary.
 - **Race consistency:** compare three events using a common median/MAD rule, retain excluded loss laps, and join damage episodes, repairs and cuts to the timeline.
-- **F4 development:** match a 78,431-frame, 30 ms replay export to CM timing, compare brake-release and sector-exit behaviour, inspect low wheel-load phases, use a server speed reference and keep setup variants distinct.
-- **GT1 practice:** analyse 50 Hz / 64,544 samples with brake bias, four wheel speeds, compound/validity checks, asymmetric tyre heat/pressure, fuel and late-lap loss allocation.
+- **F4 development:** match replay lap transitions to CM timing, compare brake-release and sector-exit behaviour, inspect low wheel-load phases, use a server speed reference and keep setup variants distinct.
+- **GT1 practice:** compare four wheel speeds against brake input and vehicle speed, locate front lockup, and use tyre state and the saved setup to define a brake-bias test.
 - **Acquisition checks:** inspect incomplete attempts, packet repetition and session-time resets; reject stale car/track capture labels through independent session identity.
 
 The native `.tc` reading, dataset joins, derived analysis and charts are the personal implementation work. Replay decoding and high-rate capture use credited upstream tools.
@@ -54,7 +54,6 @@ The workflow combined RaceChrono, OBD, heart-rate data, action-camera evidence, 
 
 The [CBR650R / P1 worked model](modelling/cbr650r-p1-model.md) publishes the measured-data inputs, dyno curve, mass/geometry/gearbox values, adhesion scenarios, GPS scale-fit residual, calculated speed/gear policy and failed rate screen. The [selected runnable implementation](modelling/code/README.md) reproduces the archived 180-station fixed-line speed profile and 45.8689 s conditional QSS timing.
 
-The vehicle project also includes reduced-transient and structured hybrid motorcycle OCP experiments.
 
 ## Acquisition and analysis workflow
 

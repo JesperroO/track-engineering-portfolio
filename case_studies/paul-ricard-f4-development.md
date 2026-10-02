@@ -8,7 +8,7 @@ This development work combines repeated driving, replay-derived control analysis
 
 ## Match the trace to the session
 
-The inspected replay export contains **78,431 frames at 30 ms**. I matched its valid-lap transition times against CM session `260831-235626`. Seven valid transitions in the retained export match exactly at the stored millisecond precision.
+I sampled the replay at **30 ms intervals** and matched its valid-lap transition times against CM session `260831-235626`. Seven valid transitions in the retained export match exactly at the stored millisecond precision.
 
 The matched practice trace supplies controls, speed, four-wheel loading and damage channels.
 

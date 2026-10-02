@@ -8,7 +8,7 @@ I drive, acquire and analyse motorsport data, and build software for telemetry p
 
 | Case | Evidence | Engineering focus |
 |---|---|---|
-| [P1 aprilia GPR150](case_studies/p1-gpr150-telemetry.md) | 71 timed laps in nine sessions; 60.022 to 55.496 s reference progression; selected actual onboard frames | OBD throttle/RPM, T2 deceleration proxies, HR response, lean duration and schematic-map line comparison |
+| [P1 aprilia GPR150](case_studies/p1-gpr150-telemetry.md) | 71 timed laps in nine sessions; 60.022 to 55.496 s reference progression; synchronized T2 onboard video | OBD throttle/RPM, T2 deceleration proxies, HR response, lean duration and schematic-map line comparison |
 | [Session feedback loop](TRACKSIDE_FEEDBACK_LOOP.md) | Dated reviews and next-run decisions | Translate a diagnosis into one controlled practice task and inspect the response |
 
 ## Simulation cases
@@ -16,8 +16,8 @@ I drive, acquire and analyse motorsport data, and build software for telemetry p
 The [simulation overview](SIM_RACING.md) links the following cases:
 
 - [MX-5 / Lime Rock](case_studies/lime-rock-mx5-race-analysis.md): P16 to official P5; accepted 57.784 s race PB; qualifying S1 accounts for 60.5% of the pole gap; seven major slow intervals cost 28.50 s against the planning baseline.
-- [F4 / Paul Ricard](case_studies/paul-ricard-f4-development.md): match a 78,431-frame replay export to actual CM laps, compare a 0.623 s S1 gain through brake release and exit speed, and distinguish wheel-load observations from setup-test results.
-- [GT1 / Silverstone](case_studies/silverstone-gt1-sim.md): 50 Hz / 64,544 samples; valid-medium progression, wheel-speed lockup, pressure/temperature asymmetry, compound validity and fuel context.
+- [F4 / Paul Ricard](case_studies/paul-ricard-f4-development.md): match replay lap transitions to CM timing, compare a 0.623 s S1 gain through brake release and exit speed, and distinguish wheel-load observations from setup-test results.
+- [GT1 / Silverstone](case_studies/silverstone-gt1-sim.md): valid-medium laps improve from 133.739 to 127.571 s; right-front lockup at 90.15–90.71% lap progress informs a proposed brake-bias test.
 
 - [Three-race comparison](case_studies/paul-ricard-race-consistency.md): compare representative pace, incident recovery, late-race gains and cut-lap patterns.
 

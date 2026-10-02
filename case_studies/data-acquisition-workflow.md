@@ -76,7 +76,7 @@ For simulator sessions, I combine accepted lap records, native best-lap files, c
 
 ### Recovering an event after live logging was unavailable
 
-For the MX-5 Lime Rock race, I combined a shared complete replay with a local tail buffer, official timing and native best-lap data. The 56,969-frame reconstruction restored the lap/traffic/damage timeline. When its brake channel proved binary, the `.tc` reader supplied the continuous accepted-PB input trace.
+For the MX-5 Lime Rock race, I combined a shared complete replay with a local tail buffer, official timing and native best-lap data. The reconstruction restored the full lap, traffic and damage timeline. When its brake channel proved binary, the `.tc` reader supplied the continuous accepted-PB input trace.
 
 The binary-reader work locates the native header, accepted lap time and sample records, then exports speed, track progress, pedals and gear to analysis tables and plots. The upstream replay parser is credited separately; my work is the source integration, timing reconciliation and analysis built around it.
 
@@ -88,7 +88,7 @@ The preserved direct-capture file contains **152,189 polling rows**, four sessio
 
 ### Preventing silent session contamination
 
-For F4, the 78,431-frame, 30 ms replay export is matched against CM valid-lap transitions. For Silverstone, a later incorrectly labelled telemetry filename is rejected after CM identifies the actual Macau/Evo session. These checks prevent comparing different sessions under the same apparent car/track label.
+For F4, I match replay lap transitions against CM valid-lap times. For Silverstone, a later incorrectly labelled telemetry filename is rejected after CM identifies the actual Macau/Evo session. These checks prevent comparing different sessions under the same apparent car/track label.
 
 ### Engineering outputs
 

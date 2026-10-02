@@ -83,15 +83,3 @@ A separate S1 comparison finds 18.054 s versus 18.677 s, with earlier brake rele
 ## Race review: preserve representative pace and the disruption timeline
 
 The [three-race comparison](case_studies/paul-ricard-race-consistency.md) places the median/MAD pace band alongside repairs, damage episodes and cut laps. R7's retained laps have a narrow pace band, while two repairs dominate its recovery losses. R8 sets a late PB followed by three cut laps. I use these timelines to choose practice targets for consecutive valid laps.
-
-## Review tasks
-
-My session reviews cover:
-
-- fast post-session data triage under limited track time;
-- selecting one turn or linked section instead of changing the whole lap at once;
-- translating a data trace into a clear riding instruction;
-- holding setup, gear, line, or measurement conditions stable where possible;
-- comparing video, telemetry and my riding notes;
-- checking the target control sequence alongside lap-time improvement;
-- flagging laps affected by poor data quality or synchronization and selecting comparable runs.

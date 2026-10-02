@@ -4,7 +4,7 @@
 
 **2026-09-12 · Assetto Corsa · RSS GT Shadow V8 · Silverstone GP OSRW**
 
-I drove and analysed a prequalification practice programme, combining CM laps and validity flags, the saved setup and **50 Hz Live Telemetry with 64,544 samples**. The work covers driving performance, brake/tyre behaviour and the next setup test.
+I drove and analysed a prequalification practice programme, combining CM laps and validity flags, the saved setup and **50 Hz Live Telemetry**. The work covers driving performance, brake/tyre behaviour and the next setup test.
 
 ## Valid laps and sector allocation
 
@@ -40,7 +40,7 @@ The almost unchanged maximum speed directs attention to corner execution and thr
 
 The wheel-speed/brake traces show front-wheel lockup signals around Village, Becketts and Vale, especially at the right front. The inspected baseline has no ABS, 61% front brake bias and 100% configured brake power.
 
-That turns a general braking complaint into a concrete test: change front bias from **61.0% to 60.5%**, hold the rest of the setup fixed, then compare wheel-speed drops, brake release, exit speed and valid-lap consistency in the same zones. Status: proposed test.
+The proposed test changes front bias from **61.0% to 60.5%**, with the rest of the setup fixed. I will compare wheel-speed drops, brake release, exit speed and consecutive valid laps in the same zones.
 
 ## Tyre and compound management
 
@@ -73,7 +73,7 @@ The visible right-front collapse occurs at **90.15–90.71% progress**: its angu
 
 I examine four-wheel angular speed alongside vehicle speed, brake input, steering, wheel load and the saved setup. In a braking window, an abrupt front-wheel speed drop relative to the car and the other wheels supports a lockup diagnosis. I distinguish it from a sustained left/right difference while turning, and use load information to identify a lightly supported wheel. Brake release and wheel-speed recovery show whether the event persists into turn-in.
 
-For this session, the repeated front-wheel events at **Village, Becketts and Vale**, especially at the right front, support two concrete actions:
+For this session, the repeated front-wheel events at **Village, Becketts and Vale**, especially at the right front, inform two follow-up steps:
 
 - **Driving:** compare peak brake input and release through turn-in, then assess the exit and the next acceleration segment. Compare entry gain with time carried through the exit and next acceleration segment.
 - **Setup:** propose **front brake bias 61.0% → 60.5%**, keeping **100% brake power, medium tyres and the other settings** fixed. Compare recurrence/duration of front-wheel drops, any new rear instability, sector exit speed and consecutive valid laps. The baseline runs without ABS. Status: proposed test.

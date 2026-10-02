@@ -8,7 +8,7 @@ I drove the race and analysed the session afterward. The official finish was P5,
 
 ## Recovering the usable dataset
 
-High-rate live logging was disabled before this race because of observed CPU spikes. The local replay buffer retained only the tail, so I obtained a shared complete replay and used upstream `acreplay-parser` 0.3.0 to reconstruct my race record: **56,969 frames at 30 ms intervals, 122 columns**. I used the other cars' tracks when examining traffic and comparing race pace.
+High-rate live logging was disabled before this race because of observed CPU spikes. The local replay buffer retained only the tail, so I obtained a shared complete replay and used upstream `acreplay-parser` 0.3.0 to reconstruct the full race timeline at 30 ms intervals. I used the other cars' tracks when examining traffic and comparing race pace.
 
 I joined that reconstruction with CM/AC qualifying results, official result snapshots and the native AC `.tc` best-lap file. Different sources answer different questions: the result snapshot gives accepted times, the replay supplies the race timeline, and `.tc` preserves a continuous normalized brake-input trace for the accepted best lap.
 

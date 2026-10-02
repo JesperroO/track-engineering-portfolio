@@ -11,7 +11,7 @@ The figures below use the retained session records. The table identifies each so
 | `f4-server-reference.png` | Archived lapstat speed-distance arrays inspected during the F4 preparation session | Plot personal 90.814 s and reference 86.871 s speed traces; highlight 3.30-3.50 km for further examination |
 | `silverstone-sectors.png` | CM session `260912-205309` | Select the three valid medium-tyre laps; compare recorded S1/S2/S3 |
 
-`evidence-summary.json` stores the aggregate tables, selected lap timings and server speed-distance comparison. The practice-file inventory was checked on 2026-10-01.
+`evidence-summary.json` stores the aggregate tables, selected lap timings and server speed-distance comparison.
 
 ## Cross-checks
 
