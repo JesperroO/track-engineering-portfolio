@@ -44,7 +44,7 @@ The [simulation overview](SIM_RACING.md) covers a multi-car workflow and dedicat
 - **GT1 practice:** analyse 50 Hz / 64,544 samples with brake bias, four wheel speeds, compound/validity checks, asymmetric tyre heat/pressure, fuel and late-lap loss allocation.
 - **Acquisition checks:** inspect incomplete attempts, packet repetition and session-time resets; reject stale car/track capture labels through independent session identity.
 
-The native `.tc` reading, dataset joins, derived analysis and charts are the personal implementation work. Replay decoding and high-rate capture use credited upstream tools. The wider local practice inventory has 331 saved per-lap CSV exports across cup, TCR, road-car and kart combinations; the inventory includes out-laps and incomplete attempts.
+The native `.tc` reading, dataset joins, derived analysis and charts are the personal implementation work. Replay decoding and high-rate capture use credited upstream tools.
 
 ### Hualong CBR650R practice analysis
 

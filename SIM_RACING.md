@@ -2,7 +2,7 @@
 
 [Portfolio contents](README.md) · [中文概述](zh/sim-racing.md)
 
-I drive the sessions and carry out the data preparation, analysis and follow-up work. The simulation archive covers rear-wheel-drive cup cars, front-wheel-drive touring cars, F4, GT1 and GT3. It includes formal online races, practice, native best-lap records, replay reconstruction and continuous telemetry capture.
+I drive the sessions and carry out the data preparation, analysis and follow-up work. My simulation work spans cup cars, TCR, F4 and GT cars. The selected cases cover race review, braking, wheel-load analysis and setup testing.
 
 I locate time losses, inspect the control and vehicle-state traces, then select a driving exercise or setup test for the next run.
 
@@ -18,26 +18,6 @@ I locate time losses, inspect the control and vehicle-state traces, then select 
 ![F4 brake-release comparison](assets/sim/f4-s1-release.png)
 
 L28 gains 0.623 s in S1 through earlier brake release and a stronger exit. Its complete lap is slower than L15, so I selected that opening sequence for further practice within a clean lap.
-
-## Practice breadth
-
-The local per-lap export archive currently contains **331 CSV files**, including a separately recovered reference export. The ordinary export groups include:
-
-| Car / track combination | Saved export files |
-|---|---:|
-| MX-5 / Lime Rock | 169 |
-| Hyundai Elantra N TCR / Zhejiang | 30 |
-| Audi RS3 LMS TCR / Zhejiang | 15 |
-| Honda Civic TCR / Zhejiang | 4 |
-| Lotus Elise SC / Zhejiang | 13 |
-| Lynk & Co 03 TCR / Brands Hatch Indy | 14 |
-| Audi RS3 LMS TCR / Brands Hatch Indy | 11 |
-| MX-5 / Brands Hatch Indy | 21 |
-| Toyota GR86 Cup / Tsukuba | 28 |
-| Lotus Exige S / Monza | 24 |
-| LO206 kart / Conghua | 1 |
-
-The file inventory was checked on 2026-10-01 and includes out-laps, aborted runs and resets. The case studies above use inspected lap selections.
 
 ## Working outputs
 
