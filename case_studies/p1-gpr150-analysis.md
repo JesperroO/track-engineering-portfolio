@@ -113,7 +113,7 @@ S09's deliberate exercise sharpens the same contrast: L10 takes **5.702 s** thro
 
 ![Location of final PB gains on the photographed P1 board](../assets/p1/p1-pb-board-gains.png)
 
-Cyan solid intervals gain time; amber dashed intervals return time. The quantitative chart below uses red and grey for the same interval results.
+Red solid intervals gain time; grey dashed intervals return time. The quantitative chart below uses the same colours.
 
 ![Final PB gains placed on the circuit](../assets/p1/p1-pb-track-gains.png)
 
