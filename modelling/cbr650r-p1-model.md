@@ -25,7 +25,7 @@ Camera display observations around 42–47° supply achieved-demand anchors: a l
 
 ![Vehicle-specific rear-wheel power curve](../assets/modelling/cbr650r-wheel-power.png)
 
-The curve contains eleven retained points. At each road speed, I calculate rpm in each legal gear, interpolate wheel power and select the best available gear. Because this is already rear-wheel power, transmission efficiency is not deducted again. The [input contract](data/cbr650r-inputs.json) contains the actual values used by the published code.
+The curve contains eleven retained points. At each road speed, I calculate rpm in each legal gear, interpolate wheel power and select the best available gear. The interpolated rear-wheel power feeds directly into the acceleration ceiling. The [input contract](data/cbr650r-inputs.json) contains the actual values used by the published code.
 
 ## What “given adhesion assumptions” means
 
@@ -38,7 +38,7 @@ I construct **separate lateral, braking and rear-drive ceilings**:
 | Nominal dry extrapolation | 1.15 g | 1.12 g | 1.10 g | 1.05 | 260.25 kg |
 | Upper dry extrapolation | 1.22 g | 1.22 g | 1.15 g | 1.05 | 260.25 kg |
 
-The archived 0.846 g input was calculated from a Road 6 GT wet straight-braking test, `100 km/h → 0 in 46.5 m`, using `v²/(2s)`. It is used as a conservative external cross-check, rather than a dry-P1 measurement of my standard Road 6 tyres. The dry values are scenario inputs. A later **2.00 g lateral working scenario** explores a higher vehicle envelope independently of my current riding capability.
+The archived 0.846 g input was calculated from a Road 6 GT wet straight-braking test, `100 km/h → 0 in 46.5 m`, using `v²/(2s)`. I use that wet-test value as the conservative braking input. The dry values are scenario inputs. A later **2.00 g lateral working scenario** explores a higher vehicle envelope independently of my current riding capability.
 
 The combined centre-of-mass height and front static load fraction are also explicit assumptions: **0.65 m / 0.46** in the conservative case and **0.60 m / 0.50** in the dry cases. Their lift ceilings are:
 
@@ -56,23 +56,23 @@ The dry geometry gives **1.208 g**. Thus the upper scenario's requested 1.22 g b
 4. Run forward acceleration and backward braking-feasibility passes until the closed speed profile converges. Integrate `dt = 2 ds / (v_i + v_next)`.
 5. Use lateral control-point pattern search to improve time; recheck the line against the original pavement. The working run uses **30 lateral controls, 180 stations and 181 evaluations**.
 
-The candidate keeps **0.184 m minimum hard-pavement clearance** for the model reference line. That check describes the line, not full swept-body clearance of the motorcycle.
+The candidate keeps **0.184 m minimum hard-pavement clearance** for the model reference line. The clearance calculation uses the model reference line.
 
 ## GPS observation model and scale check
 
 Sparse GPS cuts across curves. I sample the physical candidate at the observed GPS update phase, using its relative traversal timing rescaled to the measured 59 s lap, and fit scale against the resulting **sampled chord**.
 
-The working candidate's scale is **0.184205 m/pixel**. Its physical polyline is **907.408 m**; its simulated GPS chord is **894.680 m**, compared with **895.390 m** observed. The residual is **−0.710 m, approximately −0.079%**. This checks the calibration observation, rather than independently establishing survey accuracy. A one-step scale refit gives 0.184369 m/pixel and exposes remaining line/scale coupling.
+The working candidate's scale is **0.184205 m/pixel**. Its physical polyline is **907.408 m**; its simulated GPS chord is **894.680 m**, compared with **895.390 m** observed. The residual is **−0.710 m, approximately −0.079%**. This is the residual against the observation used for scale fitting. A one-step scale refit gives 0.184369 m/pixel and exposes remaining line/scale coupling.
 
 ## Outputs that support engineering judgement
 
 ![Model speed, longitudinal demand and finite-shift gear policy](../assets/modelling/p1-speed-and-gears.png)
 
-- **Envelope sensitivity:** the nominal 1.15 g scenario gives **57.303 s**; the higher 2.00 g working scenario gives **45.869 s**, with **36.4–142.7 km/h** speed. Each has a separately searched path and scale fit, so this compares model scenarios rather than isolating a tyre-grip effect.
+- **Envelope sensitivity:** the nominal 1.15 g scenario gives **57.303 s**; the higher 2.00 g working scenario gives **45.869 s**, with **36.4–142.7 km/h** speed. Each scenario has its own searched path and scale fit.
 - **Gear feasibility:** the nominal candidate's **28.9 km/h** minimum leaves **five stations** without a legal 2nd–4th gear within the retained dyno interval. That identifies a need for lower-rpm data, first gear or a changed path/speed profile.
-- **Finite shifts:** the higher-envelope candidate admits a closed 2nd–4th policy, using second and third gear with **two shifts**. A 0.20 s/shift allowance gives **46.269 s**. This is an additive audit on the fixed path, not a new solve through gear changes.
+- **Finite shifts:** the higher-envelope candidate admits a closed 2nd–4th policy, using second and third gear with **two shifts**. A 0.20 s/shift allowance gives **46.269 s**. The shift allowance is added to the fixed-path timing.
 - **Transient screening:** its equivalent roll-rate proxy peaks at **9.663 rad/s**, exceeding the reduced-model **3.0 rad/s** guardrail. Steering-rate demand peaks at **0.775 rad/s**, below 5.0 rad/s. The roll screen withholds the candidate as a riding line; its maximum occurs at the periodic boundary and needs examination during transient continuation.
 
-These calculations show how I investigate exit acceleration, gear feasibility, model sensitivity and unrealistic fast candidates. The 2.00 g input is an exploratory assumption; the 45.869 s result is a conditional QSS candidate, not an identified Road 6 limit or track-validated global minimum.
+The model gives me a speed profile, legal-gear checks and a list of limiting sections to inspect. The 45.869 s candidate uses the exploratory 2.00 g envelope and requires transient refinement at the failed roll-rate screen.
 
 [Archived result values](data/archived-result-summary.json) preserve the historical calculations. The [runnable subset](code/README.md) exposes the actual vehicle-envelope and fixed-line implementation.

@@ -9,7 +9,7 @@
 
 I built a budget-conscious telemetry workflow for my own track riding, then combined recorded lines, OBD channels, heart rate and onboard video to explain performance differences. My work covered sensor integration, data preparation, event detection, geographic comparisons and the presentation of evidence.
 
-The archive covers **nine sessions and 71 timed laps**. Its value is the ability to follow a difference from the physical braking reference through the control sequence to the time retained at the next corner.
+The archive covers **nine sessions and 71 timed laps**. I trace changes from the braking reference through lean and throttle timing to the speed and time carried into the next corner.
 
 ### Selected work
 
@@ -21,7 +21,7 @@ The archive covers **nine sessions and 71 timed laps**. Its value is the ability
 
 ## T2: lines, control and reference development
 
-**Engineering work:** I compared laps in one spatial frame and detected sustained deceleration, lean and throttle events. A chronological view of all 47 comparable laps shows how the braking reference moved and how its repeatability developed.
+I compared laps in one spatial frame and detected sustained deceleration, lean and throttle events. A chronological view of all 47 comparable laps shows how the braking reference moved and how its repeatability developed.
 
 ![T2 recorded lines and braking reference on the photographed P1 board](../assets/p1/p1-t2-board-reference.png)
 
@@ -37,29 +37,29 @@ The **20-second S04 onboard excerpt** shows the raised kerb at the T1 kink and t
 
 ### Linked-corner diagnosis
 
-**Engineering work:** I placed common geographic gates across laps and joined split times with measured paths, throttle, speed and lean. Comparing a complete corner sequence reveals whether a local gain survives the following transition.
+I placed common geographic gates across laps and joined split times with measured paths, throttle, speed and lean. Comparing a complete corner sequence reveals whether a local gain survives the following transition.
 
 ![Linked-corner measured lines on the photographed P1 board](../assets/p1/p1-linked-board-lines.png)
 
-The S06 L7 / S08 L8 comparison finds **0.431 s gained in one block and 0.461 s returned in the next**. The board shows the relative lines; the detailed control panels explain the sequence behind that trade-off. This supports a specific engineering question: which approach improves the whole linked section?
+The S06 L7 / S08 L8 comparison finds **0.431 s gained in one block and 0.461 s returned in the next**. The board shows the relative lines; the detailed control panels explain the sequence behind that trade-off. I compare approaches by their combined time through both blocks.
 
 [Read the linked-corner diagnosis](p1-gpr150-analysis.md#1-linked-sequence-a-quicker-right-hand-block-can-cost-the-next-transition)
 
 ### Lap-time gain attribution
 
-**Engineering work:** I partitioned laps with fixed geographic planes, computed interval gains and accumulated them around the circuit. A closer line/control comparison then examines the largest contributing package.
+I partitioned laps with fixed geographic planes, computed interval gains and accumulated them around the circuit. A closer line/control comparison then examines the largest contributing package.
 
 ![Where the final lap improvement was gained and returned on the P1 board](../assets/p1/p1-pb-board-gains.png)
 
 ![Recorded L7 and L8 lines through the main gain package](../assets/p1/p1-pb-middle-board-lines.png)
 
-The final **0.424 s** improvement contains only **0.036 s from the opening package**. G20–G40 contributes **0.371 s**; subsequent gains and losses explain the finish result. The method turns a lap-time number into locations and control sequences that can be examined.
+The final **0.424 s** improvement contains only **0.036 s from the opening package**. G20–G40 contributes **0.371 s**; subsequent gains and losses explain the finish result. I inspect the G20–G40 lines and control traces to explain the largest gain.
 
 [Read the gain attribution and closer G20–G40 comparison](p1-gpr150-analysis.md#2-s08-consecutive-pbs-where-the-final-0424-s-came-from) · [Fixed-gate definitions](p1-gpr150-methods.md#fixed-geographic-comparisons)
 
 ## OBD, control timing and rider-state analysis
 
-**Engineering work:** I synchronized GPS speed with OBD engine speed and throttle, then aligned the comparisons at the corner minimum. Calculated lean adds episode shape and duration; heart-rate windows add a separate view of my heart-rate response.
+I synchronized GPS speed with OBD engine speed and throttle, then aligned the comparisons at the corner minimum. Calculated lean adds episode shape and duration; heart-rate windows add a separate view of my heart-rate response.
 
 ![GPS speed with OBD engine recovery and throttle timing](../assets/p1/p1-obd-engine-recovery.png)
 

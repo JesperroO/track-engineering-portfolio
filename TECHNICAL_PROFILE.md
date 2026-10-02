@@ -2,7 +2,7 @@
 
 [Portfolio contents](README.md)
 
-This portfolio is backed by a working personal motorsport data and vehicle-dynamics toolchain. The public repository shows selected outputs and sanitized evidence; the raw telemetry, private media, exact coordinates, and full research archive remain private.
+I use this toolchain to acquire track data, analyse driving and vehicle response, align video, and build vehicle models.
 
 ## Toolchain
 
@@ -18,15 +18,15 @@ This portfolio is backed by a working personal motorsport data and vehicle-dynam
 
 ## What I have built
 
-The private implementation archive currently contains 26 Python `laptime` modules, 41 analysis and rendering tools, 15 pytest test modules, and 21 research notes. The work covers more than plotting a telemetry file:
+My implementation covers acquisition, analysis, video alignment and numerical modelling:
 
 - **Acquisition and data contracts:** identify source clocks, sampling behaviour, channel meaning, lap boundaries, missing data, GPS quality, and schema changes before comparing sessions.
 - **Telemetry processing:** turn raw exports into session summaries, lap tables, geographic gates, sector allocations, GPS-yaw and kinematic signals, normalized throttle, and provisional gear inference.
 - **Video and telemetry integration:** keep camera frames, lap markers, visible start/finish crossings, and telemetry timestamps as separate evidence until their alignment is demonstrated.
 - **Vehicle-dynamics software:** implement road-frame motorcycle models, powertrain and gear logic, tyre-force interfaces, kinematic-demand checks, and fixed-line/free-path lap-time formulations.
-- **Numerical engineering:** use CasADi automatic differentiation and nonlinear-programming interfaces, inspect feasibility and constraint residuals, and preserve failed solver states as diagnostics rather than presenting every trajectory as a result.
+- **Numerical engineering:** use CasADi automatic differentiation and nonlinear-programming interfaces, inspect constraint residuals and preserve failed solver states for diagnosis.
 - **Experimental design:** convert a telemetry observation into a single-variable next test, such as changing front brake bias while holding the remaining setup fixed.
-- **Reproducible outputs:** generate figures, JSON/NPZ artifacts, CSV summaries, dashboards, and test reports from dated inputs rather than manually editing a final chart.
+- **Reproducible outputs:** generate figures, model artifacts, session summaries and test reports from dated inputs.
 
 ## Evidence in the case studies
 
@@ -44,7 +44,7 @@ The [simulation overview](SIM_RACING.md) covers a multi-car workflow and dedicat
 - **GT1 practice:** analyse 50 Hz / 64,544 samples with brake bias, four wheel speeds, compound/validity checks, asymmetric tyre heat/pressure, fuel and late-lap loss allocation.
 - **Acquisition checks:** inspect incomplete attempts, packet repetition and session-time resets; reject stale car/track capture labels through independent session identity.
 
-The native `.tc` reading, dataset joins, derived analysis and charts are the personal implementation work. Replay decoding and high-rate capture use credited upstream tools. The wider local practice inventory has 331 saved per-lap CSV exports across cup, TCR, road-car and kart combinations; file count is not treated as valid-lap count.
+The native `.tc` reading, dataset joins, derived analysis and charts are the personal implementation work. Replay decoding and high-rate capture use credited upstream tools. The wider local practice inventory has 331 saved per-lap CSV exports across cup, TCR, road-car and kart combinations; the inventory includes out-laps and incomplete attempts.
 
 ### Hualong CBR650R practice analysis
 
@@ -55,10 +55,6 @@ The workflow combined RaceChrono, OBD, heart-rate data, action-camera evidence, 
 The [CBR650R / P1 worked model](modelling/cbr650r-p1-model.md) publishes the measured-data inputs, dyno curve, mass/geometry/gearbox values, adhesion scenarios, GPS scale-fit residual, calculated speed/gear policy and failed rate screen. The [selected runnable implementation](modelling/code/README.md) reproduces the archived 180-station fixed-line speed profile and 45.8689 s conditional QSS timing.
 
 My [sparse optimal-control implementation](modelling/sparse-optimal-control.md) shows the state/control/adjoint block system, active-set threshold and generalized derivative, with direct pointers to the FEniCSx/PETSc solver. Reduced-transient and structured hybrid motorcycle OCPs, including SSN/KKT experiments, remain additional local research work.
-
-## Public evidence boundary
-
-The public repository contains representative figures, selected video frames, explanations, and the method used to interpret them. It does not contain private original video, raw high-frequency telemetry, exact track coordinates, health records, local filesystem paths, or temporary solver artifacts. The omission is deliberate: the portfolio demonstrates the engineering workflow without exposing unrelated personal data or an unfiltered research archive.
 
 ## Acquisition and analysis workflow
 

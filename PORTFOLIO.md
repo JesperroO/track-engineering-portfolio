@@ -38,11 +38,9 @@ The [simulation overview](SIM_RACING.md) describes a wider multi-car archive and
 | Support real-world acquisition | Personally ride and log motorcycle sessions; combine GNSS/IMU/OBD and video while controlling data quality |
 | Implement models and tools | [CBR650R inputs, envelope and path/speed results](modelling/cbr650r-p1-model.md); [runnable QSS code](modelling/code/README.md); [active-set / sparse solver implementation](modelling/sparse-optimal-control.md) |
 
-## Implementation and scope
+## Implementation
 
-The private archive includes 26 modelling modules, 41 analysis/rendering tools and 15 model-test modules in the previously inventoried toolchain. This is separate from the wider local simulation export archive, which currently has 331 saved per-lap CSV files; the latter is a file inventory, not a valid-lap count.
-
-[Technical profile](TECHNICAL_PROFILE.md) maps the tools and implementation to the case results. Published charts and aggregate values have [source notes](assets/sim/README.md). The portfolio retains observations, completed analyses and proposed tests as distinct results, with raw logs and private records kept locally.
+[Technical profile](TECHNICAL_PROFILE.md) describes the implementation. [Figure sources](assets/sim/README.md) identify the records and calculations behind the simulation results.
 
 ## Acquisition and analysis workflow
 

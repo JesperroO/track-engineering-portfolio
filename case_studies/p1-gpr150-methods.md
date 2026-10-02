@@ -4,7 +4,7 @@
 
 ## Source channels
 
-RaceChrono exports retain GNSS position/speed/precision, OBD RPM/throttle/coolant and chest-strap HR. Longitudinal/lateral G and lean are RaceChrono **calculated** channels. GPS speed is used with OBD RPM because the ECU speed PID is unusable. Throttle is normalized over the archived **1.56863–94.5098%** endpoints. The common 20 Hz event-analysis grid interpolates the logged channels; it retains their original source-rate limitations.
+RaceChrono exports retain GNSS position/speed/precision, OBD RPM/throttle/coolant and chest-strap HR. Longitudinal/lateral G and lean are RaceChrono **calculated** channels. GPS speed is used with OBD RPM because the ECU speed PID is unusable. Throttle is normalized over the archived **1.56863–94.5098%** endpoints. The common 20 Hz event-analysis grid interpolates the logged channels; source sampling rates are retained in the channel records.
 
 ## T2 events
 
@@ -14,15 +14,15 @@ RaceChrono exports retain GNSS position/speed/precision, OBD RPM/throttle/coolan
 
 The T2 package uses fixed transverse planes from the Sep 2 S04 L3 reference: entry at 2.82 s, exit at 12.37 s and downstream endpoint at 18.50 s. All 71 laps cross these planes in time order, using interpolated crossings. The principal comparison uses S02 and S04–S08; S01/S03 have different GPS schemas and S09 changes the exercise.
 
-The whole-lap studies use G10–G90 transverse planes at 10% increments of **S08 L8's reference GPS path**. G0/G100 retain recorded lap endpoints. The same planes apply to each lap; forward crossings are interpolated with progress-order checks. Section totals are not rescaled. G60–G80 are reference stations, not corner numbers or each lap's own distance percentages.
+The whole-lap studies use G10–G90 transverse planes at 10% increments of **S08 L8's reference GPS path**. G0/G100 retain recorded lap endpoints. The same planes apply to each lap; forward crossings are interpolated with progress-order checks. Section totals use the original crossing times. G60–G80 identify fixed stations along the reference path.
 
-Spatial figures use a shared local east/north frame with the S08 L8 start as origin. Curves retain each lap's measured path. The PB map colours each interval by its complete fixed-gate time difference; it does not encode pointwise delta within that interval. Positive gains mean the later lap traversed the interval faster.
+Spatial figures use a shared local east/north frame with the S08 L8 start as origin. Curves retain each lap's measured path. The PB map colours each interval by its complete fixed-gate time difference. Positive gains mean the later lap traversed the interval faster.
 
 Control plots begin at a common geographic gate or at each lap's minimum-speed event, as labelled. An equal elapsed time can correspond to different track positions. GNSS precision and path differences limit physical interpretation; milliseconds are displayed to make the arithmetic inspectable.
 
 ## Heart-rate windows
 
-The deceleration trough anchors each event. HR is interpolated onto a 20 Hz grid and median-filtered over five seconds. The baseline is the median from −3 to −1 s; the response summary is the maximum from +2 to +12 s minus baseline. The new trace panel shows the relative HR shape for three selected laps. The session panel uses the retained full-session aggregates: dots are medians and vertical segments are the 25th–75th percentiles. The window spans later cornering and sensor delay, so it cannot isolate a physiological reaction to braking. Session 9 has no HR.
+The deceleration trough anchors each event. HR is interpolated onto a 20 Hz grid and median-filtered over five seconds. The baseline is the median from −3 to −1 s; the response summary is the maximum from +2 to +12 s minus baseline. The new trace panel shows the relative HR shape for three selected laps. The session panel uses the retained full-session aggregates: dots are medians and vertical segments are the 25th–75th percentiles. The response window includes the following corner sequence and sensor delay. Session 9 has no HR.
 
 ## Video and map alignment
 
@@ -30,7 +30,7 @@ The S04 L4 clip uses the VBO's `avisynctime` mapping. Index 1 supplies the conti
 
 The BT.2020/HLG source is converted to BT.709 SDR with a Hable tone map and highlight desaturation. The short rendered clip preserves engine audio. Other camera files require their own alignment.
 
-One similarity fit registers S08 L8 to the existing P1 main-corridor schematic; the same transform applies to S02 and its events. Fit discrepancy is approximately 18 px RMS, about 3 m at that scale. The map provides schematic correspondence to the raised kerb, with no surveyed pavement or apex claim.
+One similarity fit registers S08 L8 to the existing P1 main-corridor schematic; the same transform applies to S02 and its events. Fit discrepancy is approximately 18 px RMS, about 3 m at that scale. The schematic registration places the recorded approach beside the raised-kerb reference.
 
 ## Photographed-board comparisons
 

@@ -105,7 +105,7 @@ The left panel shows the recorded G60–G80 paths in one coordinate frame. Circl
 
 **S06 L7 → S08 L8:** G60–G70 improves **0.431 s**, while G70–G80 loses **0.461 s**. The combined section is **0.030 s slower**. S07 L5 completes both blocks **0.189 s faster** than S08 L8 despite its slower whole lap.
 
-The red PB trace develops right lean earlier, then crosses through upright into left lean earlier on this elapsed-time axis. Its throttle opening also begins earlier in the first block, but returns to partial input before the next acceleration. These changes sit beside a different path through the reversal. The paired views expose the driving sequence behind the split-time trade-off; equal elapsed time in the traces does not imply equal track position.
+The red PB trace develops right lean earlier, then crosses through upright into left lean earlier on this elapsed-time axis. Its throttle opening also begins earlier in the first block, but returns to partial input before the next acceleration. These changes sit beside a different path through the reversal. The controls are plotted from the common gate; the board view places the two sequences along their recorded lines.
 
 S09's deliberate exercise sharpens the same contrast: L10 takes **5.702 s** through G60–G70 and **7.528 s** through G70–G80. Its **13.230 s** total remains slower than the selected PB sequence. The linked-section outcome gives context to the locally faster right-hand block.
 
@@ -195,7 +195,7 @@ The post-event window extends beyond the approach into the following corners.
 
 The left panel aligns five-second median-filtered HR at the approach-deceleration trough and subtracts the pre-event baseline. S06 L7 rises across the later part of the window, while S08 L8 trends downward. The right panel retains each session's median response and middle-half range across all HR-covered timed laps.
 
-The +2 to +12 s post-event maximum is approximately **+8.5 bpm in S06 L7** and **−1.0 bpm in S08 L8**. Session medians also change: **+5.1 bpm in S01**, **−0.8 in S07**, **+0.7 in S08**. The event-window shape varies across laps and sessions; it does not establish a repeated sharp braking-related spike. That window spans the subsequent corner sequence and HR sensor delay. S09 has no HR channel.
+The +2 to +12 s post-event maximum is approximately **+8.5 bpm in S06 L7** and **−1.0 bpm in S08 L8**. Session medians also change: **+5.1 bpm in S01**, **−0.8 in S07**, **+0.7 in S08**. The response is larger in S06 L7 than S08 L8. The window includes the subsequent corner sequence and HR sensor delay; S09 has no HR channel.
 
 ## Supporting driving and setup comparisons
 
@@ -217,11 +217,11 @@ The retained geographic-gate results for **S01 L4 / S02 L2** give **0.081 s in T
 
 S04 L7 enters T2 slightly slower than L6 (**83.4 versus 84.0 km/h**) and reaches a lower T2 minimum (**38.9 versus 39.8 km/h**), yet carries approximately **40.0 versus 36.5 km/h** through the following right-hander. The later acceleration phase retains a higher throttle input and stronger engine-speed recovery in the plotted sequence.
 
-The fixed T2-plus-downstream package improves approximately **0.540 s**; full laps are **56.644 versus 57.201 s**. The comparison illustrates a useful diagnostic: the entry-speed number alone would miss the performance retained through the next corner.
+The fixed T2-plus-downstream package improves approximately **0.540 s**; full laps are **56.644 versus 57.201 s**. The gain is carried through the linked package, where I compare speed, throttle and engine recovery.
 
 ### Tyre-pressure context
 
-I recorded cold pressures of **1.75 / 1.70 bar**, front/rear, and a later front reading of **1.84 bar**. After a compromised rear hot measurement, I reset the rear to **1.80 bar hot**. These values provide session context; the programme does not isolate a pressure effect on lap time.
+I recorded cold pressures of **1.75 / 1.70 bar**, front/rear, and a later front reading of **1.84 bar**. After a compromised rear hot measurement, I reset the rear to **1.80 bar hot**. These pressure readings are retained alongside the session and driving notes.
 
 ## Video frame gallery
 

@@ -1,39 +1,25 @@
-# Case study: Hualong CBR650R practice analysis
+# CBR650R / Hualong — practice analysis
 
 [Portfolio contents](../README.md)
 
-**Date:** 2026-07-28
-**Vehicle:** 2020 Honda CBR650R
-**Context:** four-session practice day on a compact circuit
-**Tools:** RaceChrono Pro, OBD-II, heart-rate data, action-camera footage, Python-derived tables, and an Excel analysis workbook
-**Read this case for:** a session-to-session comparison that keeps comparable laps separate from degraded GPS and provisional data.
+**28 July 2026 · 2020 Honda CBR650R · four practice sessions**
 
-## Result
+I rode and analysed a four-session day on the compact Hualong circuit, using RaceChrono, OBD, heart-rate data and onboard footage. The comparison focused on early deceleration, coasting and repeated throttle applications through a driving corner.
 
-The comparable best lap improved from `47.869 s` in S01 to `42.641 s` in S04, a `5.228 s` reduction. S03 remained provisional because its automatic laps were merged and its GPS quality degraded.
+## Session comparison
 
-| Session | Best lap | Data status |
-|---|---:|---|
-| S01 | `47.869 s` | comparable |
-| S02 | `44.421 s` | comparable |
-| S03 | `44.412 s` | provisional |
-| S04 | `42.641 s` | comparable |
+The comparable best lap improved from **47.869 s** in S01 to **44.421 s** in S02 and **42.641 s** in S04: a total gain of **5.228 s**. S03's 44.412 s record is retained as provisional because merged laps and degraded GPS interrupted the timing and position comparison.
 
-## Data and calibration
+I removed out-laps, in-laps and unstable segments, then used GPS for broad speed/position trends and OBD for throttle-event timing. Throttle was scaled over its recorded endpoints to compare opening, release and sustained input across laps.
 
-The session combined RaceChrono and OBD data. OBD throttle was treated as an observed ECU/PID signal and normalized over its recorded range; it was not presented as a physical throttle-plate angle or engine torque measurement.
+## Driving sequence
 
-The analysis first removed out-laps, in-laps, and unstable segments. S03 was kept in the archive but excluded from precise cross-session claims. GPS was used for position and speed trends, while OBD channels were used for control-event timing.
+I examined the transition from approach braking to minimum speed, maintenance throttle and a continuous exit roll-on. The faster laps carried more usable throttle time, while repeated opening and waiting phases remained in the selected corner.
 
-## What the comparison showed
+The target action chain scored 1/6, 2/6 and 0/6 in the selected S01, S02 and S04 samples. Pace improved faster than the repeatability of that sequence, so I kept brake release and a single exit roll-on as the next practice focus.
 
-- The faster session had higher overall pace, more usable throttle time, and a different control rhythm.
-- The strict target sequence—approach, controlled minimum-speed phase, maintenance throttle, then continuous roll-on—was not confirmed as stable across all selected laps.
-- A low-rate phone-GPS trace could support broad trends, but it could not support metre-level racing-line claims or prove that the remaining time was caused by lean angle alone.
-- The analysis kept low-grip feedback, line choice, throttle input, and tyre condition as separate possible contributors instead of forcing them into one explanation.
+My riding notes describe low-grip conditions and the transition between braking, small throttle input and standing the motorcycle up for drive. I used those notes with the OBD trace and video to select the control sequence for review. The low-rate phone GPS supports the session-level speed comparison; detailed line work uses the better-instrumented P1 programme.
 
-## Engineering interpretation
+## Work completed
 
-This case is useful because the headline result is easy to over-read. A `5.228 s` improvement is a measured timing difference between selected laps; it is not by itself proof of a single technique, vehicle-state change, or transferable performance gain.
-
-The useful engineering output is the data-quality gate: decide which laps can be compared, calibrate the meaning of each channel, then state what additional sensor or video evidence would be needed for a stronger line or braking conclusion.
+I produced a comparable-lap selection, normalized throttle traces, session summaries and a corner-action review in Python and an Excel workbook. These outputs informed the next practice focus: shorten the waiting phase and repeat one continuous drive sequence through the exit.

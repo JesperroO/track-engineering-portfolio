@@ -22,7 +22,7 @@ My qualifying record contains nine lap entries, including the first/out-lap entr
 | S2 | 18.782 s | 18.351 s | +0.431 s |
 | S3 | 12.799 s | 12.497 s | +0.302 s |
 
-S1 explains **60.5%** of the qualifying gap. Combining my best valid sectors gives 58.613 s, a 0.196 s theoretical gain. That distinguishes two tasks: create more valid attempts and improve the opening sector, rather than treating sector assembly as the main route to a large gain.
+S1 explains **60.5%** of the qualifying gap. Combining my best valid sectors gives 58.613 s, a 0.196 s theoretical gain. I prioritised more valid attempts and opening-sector practice; assembling the existing best sectors offers only 0.196 s.
 
 ![Qualifying gap and race lap timeline](../assets/sim/lime-rock-performance.png)
 
@@ -35,7 +35,7 @@ A median/MAD screen retains 19 representative intervals out of 26 reconstructed 
 - Seven intervals above 61 s accumulated **28.50 s** above that baseline.
 - All positive deviations from the baseline summed to **30.48 s**.
 
-These are different sums. The loss budget makes consistency an actionable priority even though a competitive individual lap exists. The replay analysis localized repeated losses to linked corners and exits, while checking nearby-car positions before attributing a slow lap to traffic.
+The 28.50 s major-loss budget made consistency a priority. The replay analysis localized repeated losses to linked corners and exits, while checking nearby-car positions before attributing a slow lap to traffic.
 
 ## Native best-lap braking trace
 
@@ -43,12 +43,12 @@ I parsed the native best-lap record to recover the 57.784 s lap's speed, throttl
 
 ![Native best-lap pedal trace](../assets/sim/lime-rock-pedal-trace.png)
 
-The shared multiplayer replay stores my brake channel as only 0/255, so it can support brake-on timing but not the continuous release shape. The native best-lap file supplies that missing input shape. Normalized pedal input is distinct from hydraulic pressure or wheel brake force.
+The shared replay records brake input as 0/255. I used it for brake-on timing and recovered the continuous release shape from the native best-lap file.
 
 ## Follow-up work
 
 The review produced specific targets: increase valid flying laps in the ten-minute qualifying window, concentrate practice on S1, and reduce the recurring large-loss laps instead of chasing another isolated PB.
 
-The official result counts 25 laps, while AC and replay reconstruction contain 26 completed crossing intervals. The qualifying tail buffer does not preserve the complete 58.809 s lap. Those limitations prevent a full qualifying-versus-race control overlay, but do not prevent the qualifying-sector and race-consistency analysis above.
+Timing sources: the official result lists 25 laps; AC/replay supplies 26 crossing intervals. Qualifying sectors come from the result table, and the continuous pedal trace comes from the accepted race PB.
 
 See [aggregate evidence and source notes](../assets/sim/README.md).

@@ -8,9 +8,9 @@ This development work combines repeated driving, replay-derived control analysis
 
 ## Match the trace to the session
 
-The inspected replay export contains **78,431 frames at 30 ms**. I matched its recorded valid-lap transition times against CM session `260831-235626`, rather than assigning it to an event from its filename. Seven valid transitions in the retained export match exactly at the stored millisecond precision.
+The inspected replay export contains **78,431 frames at 30 ms**. I matched its valid-lap transition times against CM session `260831-235626`. Seven valid transitions in the retained export match exactly at the stored millisecond precision.
 
-That establishes a practice trace with controls, speed, four-wheel loading and damage information. It does not make this file a race result or a 50 Hz Live Telemetry capture.
+The matched practice trace supplies controls, speed, four-wheel loading and damage channels.
 
 ## Recovering a repeatable four-lap sequence
 
@@ -23,7 +23,7 @@ After a disrupted lap, the session produced four consecutive valid laps:
 | 15 | 18.677 s | 31.046 s | 41.580 s | 91.303 s |
 | 16 | 18.095 s | 31.361 s | 44.028 s | 93.484 s |
 
-The prior session PB was 92.444 s, with sectors 18.563 / 31.298 / 42.583 s. L15 improved it by 1.141 s; S3 contributed 1.003 s, while S1 was actually 0.114 s slower. The useful change was not uniform aggression around the lap.
+The prior session PB was 92.444 s, with sectors 18.563 / 31.298 / 42.583 s. L15 improved it by 1.141 s; S3 contributed 1.003 s, while S1 was actually 0.114 s slower.
 
 ## A faster S1 with earlier release
 
@@ -37,11 +37,11 @@ L28's valid S1 is **18.054 s**, 0.623 s faster than L15's 18.677 s. Rechecking t
 
 ![F4 S1 speed and brake input](../assets/sim/f4-s1-release.png)
 
-These are elapsed times from lap start, not surveyed braking-point coordinates. The trace supports an earlier control sequence and a stronger sector exit. L28's complete lap is **97.227 s**, slower than L15: its local S1 success is a technique to reproduce within a clean full lap, not a whole-lap performance claim.
+Times are measured from lap start. L28 releases the brake earlier and reaches the sector boundary 6.8 km/h faster. Its full lap takes **97.227 s**, compared with L15's 91.303 s; I selected the faster S1 sequence as a practice target.
 
 ## Wheel load and the troublesome transition
 
-L15 passes the same S2 transition with the right rear dropping to approximately **0.345 kN** while the recorded throttle is near full input. Other laps fail there. Low wheel load identifies the vulnerable phase but does not, by itself, identify the cause of every spin. I compare the load event with steering, throttle and the surrounding lap instead of labelling the curb universally unusable.
+L15 passes the same S2 transition with the right rear dropping to approximately **0.345 kN** while the recorded throttle is near full input. Other laps fail there. I compare that load transition with steering, throttle and replay position to examine the curb approach and the timing of drive demand.
 
 ## Setup variants and decision records
 
@@ -51,18 +51,18 @@ L15 passes the same S2 transition with the right rear dropping to approximately 
 
 At **29.610 s** on the matched 91.303 s L15, the replay reports **344.75 N right-rear load versus 605 N left-rear**, with **99.2% throttle** and zero recorded brake. The figure retains the surrounding load changes instead of presenting that sample as a whole-sector minimum.
 
-I align wheel loads, throttle, steering and replay position to identify the unload/recontact phase. The useful question is whether I ask for strong drive while the rear axle is lightly supported, and whether a curb/line choice makes that transition harder to repeat. That supports a driving comparison with a different curb approach or opening sequence, while preserving sector exit speed as an outcome.
+I align wheel loads, throttle, steering and replay position to identify the unload/recontact phase. I examine drive demand during low rear load and compare curb approach and throttle-opening sequence. The next comparison tracks load recovery, repeatability and sector exit speed.
 
-It also motivates the **rear fast-rebound 6 → 5** test below: observe the contact/load recovery and exit stability under comparable inputs. The sign of the resulting load response needs measurement; a setup slider change alone does not establish a cure. Rear pressure **17 → 16 psi** is a separate candidate, with front pressures unchanged. This is how wheel-load evidence selects a test rather than merely decorating a lap-time chart.
+It also motivates the **rear fast-rebound 6 → 5** test below: observe the contact/load recovery and exit stability under comparable inputs. The comparison would track load recovery and exit stability at the same transition. Rear pressure **17 → 16 psi** is a separate candidate, with front pressures unchanged.
 
 The working record separates two variants:
 
 - A: rear fast rebound reduced from 6 to 5, intended to investigate the unload/recontact transition.
 - B: rear cold pressure reduced from 17 to 16 psi, with the fronts retained at 17 psi.
 
-The event's adjustable-setting restriction excluded the damping variant from the race setup. The pressure variant remained a candidate. A later B-configuration practice session recorded a valid **91.005 s** lap, but repeated failures at the same S2 location remained. The observation is that usable speed survived; it does not prove that reducing pressure cured the instability or caused the PB.
+The event's adjustable-setting restriction excluded the damping variant from the race setup. The pressure variant remained a candidate. A later B-configuration practice session recorded a valid **91.005 s** lap, but repeated failures at the same S2 location remained. The pressure variant retained usable pace while leaving the transition problem unresolved.
 
-The original preparation discussion also estimated a 25-minute fuel budget around 21 L from roughly 1.0-1.1 L per clean lap, and kept brake-bias/pressure decisions separate from exit-traction changes. This is a recorded planning estimate, not a verified race-consumption result.
+I planned a 25-minute fuel budget of approximately 21 L, using an estimated 1.0–1.1 L per clean lap.
 
 ## A second reference beyond personal PB
 
@@ -70,6 +70,6 @@ An archived server `lapstat` comparison contains a personal 90.814 s lap and an 
 
 ![Archived F4 server speed reference](../assets/sim/f4-server-reference.png)
 
-The server trace provides speed and distance, not the reference driver's throttle, brake or steering. I use it to select a region for examination, then use the local control trace to form a testable driving hypothesis.
+I use the server speed-distance comparison to select a region, then inspect my local control trace to choose a driving change.
 
 See [aggregate evidence and source notes](../assets/sim/README.md).

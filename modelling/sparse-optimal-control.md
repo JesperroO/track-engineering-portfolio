@@ -20,4 +20,4 @@ The active set is `|p| > alpha(x)`. I assemble the generalized derivative explic
 - Record residual and active-set volume; investigate mesh refinement, reentrant boundaries and convergence failures separately.
 - Keep UFL active-set logic and exported per-DOF field calculations consistent.
 
-The implementation is in my [FEniCSx-SSN-Solver repository](https://github.com/JesperroO/FEniCSx-SSN-Solver): `ssn/solver.py`, `ssn/amr_engine.py` and `ssn/amg_preconditioner.py`. These are the numerical skills represented by the optimal-control entry in my CV. Motorcycle SSN/KKT formulations remain a separate exploratory application.
+The implementation is in my [FEniCSx-SSN-Solver repository](https://github.com/JesperroO/FEniCSx-SSN-Solver): `ssn/solver.py`, `ssn/amr_engine.py` and `ssn/amg_preconditioner.py`. The motorcycle project also contains exploratory SSN/KKT formulations.

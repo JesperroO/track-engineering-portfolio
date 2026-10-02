@@ -4,7 +4,7 @@
 
 I drive the sessions and carry out the data preparation, analysis and follow-up work. The simulation archive covers rear-wheel-drive cup cars, front-wheel-drive touring cars, F4, GT1 and GT3. It includes formal online races, practice, native best-lap records, replay reconstruction and continuous telemetry capture.
 
-The useful work is the combination: find where time is lost, inspect the control or vehicle-state trace, select a practice or setup change, and check whether the next run supports it.
+I locate time losses, inspect the control and vehicle-state traces, then select a driving exercise or setup test for the next run.
 
 ## Selected engineering work
 
@@ -17,7 +17,7 @@ The useful work is the combination: find where time is lost, inspect the control
 
 ![F4 brake-release comparison](assets/sim/f4-s1-release.png)
 
-The F4 figure is a local S1 comparison, not a claim that the faster sector made the whole lap faster. L28 has the stronger S1 but a slower complete lap. This is why I keep a sector result connected to the full-session record.
+L28 gains 0.623 s in S1 through earlier brake release and a stronger exit. Its complete lap is slower than L15, so I selected that opening sequence for further practice within a clean lap.
 
 ## Practice breadth
 
@@ -37,15 +37,15 @@ The local per-lap export archive currently contains **331 CSV files**, including
 | Lotus Exige S / Monza | 24 |
 | LO206 kart / Conghua | 1 |
 
-These are saved-file counts checked on 2026-10-01, not counts of valid, comparable laps. Some exports contain out-laps, aborted runs or resets. The TCR and other practice records establish breadth; the selected cases above carry the stronger, inspected engineering results.
+The file inventory was checked on 2026-10-01 and includes out-laps, aborted runs and resets. The case studies above use inspected lap selections.
 
 ## Working outputs
 
-My outputs include lap/sector tables, input traces, loss allocation, repeatability statistics, damage timelines, acquisition checks and a next-session test instruction. A setup recommendation is evaluated against both the mechanism it targets and valid-lap performance. A new PB on its own does not identify why the car improved.
+I produce lap and sector comparisons, control traces, loss budgets, repeatability statistics and damage timelines. For setup tests, I compare the targeted vehicle response, sector performance and consecutive valid laps.
 
-The tools are Python, NumPy, Matplotlib, native binary-file parsing, Content Manager/AC/ACC result records, Live Telemetry and an upstream replay parser. I distinguish my analysis and integration work from the third-party capture and parsing tools it uses.
+The tools are Python, NumPy, Matplotlib, native binary-file parsing, Content Manager/AC/ACC result records, Live Telemetry and an upstream replay parser. I write the analysis and source-integration tools around those records.
 
-[Figure provenance and aggregate evidence](assets/sim/README.md) explain the source of each published result. Original replays, full-rate logs, private session conversations and unfiltered participant records remain in the local archive.
+[Figure sources and aggregate results](assets/sim/README.md).
 
 ## Acquisition and analysis workflow
 

@@ -1,6 +1,6 @@
 # Simulation figures and evidence provenance
 
-These figures were regenerated on 2026-10-01 from existing local session records. They contain selected derived results; the original binaries, full-rate telemetry and participant-level records are not included.
+The figures below use the retained session records. The table identifies each source and calculation.
 
 | Public figure | Original evidence | Derivation |
 |---|---|---|
@@ -11,15 +11,15 @@ These figures were regenerated on 2026-10-01 from existing local session records
 | `f4-server-reference.png` | Archived lapstat speed-distance arrays inspected during the F4 preparation session | Plot personal 90.814 s and reference 86.871 s speed traces; highlight 3.30-3.50 km for further examination |
 | `silverstone-sectors.png` | CM session `260912-205309` | Select the three valid medium-tyre laps; compare recorded S1/S2/S3 |
 
-`evidence-summary.json` contains curated aggregate tables, selected lap timings and the previously archived public server speed-distance comparison. It excludes raw pedal arrays, wheel traces, replay positions and other participant identities. The practice export inventory counts files, not valid laps. Its inspection date is 2026-10-01.
+`evidence-summary.json` stores the aggregate tables, selected lap timings and server speed-distance comparison. The practice-file inventory was checked on 2026-10-01.
 
 ## Cross-checks
 
-The CV-alignment expansion adds `f4-rear-load-event.png` from the original replay's matched CM L15 (`currentLap=15`, next lap's retained `lastLapTime=91303 ms`). The marked 29.610 s sample is RR 344.75 N / LR 605 N / throttle 253/255. `wheel-diagnostic-summary.json` retains those values. `silverstone-wheel-braking.png` uses original Live Telemetry `lap=3`, 72–99% progress, plotting native angular speeds and normalized controls; it is a selected event trace rather than a fitted tyre-slip model.
+`f4-rear-load-event.png` uses the original replay's matched CM L15 (`currentLap=15`, next lap's retained `lastLapTime=91303 ms`). The marked 29.610 s sample is RR 344.75 N / LR 605 N / throttle 253/255. `wheel-diagnostic-summary.json` retains those values. `silverstone-wheel-braking.png` uses original Live Telemetry `lap=3`, 72–99% progress, plotting native angular speeds and normalized controls.
 
 - Lime Rock: three valid qualifying entries out of nine; seven >61 s completed intervals sum to 28.50 s loss above 59.31 s. The separate all-positive-loss total is 30.48 s.
 - Three-event completed/retained counts: 26/19, 12/9 and 14/11. Relative MAD values recompute to 0.559%, 0.271% and 1.045%.
 - F4: seven valid lap transitions in the inspected replay export match CM recorded times. L15/L28 S1 values are 18.677/18.054 s; the complete L28 remains slower.
 - Silverstone: the medium-lap selection recomputes to 133.739, 130.561 and 127.571 s. Soft-lap sectors are kept outside that valid-medium comparison.
 
-The narrative also uses the saved setup records, dated session analyses and original local Codex discussion where a test was proposed. A proposal is labelled as such; a later observation is not turned into a causal setup claim. Upstream `acreplay-parser` 0.3.0 supplies replay decoding, while the surrounding analysis, integration and record keeping are the portfolio work.
+Setup values and proposed tests come from the saved configurations and dated session notes. Replay decoding uses upstream `acreplay-parser` 0.3.0; I implement the dataset joins, derived analysis and figures.

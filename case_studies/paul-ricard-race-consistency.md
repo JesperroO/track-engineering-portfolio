@@ -4,7 +4,7 @@
 
 **2026-08-05 / 19 / 26 · Assetto Corsa · MX-5 and Octavia Cup · Lime Rock and Paul Ricard WTCC**
 
-I compared three formal online races after driving and reviewing each one. The cars and tracks differ, so the comparison uses within-event consistency, late-race development and disruption rather than a ranking of absolute lap times.
+I compared three formal online races after driving and reviewing each one. Across the different cars and tracks, I compare within-event pace spread, late-race development and recovery losses.
 
 ## A common statistical rule
 
@@ -18,26 +18,26 @@ For each event, I take the median and median absolute deviation (MAD) of all com
 
 ![Normalized consistency and late-race development](../assets/sim/race-consistency.png)
 
-All three events show faster late representative laps. The second race's low retained MAD does not mean it had the best race execution: two mid-race repairs and very long recovery intervals interrupted it. A robust pace statistic therefore needs the complete disruption timeline alongside it.
+All three events show faster late representative laps. R7 combines a narrow retained pace band with two mid-race repairs and long recovery intervals; the timeline shows where that consistency was interrupted.
 
 ## Joining damage, lap timing and validity
 
-I identify jumps in replay damage channels and merge closely spaced jumps into episodes. These are damage episodes, not official incident counts or responsibility findings.
+I group closely spaced jumps in the replay damage channels into damage episodes.
 
 - **R5:** two opening-lap damage clusters, then no additional damage during the remaining race and no mid-race repair. Official P5 and the game-side P16 start are corroborated by stored result evidence.
-- **R7:** three damage episodes and two repairs. The representative laps narrow to a stable band, but recovery intervals of roughly 214-259 s dominate race continuity. The local summary does not confirm a final placing.
+- **R7:** three damage episodes and two repairs. The representative laps narrow to a stable band, but recovery intervals of roughly 214-259 s dominate race continuity. The retained summary has no finishing-position record.
 - **R8:** four in-race episodes, no mid-race repair, plus a separate post-finish episode. After a 133.520 s fifth completed lap, the next six completed laps progress from 109.496 to **105.665 s**.
 
-The R8 result is game-side P18 to P13. Its 105.665 s PB occurs on completed lap 11 of 14, with zero cuts; completed laps 12-14 have cuts. The PB therefore demonstrates late-race speed, while the following laps show that speed had not yet become consistently legal and repeatable.
+The R8 result is game-side P18 to P13. Its 105.665 s PB occurs on completed lap 11 of 14, with zero cuts; completed laps 12-14 have cuts. The final practice priority is to reproduce that late-race pace across consecutive valid laps.
 
 ## Sector allocation changes the next practice task
 
 The R8 PB is 2.902 s behind the session's fastest 102.763 s lap. The sector differences are **+0.018 / +1.651 / +1.233 s**. That focuses the next practice on S2/S3 while preserving the already close S1. It also separates a local sector success from the remaining whole-lap deficit.
 
-The review becomes a practical driver debrief: keep the late-race pace, remove the repeated incident or cut pattern, and judge the next run on a consecutive valid-lap band rather than on PB alone.
+My practice targets are to retain the late-race pace, address recurring damage and cuts, and complete consecutive valid laps in that pace band.
 
 ## Source distinctions
 
-R5 has an official result snapshot; R8 uses the preserved local result summary and a corroborating replay. R7's accepted `personalbest.ini` value of 104.006 s is distinct from its 104.845 s replay-reconstructed best interval. The table uses completed intervals and does not silently replace them with accepted PBs. No public page assigns collision responsibility from a damage jump alone.
+R5 has an official result snapshot; R8 uses the preserved local result summary and a corroborating replay. R7's accepted `personalbest.ini` value of 104.006 s is distinct from its 104.845 s replay-reconstructed best interval. The comparison table uses replay-reconstructed completed intervals.
 
 See [aggregate evidence and source notes](../assets/sim/README.md).
