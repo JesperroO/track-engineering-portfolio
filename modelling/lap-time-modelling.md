@@ -17,7 +17,3 @@ Computed path with a 2.00 g exploratory lateral envelope. The speed solution and
 - **Checks:** the nominal candidate has five low-speed stations incompatible with a 2nd–4th gear policy. The faster candidate admits two shifts, giving 46.269 s with a 0.20 s/shift allowance, but fails the reduced-model roll-rate screen at 9.663 rad/s versus a 3.0 rad/s guardrail.
 
 [Inputs, equations and worked results →](cbr650r-p1-model.md) · [Runnable model subset →](code/README.md) · [Archived aggregate values →](data/archived-result-summary.json)
-
-## Numerical methods
-
-My separate [sparse optimal-control solver](sparse-optimal-control.md) demonstrates active sets, generalized-Jacobian assembly and sparse block-system solving. The motorcycle project also includes exploratory reduced-transient and SSN/KKT formulations.

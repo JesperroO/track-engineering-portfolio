@@ -19,7 +19,6 @@ I ride, acquire and analyse motorsport data, and build software for vehicle simu
 4. **[Vehicle and lap-time modelling](modelling/lap-time-modelling.md)** — measured-data inputs, dyno/gearbox integration, pavement constraints and conditional minimum-time calculation.
    - [CBR650R / P1 inputs, adhesion scenarios and worked results](modelling/cbr650r-p1-model.md)
    - [Runnable vehicle-envelope and fixed-line code](modelling/code/README.md)
-   - [Sparse optimal control: active sets, Jacobian assembly and sparse solving](modelling/sparse-optimal-control.md)
 5. **[Acquisition and trackside workflow](case_studies/data-acquisition-workflow.md)** — RaceChrono, GPS/IMU/heart rate, BLE OBD, helmet video, Circuit Tools 3 and the pit-room review loop; simulator acquisition and recovery.
 
 ## P1 / on track
