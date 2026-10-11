@@ -247,6 +247,6 @@ Selected onboard frames retain the daylight, overcast and night conditions acros
 
 ## Methods and source evidence
 
-[Measurement definitions and alignment](p1-gpr150-methods.md) cover common geographic gates, source clocks, calculated channels and comparison precision. [Per-lap gate results](../assets/p1/p1-development-detail-summary.json), [T2 results](../assets/p1/t2-progression-summary.json), [channel summaries](../assets/p1/aprilia-gpr150-channel-summary.json) and [47-lap reference history](../assets/p1/aprilia_GPR150_T2_exploration.json) retain the published numerical evidence. Original telemetry and full videos remain in the private track archive.
+[Measurement definitions and alignment](p1-gpr150-methods.md) cover common geographic gates, source clocks, calculated channels and comparison precision. [Per-lap gate results](../assets/p1/p1-development-detail-summary.json), [T2 results](../assets/p1/t2-progression-summary.json), [channel summaries](../assets/p1/aprilia-gpr150-channel-summary.json) and [47-lap reference history](../assets/p1/aprilia_GPR150_T2_exploration.json) retain the published numerical evidence.
 
 [Portfolio contents](../README.md) · [Acquisition and trackside workflow](data-acquisition-workflow.md)

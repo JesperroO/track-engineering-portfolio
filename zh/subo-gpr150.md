@@ -34,11 +34,4 @@
 
 早期只看逐圈均值与全天趋势，遗漏了这个结构；在我追问后才补做位置分析。后续采集保留心率，同时主动检查全圈位置叠加、复现比例与反例。
 
-## 图表口径
-
-- 连续弯比较使用同一节的固定地理门。累计时间差由原始GPS过线计算，速度采用已有空间对齐；正值表示比较圈更慢。尾部计时追至参考875米。
-- 心率样本排除首圈、未闭合尾段及最后让车候选。局部下降比较500–520米与540–560米窗口；去趋势按每圈均匀时间采样拟合，综合曲线五节等权。
-- 速度与倾角来自GPS及计算通道，当天缺OBD。参考轨迹约883米，与场地标称1100米分别保留。心率峰谷属于同一天的探索性结果。
-- 驾驶、反馈、问题和纠正来自我；AI辅助处理数据、绘图和复盘。完整遥测与原始对话在本地归档；公开[结果摘要](../assets/subo/results.json)。
-
 [连续弯方法](../case_studies/p1-gpr150-methods.md#fixed-geographic-comparisons) · [P1事件窗口心率研究](../case_studies/p1-gpr150-analysis.md#heart-rate-inspect-the-response-shape-against-the-session-pattern) · [采集流程](../case_studies/data-acquisition-workflow.md)

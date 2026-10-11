@@ -35,7 +35,3 @@ I ride, acquire and analyse motorsport data, and build software for vehicle simu
 ## Engineering contribution
 
 [Team tasks and work evidence](PORTFOLIO.md#what-i-can-contribute) · [Tools and implementation](TECHNICAL_PROFILE.md) · [Session reviews and practice decisions](TRACKSIDE_FEEDBACK_LOOP.md)
-
-## Published material
-
-The repository contains selected analyses, derived figures, aggregate evidence and a short onboard excerpt. Original telemetry, exact GNSS coordinates, full videos, replays and private session records remain in the local archive. The cases describe personal riding and engineering project work.

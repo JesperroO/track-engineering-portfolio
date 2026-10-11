@@ -32,12 +32,4 @@ Within-session movement of the upright crossing and trough was weakly associated
 
 The spatial pattern was missed in the initial lap-average review and found after my question. Subsequent analyses now include complete-lap spatial overlays, repeatability and counterexamples for rider channels.
 
-## Figure definitions
-
-Split times use same-session raw GPS crossings of fixed geographical planes; speed uses the existing common progress axis. Positive differences mean the comparison lap is slower. The tail study ends at reference progress 875 m.
-
-HR profiles exclude first laps, unclosed tails and final yielding candidates. The raw local comparison uses 500–520 m and 540–560 m windows. Linear trends are fitted by uniform within-lap time, and the pooled profile gives equal weight to five sessions. The relative path is approximately 883 m; the advertised circuit length is 1100 m. The spatial scan is an exploratory within-day result.
-
-Subo had GPS speed, calculated lean and HR, with no OBD. Riding, feedback and corrections came from me; AI collaboration supported processing and figures. Full telemetry and messages remain local; [published results](../assets/subo/results.json) retain selected definitions.
-
 [Fixed-gate method](p1-gpr150-methods.md#fixed-geographic-comparisons) · [P1 event-window HR](p1-gpr150-analysis.md#heart-rate-inspect-the-response-shape-against-the-session-pattern) · [Acquisition workflow](data-acquisition-workflow.md)
