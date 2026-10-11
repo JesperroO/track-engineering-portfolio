@@ -10,7 +10,7 @@ I rode, reported feedback and reviewed sessions at a new circuit. Best lap impro
 
 ## Linked corners: two outcomes from the same objective
 
-![Two same-session comparisons: speed and fixed-gate cumulative time](../assets/subo/linked-comparisons.png)
+![Two same-session comparisons: speed and fixed-gate cumulative time](../assets/subo/linked-comparisons-en.png)
 
 **18:14, lap 9 against lap 4:** low-speed waiting before the T8 transition fell by 0.816 s. Lap 9 gained 0.181 s by the intermediate gate, then returned 0.762 s through T9 and downstream. The complete T7–T9 package was 0.582 s slower. Its later speed trace falls earlier and reaches a deeper T9 minimum.
 
@@ -22,7 +22,7 @@ There were also within-lap trade-offs: the 17:19 lap 6 tail lost 0.550 s while T
 
 ## Whole-lap HR overlay: a repeated spatial trough
 
-![Raw and detrended HR overlays across 35 laps](../assets/subo/heart-position.png)
+![Raw and detrended HR overlays across 35 laps](../assets/subo/heart-position-en.png)
 
 Across five sessions, raw HR fell in the T13-exit/T14 region in 33 of 35 retained laps, with a median local drop of approximately 1.7 bpm. After removing each lap's linear time trend, 34 laps showed a decrease. The pooled trough was near reference progress 560 m.
 
