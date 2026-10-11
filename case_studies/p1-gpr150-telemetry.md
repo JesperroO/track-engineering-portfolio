@@ -7,8 +7,6 @@
 
 **Independent project · September 2026 · riding / acquisition / analysis**
 
-P1 refers to P1 International Circuit, the circuit used for these sessions.
-
 I connected RaceChrono to GPS, OBD and a heart-rate strap, aligned onboard video, and compared my recorded lines and control inputs across sessions.
 
 The archive covers **nine sessions and 71 timed laps**. I trace changes from the braking reference through lean and throttle timing to the speed and time carried into the next corner.
@@ -104,8 +102,7 @@ flowchart LR
     ALIGN --> OUT[Selected video and analysis figures]
 ```
 
-
-**Circuit Tools 3** on the pit-room laptop supports review between sessions and planning the next run. The analysis presented here also includes retrospective reconstruction of sessions ridden consecutively. Consumer hardware and DIY processing make the acquisition practical within my budget.
+**Circuit Tools 3** on the pit-room laptop supports review between sessions and planning the next run. The analysis presented here also includes retrospective reconstruction of sessions ridden consecutively.
 
 The linked reports contain the synchronized video, event maps, line and control comparisons, measurement definitions and aggregate data.
 

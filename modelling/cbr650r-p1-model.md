@@ -6,7 +6,7 @@
 
 I built this model from my **11 July 2026 CBR650R / P1** programme, separate from the September aprilia GPR150 analysis. The archive contains five TrackAddict sessions, corrected lap timing, position/speed and camera observations. The selected scale reference is a corrected **59.000 s lap with 60 GPS updates**, whose sampled chord totals **895.390 m**. The CSV has 20 Hz rows, but position updates are approximately 1 Hz.
 
-Camera display observations around 42–47° supply achieved-demand anchors: a level-road steady-state approximation, `ay/g ≈ tan(phi)`, gives approximately **0.90–1.07 g**. These observations contextualise the model envelope; camera/body angle is distinct from an identified tyre-force coefficient.
+The camera display shows lean angles around 42–47°. For steady cornering on a level road, `ay/g ≈ tan(phi)` gives approximately **0.90–1.07 g**. This estimates lateral acceleration during those turns; it does not measure the tyre grip limit.
 
 ### Vehicle-specific inputs
 
@@ -25,7 +25,7 @@ Camera display observations around 42–47° supply achieved-demand anchors: a l
 
 ![Vehicle-specific rear-wheel power curve](../assets/modelling/cbr650r-wheel-power.png)
 
-The curve contains eleven retained points. At each road speed, I calculate rpm in each legal gear, interpolate wheel power and select the best available gear. The interpolated rear-wheel power feeds directly into the acceleration ceiling. The [input contract](data/cbr650r-inputs.json) contains the actual values used by the published code.
+The curve contains eleven retained points. At each road speed, I calculate rpm in each legal gear, interpolate wheel power and select the best available gear. The interpolated rear-wheel power feeds directly into the acceleration ceiling. The [model parameters](data/cbr650r-inputs.json) contains the actual values used by the published code.
 
 ## What “given adhesion assumptions” means
 
@@ -64,14 +64,14 @@ Sparse GPS cuts across curves. I sample the physical candidate at the observed G
 
 The working candidate's scale is **0.184205 m/pixel**. Its physical polyline is **907.408 m**; its simulated GPS chord is **894.680 m**, compared with **895.390 m** observed. The residual is **−0.710 m, approximately −0.079%**. This is the residual against the observation used for scale fitting. A one-step scale refit gives 0.184369 m/pixel and exposes remaining line/scale coupling.
 
-## Outputs that support engineering judgement
+## Calculated speed, gears and roll rate
 
 ![Model speed, longitudinal demand and finite-shift gear policy](../assets/modelling/p1-speed-and-gears.png)
 
 - **Envelope sensitivity:** the nominal 1.15 g scenario gives **57.303 s**; the higher 2.00 g working scenario gives **45.869 s**, with **36.4–142.7 km/h** speed. Each scenario has its own searched path and scale fit.
 - **Gear feasibility:** the nominal candidate's **28.9 km/h** minimum leaves **five stations** without a legal 2nd–4th gear within the retained dyno interval. That identifies a need for lower-rpm data, first gear or a changed path/speed profile.
 - **Finite shifts:** the higher-envelope candidate admits a closed 2nd–4th policy, using second and third gear with **two shifts**. A 0.20 s/shift allowance gives **46.269 s**. The shift allowance is added to the fixed-path timing.
-- **Transient screening:** its equivalent roll-rate proxy peaks at **9.663 rad/s**, exceeding the reduced-model **3.0 rad/s** guardrail. Steering-rate demand peaks at **0.775 rad/s**, below 5.0 rad/s. The peak occurs at the periodic boundary; I will inspect that boundary when refining the transient model.
+- **Transient screening:** its equivalent roll-rate proxy peaks at **9.663 rad/s**, exceeding the reduced-model **3.0 rad/s** limit. Steering-rate demand peaks at **0.775 rad/s**, below 5.0 rad/s. The peak occurs at the periodic boundary; I will inspect that boundary when refining the transient model.
 
 The model gives me a speed profile, legal-gear checks and a list of limiting sections to inspect. The 45.869 s candidate uses the exploratory 2.00 g envelope and requires transient refinement at the failed roll-rate screen.
 

@@ -2,7 +2,7 @@
 
 [Portfolio contents](../README.md)
 
-I record my motorcycle sessions with RaceChrono, BLE OBD and onboard cameras, then align and analyse the data on a laptop. I chose consumer hardware and DIY integration to keep equipment costs within my budget.
+I record my motorcycle sessions with RaceChrono, BLE OBD and onboard cameras, then align and analyse the data on a laptop.
 
 ![Circuit Tools review on the pit-room laptop](../assets/workflow/p1-trackside-circuit-tools.png)
 
@@ -40,11 +40,6 @@ Helmet footage shows my view of the approach and visual reference. Other viewpoi
 
 The published P1 T2 clip is a completed example of that process: one continuous S04 passage aligned through the VBO video clock, with speed, RPM, throttle, calculated lean and longitudinal G displayed alongside the original sound. Other camera files are aligned separately as each analysis requires them.
 
-## Engineering within the budget
-
-I used RaceChrono, BLE OBD, an action camera and a laptop to keep equipment costs within my budget. I integrated their exports and clocks into lap comparisons, mapped lines and synchronized video for trackside and post-session review.
-
-
 ## Archive processing
 
 I retain original RaceChrono exports, available VBO records and camera files by session. Python/NumPy/Matplotlib support the detailed telemetry comparisons; video proxies and aligned excerpts support visual review. Geographic gates provide a common comparison where GPS schemas yield different distance totals. Source-quality checks and channel definitions accompany the selected results.
@@ -78,13 +73,13 @@ For simulator sessions, I combine accepted lap records, native best-lap files, c
 
 For the MX-5 Lime Rock race, I combined a shared complete replay with a local tail buffer, official timing and native best-lap data. The reconstruction restored the full lap, traffic and damage timeline. When its brake channel proved binary, the `.tc` reader supplied the continuous accepted-PB input trace.
 
-The binary-reader work locates the native header, accepted lap time and sample records, then exports speed, track progress, pedals and gear to analysis tables and plots. The upstream replay parser is credited separately; my work is the source integration, timing reconciliation and analysis built around it.
+The binary-reader work locates the native header, accepted lap time and sample records, then exports speed, track progress, pedals and gear to analysis tables and plots.
 
 ### Recording incomplete and invalid attempts
 
 An MX-5 T1 investigation needed an unfinished attempt that fell outside the completed-lap `.tc` record. The alternative export had gaps around the event. I added continuous CSV capture to retain invalid and aborted running for review.
 
-The preserved direct-capture file contains **152,189 polling rows**, four session-time resets and **18.14% adjacent repeated packet IDs**. I use packet and time checks to select continuous windows for analysis.
+The capture contains four session-time resets and **18.14% adjacent repeated packet IDs**. I use packet IDs and session-time resets to select continuous windows for analysis.
 
 ### Preventing silent session contamination
 

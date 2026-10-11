@@ -31,7 +31,7 @@ The next run was narrowed to one correction at a time:
 - let the motorcycle stand up into one continuous roll-on;
 - leave the other turns at the established baseline.
 
-The plan explicitly rejected using a larger peak lean angle as the task. T2 or T18 was a repeatable test location; the observable outcome was a clean roll-in, apex platform, and single exit drive.
+I chose T2 or T18 to practise a continuous roll-in, steady throttle near the apex and one exit roll-on.
 
 ### What the next data showed
 

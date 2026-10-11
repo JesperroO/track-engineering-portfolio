@@ -1,7 +1,5 @@
 # P1 / aprilia GPR150
 
-The revision is integrated into the complete portfolio.
-
 - [Portfolio contents](../../README.md)
 - [GPR project showcase](../../case_studies/p1-gpr150-telemetry.md)
 - [Detailed P1 analysis](../../case_studies/p1-gpr150-analysis.md)

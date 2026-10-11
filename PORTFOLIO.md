@@ -2,8 +2,6 @@
 
 [Portfolio contents](README.md)
 
-I drive, acquire and analyse motorsport data, and build software for telemetry processing and vehicle/lap-time modelling. My entry point for a team is data preparation, performance analysis, testing support and simulation/control development.
-
 ## Real-track cases
 
 | Case | Evidence | Engineering focus |
@@ -31,7 +29,7 @@ The [simulation overview](SIM_RACING.md) links the following cases:
 
 | Team task | Evidence from the work |
 |---|---|
-| Prepare a trustworthy session dataset | Log real-track GNSS/IMU/OBD and video; check clocks, GPS quality and lap boundaries; recover missing simulator channels |
+| Prepare session data | Log real-track GNSS/IMU/OBD and video; check clocks, GPS quality and lap boundaries; recover missing simulator channels |
 | Explain where performance is lost | aprilia GPR150 geographic sectors and linked-corner gains; MX-5 qualifying/loss allocation; F4 reference-speed comparison |
 | Turn vehicle traces into a test | Compare brake-release shapes, wheel unloading and front-lockup signals; define a separate pressure or brake-bias trial |
 | Debrief repeatability as well as PB | Review aprilia GPR150 multi-session progression and consecutive laps; compare three simulator races using median/MAD, damage and cuts |

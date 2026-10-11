@@ -16,7 +16,7 @@ I rode, reported feedback and reviewed sessions at a new circuit. Best lap impro
 
 **17:19, lap 6 against lap 3:** T7 peak speed was 3.109 km/h lower; low-speed waiting fell by 1.314 s and T9 minimum speed was 1.516 km/h higher. T8, T9 and downstream all contributed to a 0.754 s package gain.
 
-The paired outcomes put acceptance at the complete-package exit. Reference laps retain the whole sequence, with cumulative time at the common exit determining whether a process change paid off.
+Compare elapsed time through the whole T7–T9 sequence: less waiting can still cost time if the following corner is slower.
 
 There were also within-lap trade-offs: the 17:19 lap 6 tail lost 0.550 s while T7–T9 gained 0.754 s. The 18:14 lap 9 tail advantage survived to the straight's final study gate at 0.150 s. Different sections receive different reference laps.
 
@@ -26,10 +26,8 @@ There were also within-lap trade-offs: the 17:19 lap 6 tail lost 0.550 s while T
 
 Across five sessions, raw HR fell in the T13-exit/T14 region in 33 of 35 retained laps, with a median local drop of approximately 1.7 bpm. After removing each lap's linear time trend, 34 laps showed a decrease. The pooled trough was near reference progress 560 m.
 
-I reported smoother riding through the long T13 left-hander as a possible contributor to the later trough. Calculated lean stayed around −40° to −42° through the main phase; HR was already falling during the exit roll toward upright. The trough followed upright by a median of 3.0 s, with a middle-half range of 2.1–4.0 s.
+I reported smoother riding through the long T13 left-hander as a possible contributor to the later trough. Calculated lean stayed around −40° to −42° through the main phase; HR was already falling during the exit roll toward upright. The trough followed upright by a median of 3.0 s, with an interquartile range of 2.1–4.0 s.
 
-Within-session movement of the upright crossing and trough was weakly associated; fixed-delay and fixed-position predictions both had typical timing errors of about 1.1 s. Smoother T13 riding and the exit loading change remain a working explanation. Physical and sensor mechanisms, and independent-day replication, remain open.
-
-The spatial pattern was missed in the initial lap-average review and found after my question. Subsequent analyses now include complete-lap spatial overlays, repeatability and counterexamples for rider channels.
+Within-session movement of the upright crossing and trough was weakly associated; fixed-delay and fixed-position predictions both had typical timing errors of about 1.1 s. Smoother T13 riding and the exit loading change remain a working explanation. The data do not distinguish a physiological response from a sensor effect.
 
 [Fixed-gate method](p1-gpr150-methods.md#fixed-geographic-comparisons) · [P1 event-window HR](p1-gpr150-analysis.md#heart-rate-inspect-the-response-shape-against-the-session-pattern) · [Acquisition workflow](data-acquisition-workflow.md)

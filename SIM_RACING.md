@@ -2,9 +2,7 @@
 
 [Portfolio contents](README.md) · [中文概述](zh/sim-racing.md)
 
-I drive the sessions and carry out the data preparation, analysis and follow-up work. My simulation work spans cup cars, TCR, F4 and GT cars. The selected cases cover race review, braking, wheel-load analysis and setup testing.
-
-I locate time losses, inspect the control and vehicle-state traces, then select a driving exercise or setup test for the next run.
+These cases cover my races and practice sessions in cup cars, F4 and GT cars: qualifying gaps, race losses, braking, wheel loads and setup tests.
 
 ## Selected engineering work
 

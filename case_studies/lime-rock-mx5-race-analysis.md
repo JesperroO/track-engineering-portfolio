@@ -47,7 +47,7 @@ The shared replay records brake input as 0/255. I used it for brake-on timing an
 
 ## Follow-up work
 
-The review produced specific targets: increase valid flying laps in the ten-minute qualifying window, concentrate practice on S1, and reduce the recurring large-loss laps instead of chasing another isolated PB.
+The review produced specific targets: increase valid flying laps in the ten-minute qualifying window, concentrate practice on S1, and reduce the recurring large-loss laps.
 
 Timing sources: the official result lists 25 laps; AC/replay supplies 26 crossing intervals. Qualifying sectors come from the result table, and the continuous pedal trace comes from the accepted race PB.
 

@@ -9,7 +9,7 @@ I use this toolchain to acquire track data, analyse driving and vehicle response
 | Layer | Tools and data | What I use them for |
 |---|---|---|
 | Real-track acquisition | RaceChrono Pro, external GNSS/GPS, IMU, OBD-II, and onboard cameras | Session logging, lap timing, position and speed trends, control channels, and visual context |
-| Export and inspection | RaceChrono CSV, VBO/Circuit Tools exports, GPX, JSON, and derived CSV tables | Preserve source records, compare schemas and clocks, and build auditable lap and sector summaries |
+| Export and inspection | RaceChrono CSV, VBO/Circuit Tools exports, GPX, JSON, and derived CSV tables | Preserve source records, compare schemas and clocks, and build lap and sector summaries |
 | Video workflow | DJI Action 5 Pro material, multi-camera onboard footage, MP4 proxy exports, and OpenCV-based utilities | Extract review frames, inspect my line and posture, and define explicit video-to-telemetry time anchors |
 | Simulation acquisition and recovery | Assetto Corsa / ACC, Content Manager, native `.tc`, direct CSV capture, Live Telemetry 1.8.5, upstream `acreplay-parser` 0.3.0 and archived lapstat | Combine accepted timing, pedal traces, wheel loading, tyre state, damage/traffic and server speed references |
 | Analysis software | Python 3.10+, uv, NumPy, Matplotlib, OpenCV, and pytest | Build repeatable ingestion, filtering, derived-channel, plotting, media, and regression-test workflows |
@@ -20,7 +20,7 @@ I use this toolchain to acquire track data, analyse driving and vehicle response
 
 My implementation covers acquisition, analysis, video alignment and numerical modelling:
 
-- **Acquisition and data contracts:** identify source clocks, sampling behaviour, channel meaning, lap boundaries, missing data, GPS quality, and schema changes before comparing sessions.
+- **Source clocks and channels:** identify source clocks, sampling behaviour, channel meaning, lap boundaries, missing data, GPS quality, and schema changes before comparing sessions.
 - **Telemetry processing:** turn raw exports into session summaries, lap tables, geographic gates, sector allocations, GPS-yaw and kinematic signals, normalized throttle, and provisional gear inference.
 - **Video and telemetry integration:** align camera and telemetry clocks using lap markers and visible start/finish crossings, then check the timing at braking and turn-in.
 - **Vehicle-dynamics software:** implement road-frame motorcycle models, powertrain and gear logic, tyre-force interfaces, kinematic-demand checks, and fixed-line/free-path lap-time formulations.
@@ -44,7 +44,7 @@ The [simulation overview](SIM_RACING.md) covers a multi-car workflow and dedicat
 - **GT1 practice:** compare four wheel speeds against brake input and vehicle speed, locate front lockup, and use tyre state and the saved setup to define a brake-bias test.
 - **Acquisition checks:** inspect incomplete attempts, packet repetition and session-time resets; reject stale car/track capture labels through independent session identity.
 
-The native `.tc` reading, dataset joins, derived analysis and charts are the personal implementation work. Replay decoding and high-rate capture use credited upstream tools.
+Replay decoding uses `acreplay-parser`; high-rate capture uses Live Telemetry.
 
 ### Hualong CBR650R practice analysis
 
@@ -53,7 +53,6 @@ The workflow combined RaceChrono, OBD, heart-rate data, action-camera evidence, 
 ### Modelling and numerical methods
 
 The [CBR650R / P1 worked model](modelling/cbr650r-p1-model.md) publishes the measured-data inputs, dyno curve, mass/geometry/gearbox values, adhesion scenarios, GPS scale-fit residual, calculated speed/gear policy and failed rate screen. The [selected runnable implementation](modelling/code/README.md) reproduces the archived 180-station fixed-line speed profile and 45.8689 s conditional QSS timing.
-
 
 ## Acquisition and analysis workflow
 
