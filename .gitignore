@@ -38,6 +38,7 @@ __pycache__/
 !assets/workflow/
 !assets/workflow/p1-trackside-circuit-tools.png
 
-# Selected Subo venue diagram; original GNSS and telemetry remain private.
+# Selected Subo heart-rate evidence; original GNSS and telemetry remain private.
 !assets/subo/
-!assets/subo/track-board.png
+!assets/subo/heart-position.png
+!assets/subo/linked-comparisons.png

@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-06",
+  "circuit": "Subo, Guangzhou",
+  "hr_laps": 35,
+  "hr_sessions": 5,
+  "raw_decrease_laps": 33,
+  "detrended_decrease_laps": 34,
+  "raw_local_drop_median_bpm": -1.7,
+  "raw_windows_reference_m": [
+    [
+      500,
+      520
+    ],
+    [
+      540,
+      560
+    ]
+  ],
+  "pooled_trough_reference_m": 560,
+  "upright_to_trough_median_s": 3.02,
+  "upright_to_trough_middle_half_s": [
+    2.05,
+    4.02
+  ],
+  "within_session_position_pearson_r": 0.186,
+  "hypothesis_status": "Exploratory within-day spatial repetition; fixed-delay and mechanism unconfirmed",
+  "S05_L9_vs_L4": {
+    "wait_delta_s": -0.816,
+    "to325_delta_s": -0.181,
+    "T9_and_downstream_delta_s": 0.762,
+    "whole_T7_T9_delta_s": 0.582
+  },
+  "S04_L6_vs_L3": {
+    "T7_peak_delta_kmh": -3.109,
+    "whole_T7_T9_delta_s": -0.754
+  },
+  "channels": "GPS speed, GPS-calculated lean, chest heart rate; no Subo OBD",
+  "provenance": "Local RaceChrono CSV/VBO archive, fixed-plane crossing study, 2026-10-11 HR spatial analysis"
+}
