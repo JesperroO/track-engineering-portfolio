@@ -1,0 +1,32 @@
+[
+  {
+    "session":"S02",
+    "time":"11:24",
+    "best_s":62.1180000305,
+    "fastest3_spread":1.7459998131
+  },
+  {
+    "session":"PM",
+    "time":"15:23",
+    "best_s":60.8699998856,
+    "fastest3_spread":0.4720001221
+  },
+  {
+    "session":"S04",
+    "time":"17:19",
+    "best_s":61.121999979,
+    "fastest3_spread":0.3259999752
+  },
+  {
+    "session":"S05",
+    "time":"18:14",
+    "best_s":60.7409999371,
+    "fastest3_spread":0.8410000801
+  },
+  {
+    "session":"FINAL",
+    "time":"18:56",
+    "best_s":60.9990000725,
+    "fastest3_spread":1.0480000973
+  }
+]

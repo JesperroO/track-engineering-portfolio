@@ -6,6 +6,8 @@ I ride, acquire and analyse motorsport data, and build software for vehicle simu
 
 ## Contents
 
+**New: [GPR150 / Subo: new-circuit adaptation](case_studies/subo-gpr150.md)** · [Visual case](previews/subo/index.html) · [Six-page PDF](assets/subo/subo-case-study.pdf). Linked-corner gains, repeatable pace and spatial heart-rate patterns.
+
 1. **[aprilia GPR150 / P1](case_studies/p1-gpr150-telemetry.md)** — independent acquisition and analysis; spatial event comparison, linked-corner diagnosis and lap-time gain attribution across nine sessions and 71 timed laps.
    - [T2 lines, throttle opening and braking-reference development](case_studies/p1-gpr150-telemetry.md#t2-lines-control-and-reference-development)
    - [OBD, heart rate and lean](case_studies/p1-gpr150-telemetry.md#obd-control-timing-and-rider-state-analysis)
