@@ -16,6 +16,10 @@ I rode, reported feedback and reviewed sessions at a new circuit. Best lap impro
 
 **17:19, lap 6 against lap 3:** T7 peak speed was 3.109 km/h lower; low-speed waiting fell by 1.314 s and T9 minimum speed was 1.516 km/h higher. T8, T9 and downstream all contributed to a 0.754 s package gain.
 
+![T7–T9 same-session lines and lateral differences](../assets/subo/linked-lines-en.png)
+
+The paired lines are close overall, with local lateral differences of roughly 1–2 m. At reference progress 300 m, S04 L6 is 5.6 km/h faster than L3, and S05 L9 is 3.5 km/h faster than L4. At 325 m, S04 still carries 4.4 km/h more speed, while S05 is already 1.0 km/h slower. The contrasting outcomes emerge through the T8-to-T9 transition, where the initial speed advantage survives in one pair and disappears in the other.
+
 Compare elapsed time through the whole T7–T9 sequence: less waiting can still cost time if the following corner is slower.
 
 There were also within-lap trade-offs: the 17:19 lap 6 tail lost 0.550 s while T7–T9 gained 0.754 s. The 18:14 lap 9 tail advantage survived to the straight's final study gate at 0.150 s. Different sections receive different reference laps.
