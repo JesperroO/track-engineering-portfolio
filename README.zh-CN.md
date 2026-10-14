@@ -10,14 +10,12 @@
 
 ## 项目入口
 
-**[GPR150 / 速搏：连续弯收益与心率位置规律](zh/subo-gpr150.md)**：两组同节对照直接比较得失，全圈叠加发现跨节重复的心率谷。
-
-
 1. **[aprilia GPR150 / P1 实车数据分析](zh/aprilia-gpr150-p1.md)**：九节练习、71 个计时圈；刹车点逐步后移的过程、开油时机、连续弯线路和分段时间差。
-2. **[模拟赛车分析与测试](zh/sim-racing.md)**：MX-5、F4、GT1；对齐回放和遥测，分析轮载、抱死、比赛时间损失和设定测试。
-3. **[车辆动力学与最小圈速建模](zh/vehicle-modelling.md)**：CBR650R 的台架曲线、车辆参数、赛道形状、抓地力假设、线路与速度计算。
-4. **[CBR650R / 赛道日练习分析](case_studies/hualong-cbr650r.md)**：四节实车练习；将油门数据换算到 0–100%，筛选可比较的圈，复盘出弯动作。英文案例。
-5. **[实车采集与现场工作流](case_studies/data-acquisition-workflow.md)**：RaceChrono、GPS／IMU／胸部心率带、BLE OBD、头盔影像和 Circuit Tools 3。英文说明。
+2. **[GPR150 / 速搏：连续弯收益与心率位置规律](zh/subo-gpr150.md)**：两组同节对照直接比较得失，全圈叠加发现跨节重复的心率谷。
+3. **[模拟赛车分析与测试](zh/sim-racing.md)**：MX-5、F4、GT1；对齐回放和遥测，分析轮载、抱死、比赛时间损失和设定测试。
+4. **[车辆动力学与最小圈速建模](zh/vehicle-modelling.md)**：CBR650R 的台架曲线、车辆参数、赛道形状、抓地力假设、线路与速度计算。
+5. **[CBR650R / 赛道日练习分析](case_studies/hualong-cbr650r.md)**：四节实车练习；将油门数据换算到 0–100%，筛选可比较的圈，复盘出弯动作。英文案例。
+6. **[实车采集与现场工作流](case_studies/data-acquisition-workflow.md)**：RaceChrono、GPS／IMU／胸部心率带、BLE OBD、头盔影像和 Circuit Tools 3。英文说明。
 
 ## 我能为车队做什么
 
