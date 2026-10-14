@@ -18,7 +18,7 @@ I ride, acquire and analyse motorsport data, and build software for vehicle simu
    - [F4 / Paul Ricard](case_studies/paul-ricard-f4-development.md): brake release, exit speed and wheel unloading.
    - [Three-race consistency](case_studies/paul-ricard-race-consistency.md): pace, recovery losses and repeatability.
    - [GT1 / Silverstone](case_studies/silverstone-gt1-sim.md): lockup, tyre state and brake-bias analysis.
-4. **[CBR650R / Hualong](case_studies/hualong-cbr650r.md)** — four practice sessions, throttle calibration and comparable-lap selection.
+4. **[CBR650R / Hualong](case_studies/hualong-cbr650r.md)** — four practice sessions; 5.228 s best-lap gain, target-corner throttle sequences, OBD speed/RPM and onboard context.
 5. **[Vehicle and lap-time modelling](modelling/lap-time-modelling.md)** — measured-data inputs, dyno/gearbox integration, pavement constraints and conditional minimum-time calculation.
    - [CBR650R / P1 inputs, adhesion scenarios and worked results](modelling/cbr650r-p1-model.md)
    - [Runnable vehicle-envelope and fixed-line code](modelling/code/README.md)

@@ -50,7 +50,7 @@ The Hualong practice plan assigned a role to each session:
 | S03 | Optional video/verification stage | Keep the data provisional when RaceChrono merged laps or GPS quality degraded |
 | S04 | Comparable confirmation sample | Use only stable laps and stop when the tyre/track condition introduced a new uncontrolled variable |
 
-The best comparable lap moved from `47.869 s` to `44.421 s` and then `42.641 s`, but the action-chain score for the selected drive corner was `1/6`, `2/6`, and `0/6` in the comparable S01, S02, and S04 samples. Pace improved while the target action chain remained inconsistent.
+The best comparable lap moved from `47.869 s` to `44.421 s` and then `42.641 s`, but the original throttle-sequence rule matched `1/6`, `2/6`, and `0/6` in the comparable S01, S02, and S04 samples. The continuous traces show brief openings followed by closure, including S02 L2, which matches that rule. I reviewed the later speed/RPM response before choosing the next practice focus.
 
 I calibrated the OBD throttle channel, selected comparable laps and reviewed the target corner between sessions. S03 remains a provisional trend: merged laps and degraded GPS limit precise cross-session comparison.
 

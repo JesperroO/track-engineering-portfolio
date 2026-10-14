@@ -38,6 +38,11 @@ __pycache__/
 !assets/workflow/
 !assets/workflow/p1-trackside-circuit-tools.png
 
+# Curated Hualong comparisons and the saved onboard still.
+!assets/hualong/
+!assets/hualong/*.png
+!assets/hualong/hualong-s02-onboard.jpg
+
 # Selected Subo heart-rate evidence; original GNSS and telemetry remain private.
 !assets/subo/
 !assets/subo/heart-position.png

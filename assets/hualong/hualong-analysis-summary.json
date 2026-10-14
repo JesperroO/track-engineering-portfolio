@@ -1,0 +1,465 @@
+{
+  "date": "2026-07-28",
+  "vehicle": "2020 Honda CBR650R",
+  "circuit": "Hualong",
+  "normalization": {
+    "closed_raw_pct": 9.80392,
+    "open_raw_pct": 90.19608
+  },
+  "throttle_time_share_method": "Forward elapsed-time intervals with available normalized throttle; calculated separately within each selected lap.",
+  "target_rule": {
+    "window_start_m": 65,
+    "window_end_m": 105,
+    "nearest_candidate_m": 85,
+    "closed_threshold_pct": 1,
+    "small_input_upper_pct": 8,
+    "closed_min_duration_s": 1,
+    "small_input_min_duration_s": 1,
+    "sequence": "closed -> small input -> above 8% without returning closed",
+    "legacy_duration_convention": "last sample minus first sample plus 0.05 s"
+  },
+  "sessions": [
+    {
+      "session": "S01",
+      "laps": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "best_lap_s": 47.86877000000004,
+      "mean_lap_s": 48.453931666666676,
+      "throttle_time_share": [
+        0.3024326646489201,
+        0.6103917470199095,
+        0.08717558833117028
+      ],
+      "target_sequence_count": 1,
+      "target_sequence_total": 6
+    },
+    {
+      "session": "S02",
+      "laps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "best_lap_s": 44.420529999999985,
+      "mean_lap_s": 45.688373333333345,
+      "throttle_time_share": [
+        0.32048722534223173,
+        0.5343226635631296,
+        0.14519011109463853
+      ],
+      "target_sequence_count": 2,
+      "target_sequence_total": 6
+    },
+    {
+      "session": "S04",
+      "laps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "best_lap_s": 42.64116999999999,
+      "mean_lap_s": 43.79154666666667,
+      "throttle_time_share": [
+        0.2598457358284675,
+        0.5493678231963186,
+        0.19078644097521394
+      ],
+      "target_sequence_count": 0,
+      "target_sequence_total": 6
+    }
+  ],
+  "laps": [
+    {
+      "session": "S01",
+      "lap": 4,
+      "lap_time_s": 48.64394999999999,
+      "throttle_time_share": [
+        0.35605558347955135,
+        0.5811000134651877,
+        0.06284440305526094
+      ],
+      "mean_hr_bpm": 131.43283464931307,
+      "peak_hr_bpm": 135.0,
+      "max_calculated_lean_deg": 31.43687,
+      "lean_peak_accuracy_m": 2.7867,
+      "target_event": {
+        "close_start_m": 86.55689999999981,
+        "close_duration_s": 3.1849999999999907,
+        "maintenance_duration_s": 7.6600000000000135,
+        "next_state": "closed",
+        "strict_success": false
+      }
+    },
+    {
+      "session": "S01",
+      "lap": 5,
+      "lap_time_s": 48.672879999999964,
+      "throttle_time_share": [
+        0.37940799886918464,
+        0.5147630466904779,
+        0.1058289544403375
+      ],
+      "mean_hr_bpm": 131.09537359773373,
+      "peak_hr_bpm": 136.0,
+      "max_calculated_lean_deg": 33.10569,
+      "lean_peak_accuracy_m": 2.73111,
+      "target_event": {
+        "close_start_m": 89.39599999999973,
+        "close_duration_s": 2.850000000000011,
+        "maintenance_duration_s": 1.55,
+        "next_state": "closed",
+        "strict_success": false
+      }
+    },
+    {
+      "session": "S01",
+      "lap": 6,
+      "lap_time_s": 49.65965,
+      "throttle_time_share": [
+        0.3852755708105085,
+        0.531155576005871,
+        0.08356885318362045
+      ],
+      "mean_hr_bpm": 132.89730597725656,
+      "peak_hr_bpm": 140.00151,
+      "max_calculated_lean_deg": 31.70831,
+      "lean_peak_accuracy_m": 2.728,
+      "target_event": {
+        "close_start_m": 82.47437000000036,
+        "close_duration_s": 6.081000000000006,
+        "maintenance_duration_s": 5.321000000000015,
+        "next_state": "above 8%",
+        "strict_success": true
+      }
+    },
+    {
+      "session": "S01",
+      "lap": 7,
+      "lap_time_s": 47.88628,
+      "throttle_time_share": [
+        0.2309429757333433,
+        0.5928061231734847,
+        0.176250901093172
+      ],
+      "mean_hr_bpm": 139.22352249277455,
+      "peak_hr_bpm": 143.0,
+      "max_calculated_lean_deg": 35.00946,
+      "lean_peak_accuracy_m": 2.60594,
+      "target_event": {
+        "close_start_m": 87.1847600000001,
+        "close_duration_s": 2.855999999999983,
+        "maintenance_duration_s": 3.7009999999999534,
+        "next_state": "closed",
+        "strict_success": false
+      }
+    },
+    {
+      "session": "S01",
+      "lap": 8,
+      "lap_time_s": 47.99206000000004,
+      "throttle_time_share": [
+        0.24862571016955656,
+        0.724369822841528,
+        0.02700446698891542
+      ],
+      "mean_hr_bpm": 141.52287675126902,
+      "peak_hr_bpm": 146.0,
+      "max_calculated_lean_deg": 37.19656,
+      "lean_peak_accuracy_m": 2.71398,
+      "target_event": {
+        "close_start_m": 87.78696000000036,
+        "close_duration_s": 2.350000000000011,
+        "maintenance_duration_s": 8.610000000000003,
+        "next_state": "closed",
+        "strict_success": false
+      }
+    },
+    {
+      "session": "S01",
+      "lap": 9,
+      "lap_time_s": 47.86877000000004,
+      "throttle_time_share": [
+        0.20919213090288213,
+        0.7229139165263708,
+        0.06789395257074701
+      ],
+      "mean_hr_bpm": 140.33281238307347,
+      "peak_hr_bpm": 146.0,
+      "max_calculated_lean_deg": 31.1176,
+      "lean_peak_accuracy_m": 2.6578,
+      "target_event": {
+        "close_start_m": 78.41997999999967,
+        "close_duration_s": 1.4000000000000228,
+        "maintenance_duration_s": 1.3499999999999546,
+        "next_state": "closed",
+        "strict_success": false
+      }
+    },
+    {
+      "session": "S02",
+      "lap": 2,
+      "lap_time_s": 45.32883000000001,
+      "throttle_time_share": [
+        0.20483277419690604,
+        0.6804499476381825,
+        0.11471727816491155
+      ],
+      "mean_hr_bpm": 150.1088339020658,
+      "peak_hr_bpm": 153.0,
+      "max_calculated_lean_deg": 43.07288,
+      "lean_peak_accuracy_m": 3.03078,
+      "target_event": {
+        "close_start_m": 85.59788000000003,
+        "close_duration_s": 2.735000000000002,
+        "maintenance_duration_s": 1.6000000000000114,
+        "next_state": "above 8%",
+        "strict_success": true
+      }
+    },
+    {
+      "session": "S02",
+      "lap": 3,
+      "lap_time_s": 48.01656000000003,
+      "throttle_time_share": [
+        0.35007838962224747,
+        0.48643634612725306,
+        0.16348526425049945
+      ],
+      "mean_hr_bpm": 144.73541062589928,
+      "peak_hr_bpm": 152.0,
+      "max_calculated_lean_deg": 32.88777,
+      "lean_peak_accuracy_m": 3.45348,
+      "target_event": {
+        "close_start_m": 84.03063999999995,
+        "close_duration_s": 2.2950000000000044,
+        "maintenance_duration_s": 0.7619999999999891,
+        "next_state": "closed",
+        "strict_success": false
+      }
+    },
+    {
+      "session": "S02",
+      "lap": 4,
+      "lap_time_s": 44.831349999999986,
+      "throttle_time_share": [
+        0.34358434443754443,
+        0.49574683787126583,
+        0.16066881769118976
+      ],
+      "mean_hr_bpm": 145.2772098152425,
+      "peak_hr_bpm": 152.0,
+      "max_calculated_lean_deg": 37.62874,
+      "lean_peak_accuracy_m": 2.92915,
+      "target_event": {
+        "close_start_m": 75.27856999999995,
+        "close_duration_s": 4.578999999999996,
+        "maintenance_duration_s": 6.649999999999966,
+        "next_state": "above 8%",
+        "strict_success": true
+      }
+    },
+    {
+      "session": "S02",
+      "lap": 5,
+      "lap_time_s": 44.420529999999985,
+      "throttle_time_share": [
+        0.2925343304098353,
+        0.5006018613465409,
+        0.2068638082436238
+      ],
+      "mean_hr_bpm": 155.2278030529595,
+      "peak_hr_bpm": 162.0,
+      "max_calculated_lean_deg": 35.4336,
+      "lean_peak_accuracy_m": 2.96795,
+      "target_event": {
+        "close_start_m": 85.05043999999998,
+        "close_duration_s": 3.213999999999987,
+        "maintenance_duration_s": 0.44999999999997725,
+        "next_state": "above 8%",
+        "strict_success": false
+      }
+    },
+    {
+      "session": "S02",
+      "lap": 6,
+      "lap_time_s": 45.08062000000001,
+      "throttle_time_share": [
+        0.3788461649373956,
+        0.5246156774241342,
+        0.09653815763847025
+      ],
+      "mean_hr_bpm": 154.22067638591116,
+      "peak_hr_bpm": 158.0,
+      "max_calculated_lean_deg": 36.18541,
+      "lean_peak_accuracy_m": 2.7608,
+      "target_event": {
+        "close_start_m": 70.46636000000035,
+        "close_duration_s": 5.324000000000001,
+        "maintenance_duration_s": 1.4999999999999887,
+        "next_state": "closed",
+        "strict_success": false
+      }
+    },
+    {
+      "session": "S02",
+      "lap": 7,
+      "lap_time_s": 46.452350000000024,
+      "throttle_time_share": [
+        0.35056030534515376,
+        0.5201243855262457,
+        0.12931530912860048
+      ],
+      "mean_hr_bpm": 156.22891246646796,
+      "peak_hr_bpm": 160.0,
+      "max_calculated_lean_deg": 35.32866,
+      "lean_peak_accuracy_m": 3.05799,
+      "target_event": {
+        "close_start_m": 75.82768000000033,
+        "close_duration_s": 5.05,
+        "maintenance_duration_s": 1.4000000000000228,
+        "next_state": "closed",
+        "strict_success": false
+      }
+    },
+    {
+      "session": "S04",
+      "lap": 2,
+      "lap_time_s": 44.597409999999996,
+      "throttle_time_share": [
+        0.22928259735262488,
+        0.5632165634730825,
+        0.20750083917429266
+      ],
+      "mean_hr_bpm": 140.31668822618127,
+      "peak_hr_bpm": 146.0,
+      "max_calculated_lean_deg": 35.95583,
+      "lean_peak_accuracy_m": 3.04775,
+      "target_event": {
+        "close_start_m": 83.61842000000001,
+        "close_duration_s": 1.2669999999999846,
+        "maintenance_duration_s": 2.899999999999994,
+        "next_state": "closed",
+        "strict_success": false
+      }
+    },
+    {
+      "session": "S04",
+      "lap": 3,
+      "lap_time_s": 42.86588000000003,
+      "throttle_time_share": [
+        0.23281640316260993,
+        0.5668377740058049,
+        0.2003458228315851
+      ],
+      "mean_hr_bpm": 145.26270020128823,
+      "peak_hr_bpm": 150.0,
+      "max_calculated_lean_deg": 36.27175,
+      "lean_peak_accuracy_m": 3.66338,
+      "target_event": {
+        "close_start_m": 86.20436999999993,
+        "close_duration_s": 1.2499999999999887,
+        "maintenance_duration_s": 4.599999999999983,
+        "next_state": "closed",
+        "strict_success": false
+      }
+    },
+    {
+      "session": "S04",
+      "lap": 4,
+      "lap_time_s": 43.731250000000045,
+      "throttle_time_share": [
+        0.25478919536944483,
+        0.5397055881091886,
+        0.2055052165213666
+      ],
+      "mean_hr_bpm": 150.04940108643933,
+      "peak_hr_bpm": 155.0,
+      "max_calculated_lean_deg": 35.83034,
+      "lean_peak_accuracy_m": 3.31118,
+      "target_event": {
+        "close_start_m": 89.72771000000012,
+        "close_duration_s": 2.05,
+        "maintenance_duration_s": 1.8499999999999546,
+        "next_state": "closed",
+        "strict_success": false
+      }
+    },
+    {
+      "session": "S04",
+      "lap": 5,
+      "lap_time_s": 43.29195999999996,
+      "throttle_time_share": [
+        0.2684322908918867,
+        0.5829950873095155,
+        0.14857262179859776
+      ],
+      "mean_hr_bpm": 152.1934228182546,
+      "peak_hr_bpm": 157.0,
+      "max_calculated_lean_deg": 35.68354,
+      "lean_peak_accuracy_m": 3.3836,
+      "target_event": {
+        "close_start_m": 76.5325399999997,
+        "close_duration_s": 2.211000000000001,
+        "maintenance_duration_s": 1.3559999999999832,
+        "next_state": "closed",
+        "strict_success": false
+      }
+    },
+    {
+      "session": "S04",
+      "lap": 6,
+      "lap_time_s": 42.64116999999999,
+      "throttle_time_share": [
+        0.26080827519507843,
+        0.5414485578139604,
+        0.19774316699096112
+      ],
+      "mean_hr_bpm": 155.77635702351986,
+      "peak_hr_bpm": 160.0,
+      "max_calculated_lean_deg": 43.48827,
+      "lean_peak_accuracy_m": 3.23172,
+      "target_event": {
+        "close_start_m": 74.80153999999993,
+        "close_duration_s": 2.6500000000000226,
+        "maintenance_duration_s": 4.199999999999977,
+        "next_state": "closed",
+        "strict_success": false
+      }
+    },
+    {
+      "session": "S04",
+      "lap": 7,
+      "lap_time_s": 45.621609999999976,
+      "throttle_time_share": [
+        0.31091866332643614,
+        0.5041689672942284,
+        0.18491236937933545
+      ],
+      "mean_hr_bpm": 158.41020572617245,
+      "peak_hr_bpm": 166.0,
+      "max_calculated_lean_deg": 36.47537,
+      "lean_peak_accuracy_m": 3.09946,
+      "target_event": {
+        "close_start_m": 86.30299000000014,
+        "close_duration_s": 2.0000000000000453,
+        "maintenance_duration_s": 0.7000000000000342,
+        "next_state": "above 8%",
+        "strict_success": false
+      }
+    }
+  ],
+  "s03_status": "Merged automatic laps and degraded GPS; excluded from comparative figures.",
+  "checks": "Selected lap times, target event durations and 1/6, 2/6, 0/6 counts reproduce the archived derived tables."
+}

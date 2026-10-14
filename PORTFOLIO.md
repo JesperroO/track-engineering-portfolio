@@ -23,7 +23,7 @@ The [simulation overview](SIM_RACING.md) links the following cases:
 
 | Case | Evidence | Engineering focus |
 |---|---|---|
-| [Hualong CBR650R](case_studies/hualong-cbr650r.md) | Four sessions; comparable best 47.869 to 42.641 s | OBD signal calibration, comparable-lap selection and low-rate GPS limitations |
+| [Hualong CBR650R](case_studies/hualong-cbr650r.md) | Four sessions; comparable best 47.869 to 42.641 s | Throttle normalization, duration-weighted use, target-event screening and OBD speed/RPM comparison |
 
 ## What I can contribute
 

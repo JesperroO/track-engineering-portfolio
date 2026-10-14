@@ -48,7 +48,7 @@ Replay decoding uses `acreplay-parser`; high-rate capture uses Live Telemetry.
 
 ### Hualong CBR650R practice analysis
 
-The workflow combined RaceChrono, OBD, heart-rate data, action-camera evidence, derived CSV tables, and an Excel analysis workbook. OBD throttle was calibrated from its recorded endpoints; GPS was used for position and speed trends; degraded GPS and merged laps were gated out of precise comparison.
+The [Hualong case](case_studies/hualong-cbr650r.md) compares six selected laps per session, duration-weighted throttle use, and the target corner's throttle/speed/RPM sequence. I reproduced the original event flags, then checked the continuous traces for closures after the first opening. The [methods](case_studies/hualong-cbr650r-methods.md) define the thresholds, event window and treatment of merged S03 laps.
 
 ### Modelling and numerical methods
 
