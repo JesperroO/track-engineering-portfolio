@@ -4,7 +4,7 @@
 
 **2026-08-05 / 19 / 26 · Assetto Corsa · MX-5 and Octavia Cup · Lime Rock and Paul Ricard WTCC**
 
-I compared three formal online races after driving and reviewing each one. Across the different cars and tracks, I compare within-event pace spread, late-race development and recovery losses.
+I drove and reviewed three formal online races in different cars and at different tracks. I compared each race's pace spread, late-race improvement and recovery losses.
 
 ## A common statistical rule
 
@@ -18,15 +18,15 @@ For each event, I take the median and median absolute deviation (MAD) of all com
 
 ![Normalized consistency and late-race development](../assets/sim/race-consistency.png)
 
-All three events show faster late representative laps. R7 combines a narrow retained pace band with two mid-race repairs and long recovery intervals; the timeline shows where that consistency was interrupted.
+All three events have faster retained laps late in the race. R7 has a narrow pace band, interrupted by two mid-race repairs and long recovery intervals.
 
 ## Joining damage, lap timing and validity
 
 I group closely spaced jumps in the replay damage channels into damage episodes.
 
-- **R5:** two opening-lap damage clusters, then no additional damage during the remaining race and no mid-race repair. Official P5 and the game-side P16 start are corroborated by stored result evidence.
-- **R7:** three damage episodes and two repairs. The representative laps narrow to a stable band, but recovery intervals of roughly 214-259 s dominate race continuity. The retained summary has no finishing-position record.
-- **R8:** four in-race episodes, no mid-race repair, plus a separate post-finish episode. After a 133.520 s fifth completed lap, the next six completed laps progress from 109.496 to **105.665 s**.
+- R5: two opening-lap damage clusters, then no additional damage during the remaining race and no mid-race repair. The stored results confirm official P5 and game-side P16 at the start.
+- R7: three damage episodes and two repairs. The representative laps narrow to a stable band, but recovery intervals of roughly 214-259 s dominate race continuity. The retained summary has no finishing-position record.
+- R8: four in-race episodes, no mid-race repair, plus a separate post-finish episode. After a 133.520 s fifth completed lap, the next six completed laps progress from 109.496 to **105.665 s**.
 
 The R8 result is game-side P18 to P13. Its 105.665 s PB occurs on completed lap 11 of 14, with zero cuts; completed laps 12-14 have cuts. The final practice priority is to reproduce that late-race pace across consecutive valid laps.
 
@@ -34,7 +34,7 @@ The R8 result is game-side P18 to P13. Its 105.665 s PB occurs on completed lap 
 
 The R8 PB is 2.902 s behind the session's fastest 102.763 s lap. The sector differences are **+0.018 / +1.651 / +1.233 s**. That focuses the next practice on S2/S3 while preserving the already close S1.
 
-My practice targets are to retain the late-race pace, address recurring damage and cuts, and complete consecutive valid laps in that pace band.
+I also targeted the recurring damage and cuts that interrupted the improved pace.
 
 ## Source distinctions
 

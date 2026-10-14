@@ -4,7 +4,7 @@
 
 **Practice on 2026-08-31 and 2026-09-01 · SMP F4 Gen 2 · Paul Ricard WTCC**
 
-This development work combines repeated driving, replay-derived control analysis, Content Manager timing, server-reference speed traces and separate setup variants. The main problem was repeated loss of the rear axle through one S2 transition, which interrupted otherwise usable pace.
+I repeatedly lost the rear axle through one S2 transition. I compared replay controls and wheel loads with Content Manager timing, checked a server speed reference and tried separate setup variants.
 
 ## Match the trace to the session
 
@@ -27,7 +27,7 @@ The prior session PB was 92.444 s, with sectors 18.563 / 31.298 / 42.583 s. L15 
 
 ## A faster S1 with earlier release
 
-L28's valid S1 is **18.054 s**, 0.623 s faster than L15's 18.677 s. Rechecking the replay samples gives:
+L28's valid S1 is **18.054 s**, 0.623 s faster than L15's 18.677 s. The replay records:
 
 | S1 measure | L15 | L28 |
 |---|---:|---:|
@@ -56,13 +56,13 @@ I compare wheel loads, throttle, steering and replay position through the loss a
 - A: rear fast rebound reduced from 6 to 5, intended to investigate the unload/recontact transition.
 - B: rear cold pressure reduced from 17 to 16 psi, with the fronts retained at 17 psi.
 
-The event's adjustable-setting restriction excluded the damping variant from the race setup. The pressure variant remained a candidate. A later B-configuration practice session recorded a valid **91.005 s** lap, but repeated failures at the same S2 location remained. The pressure variant retained usable pace while leaving the transition problem unresolved.
+The event's adjustable-setting restriction excluded the damping variant from the race setup. The pressure variant remained a candidate. A later B-configuration practice session recorded a valid **91.005 s** lap, but repeated failures at the same S2 location remained.
 
 I planned a 25-minute fuel budget of approximately 21 L, using an estimated 1.0–1.1 L per clean lap.
 
 ## A second reference beyond personal PB
 
-An archived server `lapstat` comparison contains a personal 90.814 s lap and an 86.871 s reference. Its speed-distance traces reveal a substantial deficit around 3.30-3.50 km in the final braking sequence, even though the repeated S2 failure naturally attracted more attention.
+An archived server `lapstat` comparison contains a personal 90.814 s lap and an 86.871 s reference. Its speed-distance traces reveal a substantial deficit around 3.30-3.50 km in the final braking sequence, beyond the S2 transition I had been practising.
 
 ![Archived F4 server speed reference](../assets/sim/f4-server-reference.png)
 

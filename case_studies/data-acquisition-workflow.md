@@ -26,19 +26,19 @@ flowchart LR
     VIDEO --> CT
 ```
 
-The vehicle side supplies OBD channels such as RPM and throttle. GPS supplies position, speed and lap context; motion and heart-rate channels add information about my riding transitions and heart-rate response. Their individual sampling rates and source definitions remain attached to the exported data.
+OBD records RPM and throttle; GPS records position, speed and lap timing. Motion data describe riding transitions, and the chest strap records heart rate. I retain each channel's source and sampling rate with the exports.
 
 ## Between sessions
 
 During a review break, I use **Circuit Tools 3 on the pit-room laptop** to compare laps, inspect speed and control traces, and revisit the available onboard footage. I combine those observations with riding feedback to choose the focus for the next session: a braking reference, opening sequence, linked-corner line or other specific driving question.
 
-The working loop is **ride → capture → review → choose the next-session focus → ride again**. Review timing depends on the session schedule. For the P1 S04–S07 sequence, the consecutive runs were analysed retrospectively; the general trackside workflow also includes breaks used for review and planning.
+Review timing depends on the session schedule. I rode P1 S04–S07 consecutively and analysed them afterward; when there is a review break, I use it to plan the next session.
 
 ## Video and later analysis
 
-Helmet footage shows my view of the approach and visual reference. Other viewpoints provide complementary context. After the track day, I archive the original telemetry and camera files, align the available viewpoints and telemetry clocks, and select the relevant passage for a lap or corner comparison.
+Helmet footage shows the approach and visual markers from my viewpoint. Other cameras show the line and riding position. After the track day, I archive the original telemetry and camera files, align the available viewpoints and telemetry clocks, and select the relevant passage for a lap or corner comparison.
 
-The published P1 T2 clip is a completed example of that process: one continuous S04 passage aligned through the VBO video clock, with speed, RPM, throttle, calculated lean and longitudinal G displayed alongside the original sound. Other camera files are aligned separately as each analysis requires them.
+The P1 T2 clip uses one continuous S04 passage aligned through the VBO video clock, with speed, RPM, throttle, calculated lean and longitudinal G displayed alongside the original sound. Other camera files are aligned separately as each analysis requires them.
 
 ## Archive processing
 
@@ -48,11 +48,11 @@ The [aprilia GPR150 P1 case](p1-gpr150-telemetry.md) and [CBR650R case](hualong-
 
 ## Source checks
 
-- **P1 GPS source changes:** source schemas differed between sessions and produced materially different distance totals. Geographic gates supplied a shared comparison; external-GPS precision and satellite fields supported reference-lap selection.
-- **P1 source-clock conflict:** some exports retained an old GPS date despite the current session metadata and upload context. Monotonic elapsed/lap timing supported interval analysis while absolute timestamps remained qualified.
-- **aprilia GPR150 gear inference:** an ECU speed PID stayed at zero and no direct gear channel was available. I used GPS/RPM ratios and my recorded gear choices, retaining inferred labels where applicable.
-- **CBR650R throttle normalization:** scale the recorded OBD endpoints to 0–100% for comparing throttle opening and release across laps.
-- **CBR650R degraded GPS:** merged laps and weak position data in S03 were retained for provisional context but excluded from precise cross-session claims.
+- P1 GPS source changes: source schemas differed between sessions and produced materially different distance totals. Geographic gates supplied a shared comparison; external-GPS precision and satellite fields supported reference-lap selection.
+- P1 source-clock conflict: some exports retained an old GPS date despite the current session metadata and upload context. Monotonic elapsed/lap timing supported interval analysis while absolute timestamps remained qualified.
+- aprilia GPR150 gear inference: an ECU speed PID stayed at zero and no direct gear channel was available. I used GPS/RPM ratios and my recorded gear choices, retaining inferred labels where applicable.
+- CBR650R throttle normalization: scale the recorded OBD endpoints to 0–100% for comparing throttle opening and release across laps.
+- CBR650R degraded GPS: merged laps and weak position data in S03 were retained for provisional context but excluded from precise cross-session claims.
 
 ## Simulator acquisition and recovery
 
@@ -83,11 +83,9 @@ The capture contains four session-time resets and **18.14% adjacent repeated pac
 
 ### Preventing silent session contamination
 
-For F4, I match replay lap transitions against CM valid-lap times. For Silverstone, a later incorrectly labelled telemetry filename is rejected after CM identifies the actual Macau/Evo session. These checks prevent comparing different sessions under the same apparent car/track label.
+For F4, I match replay lap transitions against CM valid-lap times. For Silverstone, a later incorrectly labelled telemetry filename is rejected after CM identifies the actual Macau/Evo session.
 
 ### Engineering outputs
-
-I export:
 
 - valid-lap and source-coverage tables;
 - speed/input traces and brake-event windows;

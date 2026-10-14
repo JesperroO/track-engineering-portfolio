@@ -11,11 +11,11 @@
 
 ## Simulation cases
 
-The [simulation overview](SIM_RACING.md) links the following cases:
+[Simulation overview](SIM_RACING.md)
 
 - [MX-5 / Lime Rock](case_studies/lime-rock-mx5-race-analysis.md): P16 to official P5; accepted 57.784 s race PB; qualifying S1 accounts for 60.5% of the pole gap; seven major slow intervals cost 28.50 s against the planning baseline.
-- [F4 / Paul Ricard](case_studies/paul-ricard-f4-development.md): match replay lap transitions to CM timing, compare a 0.623 s S1 gain through brake release and exit speed, and distinguish wheel-load observations from setup-test results.
-- [GT1 / Silverstone](case_studies/silverstone-gt1-sim.md): valid-medium laps improve from 133.739 to 127.571 s; right-front lockup at 90.15–90.71% lap progress informs a proposed brake-bias test.
+- [F4 / Paul Ricard](case_studies/paul-ricard-f4-development.md): match replay lap transitions to CM timing, compare brake release and exit speed in a 0.623 s S1 gain, then inspect rear-wheel load and the results of a pressure test.
+- [GT1 / Silverstone](case_studies/silverstone-gt1-sim.md): valid laps on medium tyres improve from 133.739 to 127.571 s; right-front lockup at 90.15–90.71% lap progress informs a proposed brake-bias test.
 
 - [Three-race comparison](case_studies/paul-ricard-race-consistency.md): compare representative pace, incident recovery, late-race gains and cut-lap patterns.
 
@@ -33,12 +33,12 @@ The [simulation overview](SIM_RACING.md) links the following cases:
 | Explain where performance is lost | aprilia GPR150 geographic sectors and linked-corner gains; MX-5 qualifying/loss allocation; F4 reference-speed comparison |
 | Turn vehicle traces into a test | Compare brake-release shapes, wheel unloading and front-lockup signals; define a separate pressure or brake-bias trial |
 | Debrief repeatability as well as PB | Review aprilia GPR150 multi-session progression and consecutive laps; compare three simulator races using median/MAD, damage and cuts |
-| Support real-world acquisition | Personally ride and log motorcycle sessions; combine GNSS/IMU/OBD and video while controlling data quality |
+| Support real-world acquisition | Ride and record motorcycle sessions; align GNSS/IMU/OBD with video and check channel coverage |
 | Implement models and tools | [CBR650R inputs, envelope and path/speed results](modelling/cbr650r-p1-model.md); [runnable QSS code](modelling/code/README.md) |
 
 ## Implementation
 
-[Technical profile](TECHNICAL_PROFILE.md) describes the implementation. [Figure sources](assets/sim/README.md) identify the records and calculations behind the simulation results.
+[Tools and implementation](TECHNICAL_PROFILE.md) · [Simulation figure sources and calculations](assets/sim/README.md)
 
 ## Acquisition and analysis workflow
 

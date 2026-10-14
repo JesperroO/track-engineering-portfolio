@@ -1,10 +1,10 @@
-# aprilia GPR150 / P1 — detailed analysis
+# aprilia GPR150 / P1: detailed analysis
 
-[Project showcase](p1-gpr150-telemetry.md) · [Portfolio contents](../README.md)
+[Project overview](p1-gpr150-telemetry.md) · [Portfolio contents](../README.md)
 
 **September 2026 · my riding, data acquisition and analysis**
 
-I rode and logged repeated P1 practice sessions, then joined the recorded lines, OBD channels and onboard footage to examine how the driving developed. T1 is the approach kink; T2 is the main left after the straight. This case follows the braking reference, corner-exit control, linked-corner trade-offs and the final sequence of personal bests.
+I rode and logged repeated P1 practice sessions, then joined the recorded lines, OBD channels and onboard footage to examine how the driving developed. T1 is the approach kink; T2 is the main left after the straight. I compared the braking reference, corner-exit control and linked-corner times through the final sequence of personal bests.
 
 ## In this case
 
@@ -39,7 +39,7 @@ Over several sessions I moved the braking reference downstream, eventually using
 
 ![Recorded lines and event positions](../assets/p1/p1-t2-line-analysis.png)
 
-**S02 L2 → S08 L8:** the recorded deceleration onset moves approximately **12.3 m downstream**, while the sustained 20° left-lean landmark stays in a similar approach position. The two laps therefore show a substantial change in the approach without an equivalent downstream shift of the lean landmark.
+**S02 L2 → S08 L8:** the recorded deceleration onset moves approximately **12.3 m downstream**, while the sustained 20° left-lean landmark stays in a similar approach position.
 
 Both lines use the same metric coordinate frame. The larger diagram shows the corner sequence; the detail views isolate the approach events. Circles identify deceleration onset, squares sustained left lean of 20°, and triangles sustained 40% throttle.
 
@@ -49,9 +49,9 @@ Both lines use the same metric coordinate frame. The larger diagram shows the co
 
 The curves align each lap at its T2 minimum speed, marked by the vertical zero line. Sustained 40% throttle arrives **1.50 s after minimum speed in S02 L2**, compared with **0.10 s in S08 L8**. The speed traces then separate through the exit while both laps remain substantially leaned over.
 
-At the fixed T2 exit gate, speed increases **58.8 → 64.6 km/h**. At the downstream gate it increases **43.4 → 46.0 km/h**. The measured T2-plus-downstream package improves by **0.722 s**: **0.569 s in T2** and **0.152 s after it**, with rounding applied to the components.
+At the fixed T2 exit gate, speed increases **58.8 → 64.6 km/h**. At the downstream gate it increases **43.4 → 46.0 km/h**. The measured T2-plus-downstream section improves by **0.722 s**: **0.569 s in T2** and **0.152 s after it**, with rounding applied to the components.
 
-The full-lap PB and the fastest opening package capture different strengths. S07 L5 traverses the same opening package in **13.940 s**, compared with **14.192 s for S08 L8**, despite its lower T2 exit speed. Exit speed and the following transition must therefore be read together.
+The full-lap PB and the fastest opening sequence capture different strengths. S07 L5 traverses the same opening sequence in **13.940 s**, compared with **14.192 s for S08 L8**, despite its lower T2 exit speed. Exit speed and the following transition must therefore be read together.
 
 A second pair illustrates the distinction: **S04 L7 → S06 L7** has later deceleration and a later lean landmark, but the delay to sustained 40% opening grows **0.35 → 0.95 s**. The effect of moving the reference depends on the accompanying entry and corner sequence.
 
@@ -61,11 +61,11 @@ A second pair illustrates the distinction: **S04 L7 → S06 L7** has later decel
 
 Each point is one timed lap; session boundaries preserve the riding order. Position is projected onto the common approach axis, with **S08 L8 onset at 0 m**. Pale bars show how the detected point changes when the deceleration threshold varies from -0.10 to -0.20 G.
 
-The clearest reversal occurs within S07. Its first five laps have median onset **+9.9 m**, while the final four return to **+0.6 m**. S08 stays near that returned region. The sequence records downstream shifts and returns within the practice day; my riding notes supply the reasons for individual adjustments.
+The clearest reversal occurs within S07. Its first five laps have median onset **+9.9 m**, while the final four return to **+0.6 m**. S08 stays near that returned region. My riding notes record why I moved the reference on individual attempts.
 
-The logged full position range narrows from **22.3 m in S07** to **2.8 m in S08**. The middle-half ranges narrow from **9.0 m** to **1.1 m**. Varying the event threshold preserves the broad difference between the sessions. The result describes relative consistency in the recorded onset position.
+The logged full position range narrows from **22.3 m in S07** to **2.8 m in S08**. The middle-half ranges narrow from **9.0 m** to **1.1 m**. Varying the event threshold preserves the broad difference between the sessions.
 
-S04–S07 were ridden consecutively without interim telemetry debriefs. This analysis reconstructs the practice retrospectively.
+S04–S07 were ridden consecutively without interim telemetry debriefs. I analysed these runs afterward.
 
 ### Event definitions
 
@@ -77,7 +77,7 @@ GNSS supplies position and speed; OBD supplies throttle and engine speed. Decele
 
 [![Play the 20-second T2 onboard example](../assets/p1/aprilia-gpr150-t2-braking-reference.jpg)](https://raw.githubusercontent.com/JesperroO/track-engineering-portfolio/core/assets/p1/aprilia-gpr150-t2-braking-reference.mp4)
 
-[Watch the original-audio clip](../assets/p1/aprilia-gpr150-t2-braking-reference.mp4) — S04 L4, source-video 06:21–06:41. The approach shows the tucked position, the raised kerb at the T1 kink, the transition upright and the main T2 left. This intermediate-session example gives the physical setting for the measured S02/S08 comparison.
+[Watch the original-audio clip](../assets/p1/aprilia-gpr150-t2-braking-reference.mp4): S04 L4, source-video 06:21–06:41. The approach shows the tucked position, the raised kerb at the T1 kink, the transition upright and the main T2 left.
 
 ![P1 line comparison and physical braking reference](../assets/p1/p1-t2-board-reference.png)
 
@@ -89,9 +89,9 @@ The overlay joins GNSS speed, OBD RPM/throttle and calculated lean/longitudinal 
 
 The final PB retains **0.722 s** across T2 and the following section relative to S02 L2: **0.569 s in T2**, then **0.152 s downstream**. T2 exit speed rises **58.8 → 64.6 km/h**, and downstream gate speed **43.4 → 46.0 km/h**.
 
-S07 L5 nevertheless completes this package faster: **13.940 s**, against **14.192 s in S08 L8**. Its lower T2 exit speed, **62.8 km/h**, accompanies a shorter downstream traversal. The final PB gains **0.059 s in T2** against this lap, then returns **0.311 s** in the following section. The best exit-speed result and the best complete sequence belong to different laps.
+S07 L5 nevertheless completes this combined section faster: **13.940 s**, against **14.192 s in S08 L8**. Its lower T2 exit speed, **62.8 km/h**, accompanies a shorter downstream traversal. The final PB gains **0.059 s in T2** against this lap, then returns **0.311 s** in the following section. The best exit-speed result and the best complete sequence belong to different laps.
 
-The pattern also extends beyond the chosen PBs. The package median improves **14.955 → 14.278 s** from S02 to S07, then becomes **14.550 s** in S08. S02-to-S08 median exit speed rises **58.8 → 62.2 km/h**. The full per-session comparison is retained in the [aggregate evidence](../assets/p1/t2-progression-summary.json).
+The pattern also extends beyond the chosen PBs. The median time through the combined section improves **14.955 → 14.278 s** from S02 to S07, then becomes **14.550 s** in S08. S02-to-S08 median exit speed rises **58.8 → 62.2 km/h**. The full per-session comparison is retained in the [aggregate evidence](../assets/p1/t2-progression-summary.json).
 
 ## Whole-lap performance studies
 
@@ -107,7 +107,7 @@ The left panel shows the recorded G60–G80 paths in one coordinate frame. Circl
 
 The red PB trace develops right lean earlier, then crosses through upright into left lean earlier on this elapsed-time axis. Its throttle opening also begins earlier in the first block, but returns to partial input before the next acceleration. These changes sit beside a different path through the reversal. The controls are plotted from the common gate; the board view places the two sequences along their recorded lines.
 
-S09's deliberate exercise sharpens the same contrast: L10 takes **5.702 s** through G60–G70 and **7.528 s** through G70–G80. Its **13.230 s** total remains slower than the selected PB sequence. The linked-section outcome gives context to the locally faster right-hand block.
+S09's deliberate exercise sharpens the same contrast: L10 takes **5.702 s** through G60–G70 and **7.528 s** through G70–G80. Its **13.230 s** total remains slower than the selected PB sequence.
 
 ### 2. S08 consecutive PBs: where the final 0.424 s came from
 
@@ -119,7 +119,7 @@ Red solid intervals gain time; grey dashed intervals return time. The quantitati
 
 Red path intervals gain time from **L7 to L8**; grey intervals return it. The adjacent bars quantify those same fixed geographic intervals. The lower panel compares accumulated gains for both PB steps.
 
-**L6 → L7:** T2 and its following section gain **0.322 s**, but the rest of the lap returns **0.285 s**, leaving **0.037 s** at the finish. **L7 → L8:** the opening package gains only **0.036 s**; the rest contributes **0.388 s** of the final **0.424 s** improvement.
+**L6 → L7:** T2 and its following section gain **0.322 s**, but the rest of the lap returns **0.285 s**, leaving **0.037 s** at the finish. **L7 → L8:** the opening sequence gains only **0.036 s**; the rest contributes **0.388 s** of the final **0.424 s** improvement.
 
 The strongest final-step contribution is **G20–G40: 0.371 s**. G40–G60 adds **0.175 s**. L8 reaches G70 approximately **0.59 s ahead**, then finishes **0.424 s ahead** after later losses.
 
@@ -127,13 +127,13 @@ The strongest final-step contribution is **G20–G40: 0.371 s**. G40–G60 adds 
 
 ![L7 and L8 lines and controls through G20–G40](../assets/p1/p1-pb-middle-controls.png)
 
-The following plots compare G20–G40. Circles, squares and triangles mark G20, G30 and G40. L8 carries more speed at all three gates: **48.6 / 39.2 / 56.9 km/h**, against **47.8 / 38.1 / 54.6 km/h in L7**.
+Circles, squares and triangles mark G20, G30 and G40. L8 carries more speed at all three gates: **48.6 / 39.2 / 56.9 km/h**, against **47.8 / 38.1 / 54.6 km/h in L7**.
 
-The two paths remain close through much of the right-hand arc, while the red trace maintains more throttle after the first opening falls back to partial input. Around 8–10 s from G20, that input accompanies stronger speed recovery and an earlier right-to-left reversal on the elapsed-time axis. The measured section time falls **11.850 → 11.479 s**. This locates a concrete control-and-transition difference within the PB, while retaining line and timing as separate observations.
+The two paths remain close through much of the right-hand arc, while the red trace maintains more throttle after the first opening falls back to partial input. Around 8–10 s from G20, that input accompanies stronger speed recovery and an earlier right-to-left reversal on the elapsed-time axis. The measured section time falls **11.850 → 11.479 s**.
 
 ### 3. A deliberate right-turn exercise
 
-**Method:** compare the exercise at the same G60–G80 gates as the earlier linked-corner study, then inspect the driven path, right-lean duration and following acceleration.
+I compared the exercise at the same G60–G80 gates, then inspected the path, right-lean duration and following acceleration.
 
 ![S08 and S09 lines on the photographed P1 board](../assets/p1/p1-right-exercise-board-lines.png)
 
@@ -141,11 +141,11 @@ The two paths remain close through much of the right-hand arc, while the red tra
 
 The S09 L10 trace spends more of the first block near or above **40° right lean**, carries more speed through that block and reaches G70 sooner. Its following leftward transition carries less speed and accelerates later. Squares mark the common G70 crossing; equal elapsed times elsewhere can correspond to different positions.
 
-S09 L10 improves G60–G70 by approximately **0.194 s** against S08 L8, then loses approximately **0.510 s** through G70–G80. The complete pair is **13.230 versus 12.914 s**, exposing the downstream cost of the locally quicker exercise.
+S09 L10 improves G60–G70 by approximately **0.194 s** against S08 L8, then loses approximately **0.510 s** through G70–G80. The complete pair is **13.230 versus 12.914 s**, including the time lost after the quicker first block.
 
 ![Directional lean magnitude and duration across S07–S09](../assets/p1/p1-directional-lean-context.png)
 
-Whole-session medians supply context: right-side time beyond 40° changes **2.172 → 2.665 s** from S08 to S09, while median peak right lean changes **43.187° → 43.944°**. This separates the shape and duration of the exercise from the peak-angle number. The exercise has its own objective; its whole-lap distribution remains separate from the PB progression.
+Whole-session medians supply context: right-side time beyond 40° changes **2.172 → 2.665 s** from S08 to S09, while median peak right lean changes **43.187° → 43.944°**. S09 was a right-turn exercise, so I compared its lean durations separately from the PB progression.
 
 [Directional and comparison aggregates](../assets/p1/p1-supporting-comparisons.json)
 
@@ -153,7 +153,7 @@ Whole-session medians supply context: right-side time beyond 40° changes **2.17
 
 ### Deceleration: position, speed loss and recovery
 
-**Method:** compare the complete deceleration sequence at a common minimum-speed event, retaining the sustained onset position and speed loss as separate quantities.
+I aligned each lap at minimum speed and compared deceleration onset, speed loss and recovery.
 
 ![T2 approach context from the aligned S04 onboard excerpt](../assets/p1/p1-t2-onboard-sequence.png)
 
@@ -161,7 +161,7 @@ Whole-session medians supply context: right-side time beyond 40° changes **2.17
 
 Open circles mark the archived sustained deceleration onset; zero marks each lap's T2 minimum speed. The G trace uses a 0.25 s moving mean for display. The speed view reveals the longer early slowdown in S02, alongside the later, stronger deceleration episodes in S06 and S08.
 
-S02 L2 / S08 L8 have archived filtered troughs of approximately **−0.40 / −0.63 G** and effective average deceleration from onset to minimum of **0.25 / 0.32 G**. S06 L7 reaches approximately **−0.68 G**. Reading onset, speed loss and recovery together describes the approach sequence; the calculated net G includes engine braking and coasting.
+S02 L2 / S08 L8 have archived filtered troughs of approximately **−0.40 / −0.63 G** and effective average deceleration from onset to minimum of **0.25 / 0.32 G**. S06 L7 reaches approximately **−0.68 G**. Calculated net G includes engine braking and coasting.
 
 [Position and repeatability study](#t2-lines-control-and-reference-development) · [Source and event definitions](p1-gpr150-methods.md#t2-events)
 
@@ -173,9 +173,9 @@ The [aligned S04 excerpt](#t2-onboard-example-developing-a-repeatable-braking-re
 
 All three laps align at their T2 minimum-speed event. S02 L2 and S08 L8 reach similar minimum engine speeds, approximately **6,383 / 6,356 rpm**, then exit at **8,688 / 9,346 rpm**. The throttle sequence supplies the context: near-closed time in T2 falls **3.75 → 1.50 s**, and stable 40% opening moves **+1.50 → +0.10 s** after minimum speed.
 
-S07 L5 has a different engine-speed recovery, exiting at approximately **7,106 rpm** despite a broadly comparable GPS exit speed. Reading RPM and throttle alongside speed exposes drivetrain behaviour that speed alone conceals. I recorded my gear-choice trials alongside the speed/RPM groupings; transient ratio changes also reflect clutch state and channel timing.
+S07 L5 has a different engine-speed recovery, exiting at approximately **7,106 rpm** despite a broadly comparable GPS exit speed. RPM and throttle show how engine-speed recovery differs between these laps. I recorded my gear-choice trials alongside the speed/RPM groupings; transient ratio changes also reflect clutch state and channel timing.
 
-The PB's early opening is a selected-lap result. S08's median stable-40% delay is **1.20 s**, showing a meaningful gap between the best execution and the session's usual sequence.
+The PB's early opening is a selected-lap result. S08's median stable-40% delay is **1.20 s**, compared with the PB's 0.10 s delay.
 
 ### Lean: the shape and duration of the cornering episode
 
@@ -183,7 +183,7 @@ The PB's early opening is a selected-lap result. S08's median stable-40% delay i
 
 The left panel retains physical left/right sign and aligns at minimum speed. The dotted line marks **35° left lean**. The right panel pairs time beyond 35° with peak left-lean magnitude for the same two laps.
 
-S02 L2 → S08 L8 increases peak left lean **42.0° → 44.3°**, while time beyond 35° falls **4.20 → 3.70 s**. The quicker lap passes through its deep-lean episode in less time, with the earlier opening already visible in the T2 control comparison. Reading magnitude, duration and recovery together is more informative than comparing maximum angle alone.
+S02 L2 → S08 L8 increases peak left lean **42.0° → 44.3°**, while time beyond 35° falls **4.20 → 3.70 s**. The quicker lap passes through its deep-lean episode in less time, with the earlier opening already visible in the T2 control comparison.
 
 ### Heart rate: inspect the response shape against the session pattern
 
@@ -195,7 +195,7 @@ The post-event window extends beyond the approach into the following corners.
 
 The left panel aligns five-second median-filtered HR at the approach-deceleration trough and subtracts the pre-event baseline. S06 L7 rises across the later part of the window, while S08 L8 trends downward. The right panel retains each session's median response and middle-half range across all HR-covered timed laps.
 
-The +2 to +12 s post-event maximum is approximately **+8.5 bpm in S06 L7** and **−1.0 bpm in S08 L8**. Session medians also change: **+5.1 bpm in S01**, **−0.8 in S07**, **+0.7 in S08**. The response is larger in S06 L7 than S08 L8. The window includes the subsequent corner sequence and HR sensor delay; S09 has no HR channel.
+The +2 to +12 s post-event maximum is approximately **+8.5 bpm in S06 L7** and **−1.0 bpm in S08 L8**. Session medians also change: **+5.1 bpm in S01**, **−0.8 in S07**, **+0.7 in S08**.  The window includes the subsequent corner sequence and HR sensor delay; S09 has no HR channel.
 
 ## Supporting driving and setup comparisons
 
@@ -205,19 +205,19 @@ Before the September run, I asked whether using third gear in T2 could avoid an 
 
 ![RPM, throttle and speed through the gear-trial comparison](../assets/p1/p1-gear-trial-sequence.png)
 
-Both traces start at the common T2 entry plane. Squares mark T2 exit and the traces continue to the downstream plane. This keeps the drive phase and the following slowdown visible together.
+Both traces start at the common T2 entry plane. Squares mark T2 exit and the traces continue to the downstream plane.
 
-The retained geographic-gate results for **S01 L4 / S02 L2** give **0.081 s in T2**, **0.771 s downstream** and **0.851 s across the package**. I rode T2 in third gear during the trial. The pair shows the result of the complete driving sequence; RPM/throttle add drivetrain context, with line and entry changes also present.
+The retained geographic-gate results for **S01 L4 / S02 L2** give **0.081 s in T2**, **0.771 s downstream** and **0.851 s across the combined section**. I rode T2 in third gear during the trial. The pair shows the result of the complete driving sequence; RPM/throttle add drivetrain context, with line and entry changes also present.
 
 ### Same-session contrast: entry speed versus linked-corner carry
 
-**Method:** select consecutive laps from the same session, hold the geographic comparison planes fixed, and inspect how entry, opening and the following corner differ.
+I compared consecutive laps from the same session at fixed geographic planes, checking entry speed, opening and the following corner.
 
 ![Same-session speed, engine speed and throttle comparison](../assets/p1/p1-same-session-carry.png)
 
 S04 L7 enters T2 slightly slower than L6 (**83.4 versus 84.0 km/h**) and reaches a lower T2 minimum (**38.9 versus 39.8 km/h**), yet carries approximately **40.0 versus 36.5 km/h** through the following right-hander. The later acceleration phase retains a higher throttle input and stronger engine-speed recovery in the plotted sequence.
 
-The fixed T2-plus-downstream package improves approximately **0.540 s**; full laps are **56.644 versus 57.201 s**. The gain is carried through the linked package, where I compare speed, throttle and engine recovery.
+The fixed T2-plus-downstream section improves approximately **0.540 s**; full laps are **56.644 versus 57.201 s**.
 
 ### Tyre-pressure context
 
@@ -225,7 +225,7 @@ I recorded cold pressures of **1.75 / 1.70 bar**, front/rear, and a later front 
 
 ## Video frame gallery
 
-Selected onboard frames retain the daylight, overcast and night conditions across the programme. The aligned T2 clip above supplies the timed example; these stills provide visual context for the wider archive.
+These onboard frames show daylight, overcast and night sessions. The T2 clip above is aligned with telemetry.
 
 <p align="center">
   <img src="../assets/p1/video_frames/p1-s04-day-corner-01.jpg" alt="P1 S04 daytime corner" width="31%" />

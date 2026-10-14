@@ -4,7 +4,7 @@
 
 **2026-09-12 · Assetto Corsa · RSS GT Shadow V8 · Silverstone GP OSRW**
 
-I drove and analysed a prequalification practice programme, combining CM laps and validity flags, the saved setup and **50 Hz Live Telemetry**. The work covers driving performance, brake/tyre behaviour and the next setup test.
+I drove and analysed a prequalification practice programme, combining CM laps and validity flags, the saved setup and **50 Hz Live Telemetry**. I compared sector times, brake input, wheel speeds and tyre state to choose a setup test.
 
 ## Valid laps and sector allocation
 
@@ -34,7 +34,7 @@ Comparing the final valid lap with the previous one:
 
 At approximately 60% track progress, the final lap was already 3.616 s ahead; the remaining section returned about 0.631 s. The largest gains were around Village/Loop/Aintree, Brooklands/Luffield and Copse. Copse-window minimum speed increased from about 144.7 to 152.1 km/h.
 
-The almost unchanged maximum speed directs attention to corner execution and throttle connection.
+Maximum speed changed little; the faster lap spent more time at full throttle and carried more speed through Copse.
 
 ## Brake and wheel-speed interpretation
 
@@ -57,12 +57,12 @@ With four cold pressures set to 20 psi, the end of the fastest medium lap record
 | LR | 28.96 psi | 85.7 C |
 | RR | 28.08 psi | 79.9 C |
 
-The later soft-tyre segment reaches about 29.82 psi and 91.4 C at the left rear. Combined with repeated S3 errors and invalid laps, this supports keeping a medium-tyre baseline until a comparable soft stint exists.
+The later soft-tyre segment reaches about 29.82 psi and 91.4 C at the left rear. The soft stint also contains repeated S3 errors and invalid laps. I kept medium tyres for the proposed comparison.
 
 ## Fuel, conditions and session identity
 
 The CM record reports 49.904 km and 31.4 L consumed, equivalent to approximately **3.70 L per 5.891 km lap**. The final setup stores 18 L. Practice conditions were 26 C air / 34 C track; the event target was 18 C / 30 C.
 
-A later capture carries a Silverstone/Shadow filename but matches a CM Macau/Evo session. It is excluded from this case because startup metadata was stale. Filename matching alone would have contaminated both the performance comparison and tyre conclusions.
+A later capture carries a Silverstone/Shadow filename but matches a CM Macau/Evo session. It is excluded from this case because startup metadata was stale.
 
 See [aggregate evidence and source notes](../assets/sim/README.md).

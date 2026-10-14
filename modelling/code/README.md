@@ -16,4 +16,4 @@ python run_fixed_line.py
 
 The JSON supplies segment lengths and curvature for the archived 180-station candidate. The script solves **speed on this fixed path** and reports time and speed differences against the archive. [The worked model](../cbr650r-p1-model.md) describes path optimisation and photographed-board extraction.
 
-Verification of this published subset reproduces **45.8689348527 s**, with **0.0 m/s maximum difference** from the archived speed profile and convergence in three passes. [Model inputs and assumptions](../cbr650r-p1-model.md).
+Running these modules reproduces **45.8689348527 s**, with **0.0 m/s maximum difference** from the archived speed profile and convergence in three passes. [Model inputs and assumptions](../cbr650r-p1-model.md).

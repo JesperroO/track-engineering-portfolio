@@ -4,7 +4,7 @@
 
 **2026 年 9 月 · P1 国际赛车场 · 独立骑行、采集与分析 · 九节练习、71 个计时圈**
 
-我用 RaceChrono、GPS、OBD、心率带和车载影像记录自己的赛道练习。我重点比较刹车点后移以后，是否更晚入弯、更早开油，以及这个弯省下的时间会不会在后面的连续弯丢掉。
+我用 RaceChrono、GPS、OBD、心率带和车载影像记录自己的赛道练习，重点比较刹车点后移以后，是否更晚入弯、更早开油，以及这个弯省下的时间会不会在后面的连续弯丢掉。
 
 ## 刹车参照、入弯与开油
 
@@ -38,7 +38,7 @@ S06 L7 与 S08 L8 的比较中，一个区段节省 **0.431 s**，接下来的�
 
 ![出弯速度、转速与油门时序](../assets/p1/p1-obd-engine-recovery.png)
 
-倾角分析比较最大倾角，以及保持较大倾角的时间。心率分析比较减速前后的变化，再查看这种变化在不同节、不同圈里是否反复出现。其他对比包括 S09 右弯练习、挡位选择，以及同一节内连续两圈的线路和操作。
+倾角分析比较最大倾角，和保持较大倾角的时间。心率分析比较减速前后的变化，再查看这种变化在不同节、不同圈里是否反复出现。其他对比包括 S09 右弯练习、挡位选择，以及同一节内连续两圈的线路和操作。
 
 [OBD、倾角与心率分析](../case_studies/p1-gpr150-analysis.md#obd-control-timing-and-rider-state-analysis) · [挡位与同节对比](../case_studies/p1-gpr150-analysis.md#supporting-driving-and-setup-comparisons)
 
@@ -46,6 +46,6 @@ S06 L7 与 S08 L8 的比较中，一个区段节省 **0.431 s**，接下来的�
 
 采集设备和软件包括 RaceChrono、GPS／IMU、胸部心率带、vLinker MC+ BLE OBD2 和 DJI Action 5 Pro 头盔影像。我用 Circuit Tools 3 在 P 房笔记本上复盘，赛后继续完成多机位与遥测对齐。
 
-页面附有同步视频、减速与开油位置图、线路和操作曲线、分段时间差及汇总数据。S04–S07 连续骑行，分析在赛后完成；有休息间隔时，我在 P 房复盘并安排下一节练习。
+S04–S07 连续骑行，分析在赛后完成；有休息间隔时，我在 P 房复盘并安排下一节练习。
 
 [详细分析](../case_studies/p1-gpr150-analysis.md) · [测量方法](../case_studies/p1-gpr150-methods.md) · [采集工作流](../case_studies/data-acquisition-workflow.md) · [汇总数据](../assets/p1/p1-development-detail-summary.json)

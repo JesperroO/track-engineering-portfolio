@@ -15,8 +15,8 @@ The sequential comparison retains S02 and S04–S08, totalling 47 timed laps in 
 
 Calculated G and lean define the event landmarks. Each lap retains its recorded trajectory in a shared coordinate frame. GNSS precision and threshold sensitivity accompany the metre-scale position comparison.
 
-The S04 clip uses the VBO main-video clock. Visual checks at the upright/deceleration transition and main-left lean agree at approximately half-second inspection resolution. The S04 clip illustrates execution in an intermediate session, separately from the S02/S08 comparison.
+The S04 clip uses the VBO main-video clock. Visual checks at the upright/deceleration transition and main-left lean agree at approximately half-second inspection resolution. The S04 clip is from an intermediate session; the measured comparison uses S02/S08.
 
-The downstream timing and speed values in the main text are reproduced from the existing fixed-gate progression summary. The differences shown are observed comparisons; no isolated setup effect is inferred.
+The downstream timing and speed values in the main text are reproduced from the existing fixed-gate progression summary. These pairs include changes in driving and line as well as the recorded setup.
 
 [Back to the study](p1-gpr150-analysis.md#t2-lines-control-and-reference-development)

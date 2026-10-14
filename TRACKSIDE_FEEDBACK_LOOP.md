@@ -13,13 +13,11 @@ run a session
     -> compare the new evidence and keep, reject, or refine the hypothesis
 ```
 
-Each review identifies a corner or sequence to work on and a result to compare after the next run.
-
 ## P1 CBR650R: from a full-session impression to a one-turn drill
 
 ### Evidence after the first session
 
-The first P1 session produced six complete laps and showed stable deep-lean samples around T14/T18, while T2 contained repeated throttle attempts. Video and telemetry showed early speed unloading, a waiting phase and a second control input while completing the turn.
+The first P1 session produced six complete laps and showed stable deep-lean samples around T14/T18, while T2 contained repeated throttle attempts. Video and telemetry showed early slowing, a waiting phase and another control input before completing the turn.
 
 ### Decision for the next session
 
@@ -37,7 +35,7 @@ I chose T2 or T18 to practise a continuous roll-in, steady throttle near the ape
 
 I aligned the later video review to TrackAddict using a visible camera timestamp and a fixed `17.0 s` offset. In the usable rear-camera segment, several laps showed a continuous `40–46°` roll-in and roll-out. The focused session also produced two approximately `59 s` laps and a later `47°` right-turn frame. The video review showed repeatable posture and vehicle motion; throttle timing remained a focus for the later OBD-instrumented programme.
 
-The full-day sector comparison then showed improvement in all four coarse geographic sections: approximately `1 s`, `1 s`, `1 s`, and `2 s`, for a `1:03.994 → 58.998 s` representative-lap change. The improvement was distributed across the lap.
+The full-day sector comparison then showed improvement in all four coarse geographic sections: approximately `1 s`, `1 s`, `1 s`, and `2 s`, for a `1:03.994 → 58.998 s` representative-lap change.
 
 ## Hualong CBR650R: baseline, single-variable practice, and data gates
 
@@ -59,16 +57,16 @@ I calibrated the OBD throttle channel, selected comparable laps and reviewed the
 The September P1 programme contains nine sessions and 71 timed laps. I rode S04–S07 consecutively and reviewed them afterward.
 
 - The S06 review identified a late-lap continuity pattern: the quickest complete T2 gate was not necessarily the quickest T2-plus-following-right complex.
-- S07 supplied a repeatable seven-lap band and a faster complete opening complex without requiring the fastest standalone T2 gate.
-- After S07, the documented decision was one more short, controlled session using the existing `56 s` rhythm as the ceiling rather than an immediate personal-best attack.
+- S07 produced seven laps in a close time range and a faster combined opening section, without setting the fastest T2 split.
+- After S07, I planned one more short session at the established `56 s` rhythm before another PB attempt.
 - S08 then produced `55.496 s`, but the post-session comparison showed that the gain was distributed: `0.400 s` in the `60–70%` region and `0.243 s` in the final `10%`, while `0.450 s` was returned in the immediately following `70–80%` transition.
-- S09 changed purpose after the displayed lap entered the `58 s` range: it became deliberate right-turn exploration rather than continued personal-best assembly.
+- S09 changed purpose after the displayed lap entered the `58 s` range: I switched to practising right turns and stopped trying to assemble a PB.
 
 ## Silverstone GT1 simulation: from observation to the next controlled test
 
-The same loop exists in the simulation work. Three valid medium-tyre laps progressed from `2:13.739` to `2:10.561` to `2:07.571`. Fifty-hertz telemetry showed almost unchanged top speed, longer full-throttle time, less braking time, and front-wheel lockup signals around heavy-braking zones.
+Three valid medium-tyre laps progressed from `2:13.739` to `2:10.561` to `2:07.571`. Fifty-hertz telemetry showed almost unchanged top speed, longer full-throttle time, less braking time, and front-wheel lockup signals around heavy-braking zones.
 
-The resulting next-session instruction was concrete:
+I proposed this test:
 
 > Change front brake bias from `61.0%` to `60.5%`; hold the rest of the setup fixed; compare front-wheel lockup and exit performance in Village, Becketts, and Vale.
 
@@ -76,7 +74,7 @@ The brake-bias change remains a proposed test.
 
 ## F4 simulation: learn from a local gain and an incomplete setup fix
 
-The [F4 case](case_studies/paul-ricard-f4-development.md) shows a further turn-by-turn loop. A repeated S2 wheel-unload event prompted separate damping and rear-pressure variants. Event restrictions removed damping from the legal race setup; the pressure trial retained a valid 91.005 s lap but did not remove the repeated loss at the same transition. I retained the driving-transition problem as the next review focus.
+In the [F4 case](case_studies/paul-ricard-f4-development.md), repeated S2 rear-wheel unloading prompted separate damping and pressure tests. Event restrictions removed damping from the legal race setup; the pressure trial retained a valid 91.005 s lap but did not remove the repeated loss at the same transition. I retained the driving-transition problem as the next review focus.
 
 A separate S1 comparison finds 18.054 s versus 18.677 s, with earlier brake release and higher exit speed. The whole L28 lap remains slower, so the next task is to reproduce that control sequence inside a clean lap. The server speed comparison also identified a larger deficit in the final braking sequence.
 

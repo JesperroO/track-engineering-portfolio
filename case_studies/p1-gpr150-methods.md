@@ -1,6 +1,6 @@
-# aprilia GPR150 / P1 — measurement and source notes
+# aprilia GPR150 / P1: measurement and source notes
 
-[Project showcase](p1-gpr150-telemetry.md) · [Detailed analysis](p1-gpr150-analysis.md) · [Portfolio contents](../README.md)
+[Project overview](p1-gpr150-telemetry.md) · [Detailed analysis](p1-gpr150-analysis.md) · [Portfolio contents](../README.md)
 
 ## Source channels
 
@@ -8,11 +8,11 @@ RaceChrono exports retain GNSS position/speed/precision, OBD RPM/throttle/coolan
 
 ## T2 events
 
-[T2 event definitions and source details](p1-t2-development-method.md) specify sustained deceleration, main-left lean and throttle-opening thresholds. Deceleration represents net longitudinal change; lean landmarks represent calculated roll-state events. Brake pressure and steering angle were not recorded.
+[T2 event definitions and source details](p1-t2-development-method.md) specify sustained deceleration, main-left lean and throttle-opening thresholds. The deceleration marker uses net longitudinal G; the lean marker uses calculated lean. Brake pressure and steering angle were not recorded.
 
 ## Fixed geographic comparisons
 
-The T2 package uses fixed transverse planes from the Sep 2 S04 L3 reference: entry at 2.82 s, exit at 12.37 s and downstream endpoint at 18.50 s. All 71 laps cross these planes in time order, using interpolated crossings. The principal comparison uses S02 and S04–S08; S01/S03 have different GPS schemas and S09 changes the exercise.
+The T2 combined section uses fixed transverse planes from the Sep 2 S04 L3 reference: entry at 2.82 s, exit at 12.37 s and downstream endpoint at 18.50 s. All 71 laps cross these planes in time order, using interpolated crossings. The principal comparison uses S02 and S04–S08; S01/S03 have different GPS schemas and S09 changes the exercise.
 
 The whole-lap studies use G10–G90 transverse planes at 10% increments of **S08 L8's reference GPS path**. G0/G100 retain recorded lap endpoints. The same planes apply to each lap; forward crossings are interpolated with progress-order checks. Section totals use the original crossing times. G60–G80 identify fixed stations along the reference path.
 
@@ -22,7 +22,7 @@ Control plots begin at a common geographic gate or at each lap's minimum-speed e
 
 ## Heart-rate windows
 
-The deceleration trough anchors each event. HR is interpolated onto a 20 Hz grid and median-filtered over five seconds. The baseline is the median from −3 to −1 s; the response summary is the maximum from +2 to +12 s minus baseline. The new trace panel shows the relative HR shape for three selected laps. The session panel uses the retained full-session aggregates: dots are medians and vertical segments are the 25th–75th percentiles. The response window includes the following corner sequence and sensor delay. Session 9 has no HR.
+The deceleration trough anchors each event. HR is interpolated onto a 20 Hz grid and median-filtered over five seconds. The baseline is the median from −3 to −1 s; the response summary is the maximum from +2 to +12 s minus baseline. The trace panel shows the relative HR shape for three selected laps. The session panel uses the retained full-session aggregates: dots are medians and vertical segments are the 25th–75th percentiles. The response window includes the following corner sequence and sensor delay. Session 9 has no HR.
 
 ## Video and map alignment
 
@@ -34,7 +34,7 @@ One similarity fit registers S08 L8 to the existing P1 main-corridor schematic; 
 
 ## Photographed-board comparisons
 
-The same similarity registration used by the published T2 comparison also places the linked-corner lines, geographic gates, PB interval gains and HR window on the photographed P1 board. Its parameters were recovered from the published S08 overlay, then applied unchanged to every compared lap. Recovery discrepancy against that rendered line is below one board pixel; this is separate from the original approximately 18 px schematic-fit discrepancy. Each trajectory retains its measured shape and relative position.
+The same similarity registration used by the published T2 comparison also places the linked-corner lines, geographic gates, PB interval gains and HR window on the photographed P1 board. Its parameters were recovered from the published S08 overlay, then applied unchanged to every compared lap. Recovery discrepancy against that rendered line is below one board pixel; the original schematic fit has approximately 18 px discrepancy. Each trajectory retains its measured shape and relative position.
 
 Board colours distinguish laps or interval gains as indicated by each legend. Native metric and control figures provide the quantitative comparisons alongside the board views.
 
@@ -42,16 +42,16 @@ Board colours distinguish laps or interval gains as indicated by each legend. Na
 
 The S09 exercise reuses the published G60/G70/G80 crossing times. The directional-lean panel uses per-session medians from the retained whole-lap lean summary; open circles show right lean and crosses left lean. S09 has no HR channel.
 
-Gear-trial and same-session trace figures interpolate native GNSS crossings of the original three T2 planes. Their display crossings can differ by approximately 0.01–0.03 s from the retained analysis-grid aggregates. The text uses the retained aggregate package results; neither timing series is rescaled. Squares mark each lap's T2 exit. All throttle traces use the same archived-endpoint normalization.
+Gear-trial and same-session trace figures interpolate native GNSS crossings of the original three T2 planes. Their display crossings can differ by approximately 0.01–0.03 s from the retained analysis-grid aggregates. The text uses the retained aggregate combined section results; neither timing series is rescaled. Squares mark each lap's T2 exit. All throttle traces use the same archived-endpoint normalization.
 
 The deceleration display uses a five-sample moving mean on the 0.05 s grid. Its onset markers and reported effective-average values come from the retained channel aggregates. Speed loss divided by onset-to-minimum elapsed time supplies the average net-deceleration proxy.
 
 ## Session context
 
-S04–S07 were ridden consecutively without interim telemetry debriefs. Their changes are retrospective observations. The generic pit-room review workflow is documented separately in the [acquisition chapter](data-acquisition-workflow.md).
+S04–S07 were ridden consecutively without interim telemetry debriefs. I compared these runs afterward. Pit-room review is described in the [acquisition chapter](data-acquisition-workflow.md).
 
 My riding notes document how I progressively moved the physical braking reference, tried third gear, recorded tyre pressures and chose the S09 exercise objective. Gear labels use my recorded gear choices or RPM/speed inference; transient ratios also depend on clutch state and cross-channel timing.
 
-The broader previous-day 60.022 s reference gives approximately 1.50 s improvement across the T2/downstream package (15.692 → 14.192 s). This spans acquisition schemas; the same-programme comparison carries the main result.
+The broader previous-day 60.022 s reference gives approximately 1.50 s improvement across the T2/downstream section (15.692 → 14.192 s). This spans acquisition schemas; the same-programme comparison carries the main result.
 
-[Project showcase](p1-gpr150-telemetry.md) · [Detailed analysis](p1-gpr150-analysis.md)
+[Project overview](p1-gpr150-telemetry.md) · [Detailed analysis](p1-gpr150-analysis.md)

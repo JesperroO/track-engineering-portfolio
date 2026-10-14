@@ -1,6 +1,6 @@
-# CBR650R / P1 — inputs, assumptions and calculation
+# CBR650R / P1: inputs, assumptions and calculation
 
-[Modelling showcase](lap-time-modelling.md) · [Code and data](code/README.md)
+[Model overview](lap-time-modelling.md) · [Code and data](code/README.md)
 
 ## From measured riding data to a vehicle model
 
@@ -25,9 +25,9 @@ The camera display shows lean angles around 42–47°. For steady cornering on a
 
 ![Vehicle-specific rear-wheel power curve](../assets/modelling/cbr650r-wheel-power.png)
 
-The curve contains eleven retained points. At each road speed, I calculate rpm in each legal gear, interpolate wheel power and select the best available gear. The interpolated rear-wheel power feeds directly into the acceleration ceiling. The [model parameters](data/cbr650r-inputs.json) contains the actual values used by the published code.
+The curve contains eleven retained points. At each road speed, I calculate rpm in each legal gear, interpolate wheel power and select the best available gear. The interpolated rear-wheel power feeds directly into the acceleration ceiling. The published code uses these [model parameters](data/cbr650r-inputs.json).
 
-## What “given adhesion assumptions” means
+## Grip assumptions
 
 I construct **separate lateral, braking and rear-drive ceilings**:
 
@@ -46,7 +46,7 @@ The combined centre-of-mass height and front static load fraction are also expli
 
 `a_stoppie/g = (1 − front_fraction) × wheelbase / h_CG`
 
-The dry geometry gives **1.208 g**. Thus the upper scenario's requested 1.22 g braking input is clipped to 1.208 g. Chassis assumptions directly change the usable envelope.
+The dry geometry gives **1.208 g**. Thus the upper scenario's requested 1.22 g braking input is clipped to 1.208 g.
 
 ## Calculation chain
 
@@ -62,17 +62,17 @@ The candidate keeps **0.184 m minimum hard-pavement clearance** for the model re
 
 Sparse GPS cuts across curves. I sample the physical candidate at the observed GPS update phase, using its relative traversal timing rescaled to the measured 59 s lap, and fit scale against the resulting **sampled chord**.
 
-The working candidate's scale is **0.184205 m/pixel**. Its physical polyline is **907.408 m**; its simulated GPS chord is **894.680 m**, compared with **895.390 m** observed. The residual is **−0.710 m, approximately −0.079%**. This is the residual against the observation used for scale fitting. A one-step scale refit gives 0.184369 m/pixel and exposes remaining line/scale coupling.
+The working candidate's scale is **0.184205 m/pixel**. Its physical polyline is **907.408 m**; its simulated GPS chord is **894.680 m**, compared with **895.390 m** observed. The residual is **−0.710 m, approximately −0.079%**. This is the residual against the observation used for scale fitting. A one-step scale refit gives 0.184369 m/pixel; the fitted scale still depends on the candidate line.
 
 ## Calculated speed, gears and roll rate
 
 ![Model speed, longitudinal demand and finite-shift gear policy](../assets/modelling/p1-speed-and-gears.png)
 
-- **Envelope sensitivity:** the nominal 1.15 g scenario gives **57.303 s**; the higher 2.00 g working scenario gives **45.869 s**, with **36.4–142.7 km/h** speed. Each scenario has its own searched path and scale fit.
-- **Gear feasibility:** the nominal candidate's **28.9 km/h** minimum leaves **five stations** without a legal 2nd–4th gear within the retained dyno interval. That identifies a need for lower-rpm data, first gear or a changed path/speed profile.
-- **Finite shifts:** the higher-envelope candidate admits a closed 2nd–4th policy, using second and third gear with **two shifts**. A 0.20 s/shift allowance gives **46.269 s**. The shift allowance is added to the fixed-path timing.
-- **Transient screening:** its equivalent roll-rate proxy peaks at **9.663 rad/s**, exceeding the reduced-model **3.0 rad/s** limit. Steering-rate demand peaks at **0.775 rad/s**, below 5.0 rad/s. The peak occurs at the periodic boundary; I will inspect that boundary when refining the transient model.
+- Envelope sensitivity: the nominal 1.15 g scenario gives **57.303 s**; the higher 2.00 g working scenario gives **45.869 s**, with **36.4–142.7 km/h** speed. Each scenario has its own searched path and scale fit.
+- Gear feasibility: the nominal candidate's **28.9 km/h** minimum leaves **five stations** without a legal 2nd–4th gear within the retained dyno interval. That identifies a need for lower-rpm data, first gear or a changed path/speed profile.
+- Finite shifts: the higher-envelope candidate admits a closed 2nd–4th policy, using second and third gear with **two shifts**. A 0.20 s/shift allowance gives **46.269 s**. The shift allowance is added to the fixed-path timing.
+- Transient screening: its equivalent roll-rate proxy peaks at **9.663 rad/s**, exceeding the reduced-model **3.0 rad/s** limit. Steering-rate demand peaks at **0.775 rad/s**, below 5.0 rad/s. The roll-rate peak occurs at the periodic boundary; I will inspect that boundary when refining the transient model.
 
-The model gives me a speed profile, legal-gear checks and a list of limiting sections to inspect. The 45.869 s candidate uses the exploratory 2.00 g envelope and requires transient refinement at the failed roll-rate screen.
+The 45.869 s candidate uses the exploratory 2.00 g envelope. Its failed roll-rate check still requires transient refinement.
 
-[Archived result values](data/archived-result-summary.json) preserve the historical calculations. The [runnable subset](code/README.md) exposes the actual vehicle-envelope and fixed-line implementation.
+[Archived result values](data/archived-result-summary.json) preserve the historical calculations. The [runnable subset](code/README.md) contains the vehicle-envelope and fixed-line implementation.

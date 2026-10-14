@@ -9,19 +9,19 @@
 
 I connected RaceChrono to GPS, OBD and a heart-rate strap, aligned onboard video, and compared my recorded lines and control inputs across sessions.
 
-The archive covers **nine sessions and 71 timed laps**. I trace changes from the braking reference through lean and throttle timing to the speed and time carried into the next corner.
+Across **nine sessions and 71 timed laps**, I compared braking position, lean and opening timing, then checked speed and time through the following corner.
 
 ### Selected work
 
-- [T2 event comparison](#t2-lines-control-and-reference-development) — relate braking position, lean and throttle opening; track repeatability across 47 laps.
-- [Linked corners and gain attribution](#whole-lap-performance-studies) — locate gains and losses using common geographic gates, measured lines and control traces.
-- [OBD and rider-state analysis](#obd-control-timing-and-rider-state-analysis) — examine deceleration, engine recovery, lean duration and event-aligned heart rate.
-- [Targeted driving comparisons](#targeted-driving-comparisons) — compare an intentional exercise, gear choice and consecutive laps.
-- [Acquisition and evidence delivery](#acquisition-and-evidence-delivery) — connect the recording stack, synchronized video and trackside review.
+- [T2 event comparison](#t2-lines-control-and-reference-development): relate braking position, lean and throttle opening; track repeatability across 47 laps.
+- [Linked corners and gain attribution](#whole-lap-performance-studies): locate gains and losses using common geographic gates, measured lines and control traces.
+- [OBD and rider-state analysis](#obd-control-timing-and-rider-state-analysis): examine deceleration, engine recovery, lean duration and event-aligned heart rate.
+- [Targeted driving comparisons](#targeted-driving-comparisons): compare an intentional exercise, gear choice and consecutive laps.
+- [Acquisition and evidence delivery](#acquisition-and-evidence-delivery): connect the recording stack, synchronized video and trackside review.
 
 ## T2: lines, control and reference development
 
-I compared laps in one spatial frame and detected sustained deceleration, lean and throttle events. A chronological view of all 47 comparable laps shows how the braking reference moved and how its repeatability developed.
+I aligned the recorded paths and marked sustained deceleration, lean and throttle opening. Plotting 47 comparable laps in riding order shows where the reference moved and how consistently I used it.
 
 ![T2 recorded lines and braking reference on the photographed P1 board](../assets/p1/p1-t2-board-reference.png)
 
@@ -29,7 +29,7 @@ In the selected S02 L2 / S08 L8 pair, deceleration starts **12.3 m farther downs
 
 [![Play the synchronized T2 onboard excerpt](../assets/p1/aprilia-gpr150-t2-braking-reference.jpg)](https://raw.githubusercontent.com/JesperroO/track-engineering-portfolio/core/assets/p1/aprilia-gpr150-t2-braking-reference.mp4)
 
-The **20-second S04 onboard excerpt** shows the raised kerb at the T1 kink and the main T2 left. The synchronized overlay and original engine audio give the event analysis a physical reference. The measured pair above is S02 / S08; the video illustrates the intermediate S04 session.
+The **20-second S04 onboard excerpt** shows the raised kerb at the T1 kink and the main T2 left. The overlay is synchronized to the original engine audio. This is an intermediate S04 session; the measured pair is S02 / S08.
 
 [Read the complete T2 study: lines, opening and 47-lap reference history](p1-gpr150-analysis.md#t2-lines-control-and-reference-development) · [Onboard and mapped reference](p1-gpr150-analysis.md#t2-onboard-example-developing-a-repeatable-braking-reference)
 
@@ -41,7 +41,7 @@ I placed common geographic gates across laps and joined split times with measure
 
 ![Linked-corner measured lines on the photographed P1 board](../assets/p1/p1-linked-board-lines.png)
 
-The S06 L7 / S08 L8 comparison finds **0.431 s gained in one block and 0.461 s returned in the next**. The board shows the relative lines; the detailed control panels explain the sequence behind that trade-off. I compare approaches by their combined time through both blocks.
+The S06 L7 / S08 L8 comparison finds **0.431 s gained in one block and 0.461 s returned in the next**. I compared the recorded lines and control traces using the combined time through both blocks.
 
 [Read the linked-corner diagnosis](p1-gpr150-analysis.md#1-linked-sequence-a-quicker-right-hand-block-can-cost-the-next-transition)
 
@@ -51,15 +51,15 @@ I split laps at fixed geographic planes, accumulated the interval time differenc
 
 ![Where the final lap improvement was gained and returned on the P1 board](../assets/p1/p1-pb-board-gains.png)
 
-![Recorded L7 and L8 lines through the main gain package](../assets/p1/p1-pb-middle-board-lines.png)
+![Recorded L7 and L8 lines through the main gain section](../assets/p1/p1-pb-middle-board-lines.png)
 
-The final **0.424 s** improvement contains only **0.036 s from the opening package**. G20–G40 contributes **0.371 s**; subsequent gains and losses explain the finish result. I inspect the G20–G40 lines and control traces to explain the largest gain.
+The final **0.424 s** improvement contains only **0.036 s from the opening sequence**. G20–G40 contributes **0.371 s**; subsequent gains and losses explain the finish result. I compared the G20–G40 lines and control traces to locate that gain.
 
 [Read the gain attribution and closer G20–G40 comparison](p1-gpr150-analysis.md#2-s08-consecutive-pbs-where-the-final-0424-s-came-from) · [Fixed-gate definitions](p1-gpr150-methods.md#fixed-geographic-comparisons)
 
 ## OBD, control timing and rider-state analysis
 
-I synchronized GPS speed with OBD engine speed and throttle, then aligned the comparisons at the corner minimum. Calculated lean adds episode shape and duration; heart-rate windows add a separate view of my heart-rate response.
+I synchronized GPS speed with OBD engine speed and throttle, then aligned the comparisons at the corner minimum. I compared how long each lap remained at high lean and how my heart rate changed after deceleration.
 
 ![GPS speed with OBD engine recovery and throttle timing](../assets/p1/p1-obd-engine-recovery.png)
 
@@ -79,7 +79,7 @@ I compare each exercise through the same geographic sections, following its line
 
 The **S09 right-turn exercise** gains approximately **0.194 s** in the first block, then returns **0.510 s** in the following transition. The detailed comparison follows the path, throttle and right-to-left lean sequence, with whole-session lean distributions as context.
 
-The **gear trial** compares RPM, throttle and speed through the opening package. In the **same-session L6/L7 pair**, L7 enters slightly slower and carries more speed through the following corner.
+The **gear trial** compares RPM, throttle and speed through the opening sequence. In the **same-session L6/L7 pair**, L7 enters slightly slower and carries more speed through the following corner.
 
 [Right-turn exercise](p1-gpr150-analysis.md#3-a-deliberate-right-turn-exercise) · [Gear-trial comparison](p1-gpr150-analysis.md#gear-choice-does-avoiding-a-shift-preserve-the-next-corner) · [Same-session comparison](p1-gpr150-analysis.md#same-session-contrast-entry-speed-versus-linked-corner-carry) · [Setup context](p1-gpr150-analysis.md#tyre-pressure-context)
 
@@ -102,9 +102,7 @@ flowchart LR
     ALIGN --> OUT[Selected video and analysis figures]
 ```
 
-**Circuit Tools 3** on the pit-room laptop supports review between sessions and planning the next run. The analysis presented here also includes retrospective reconstruction of sessions ridden consecutively.
-
-The linked reports contain the synchronized video, event maps, line and control comparisons, measurement definitions and aggregate data.
+I use Circuit Tools 3 on the pit-room laptop to review sessions and plan the next run. Sessions ridden consecutively were analysed afterward.
 
 [Acquisition and trackside workflow](data-acquisition-workflow.md) · [Complete analysis](p1-gpr150-analysis.md) · [Methods and source notes](p1-gpr150-methods.md) · [Aggregate evidence](../assets/p1/p1-development-detail-summary.json)
 

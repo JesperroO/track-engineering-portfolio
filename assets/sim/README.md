@@ -1,14 +1,12 @@
 # Simulation figures and evidence provenance
 
-The figures below use the retained session records. The table identifies each source and calculation.
-
 | Public figure | Original evidence | Derivation |
 |---|---|---|
 | `lime-rock-performance.png` | 2026-08-05 MX-5 qualifying table and 26-interval race summary | PB-sector difference to pole; reconstructed lap timeline and loss above a 59.31 s planning baseline |
 | `lime-rock-pedal-trace.png` | Native AC accepted-best-lap `.tc`, previously decoded to a selected-lap table | Speed, normalized throttle and brake input versus normalized track progress; shaded primary braking window |
 | `race-consistency.png` | R5 completed-interval table, my R7 reconstructed race trace, R8 completed-lap table | Screen using all-interval median ± 3 MAD; recompute retained median/MAD and first/last three retained-lap medians |
 | `f4-s1-release.png` | 2026-08-31 F4 replay-derived CSV plus CM session `260831-235626` | Match valid lap transitions; select L15/L28 S1 by CM sector duration; plot vector-speed magnitude and normalized replay brake input against elapsed lap time |
-| `f4-server-reference.png` | Archived lapstat speed-distance arrays inspected during the F4 preparation session | Plot personal 90.814 s and reference 86.871 s speed traces; highlight 3.30-3.50 km for further examination |
+| `f4-server-reference.png` | Archived lapstat speed-distance arrays inspected during the F4 preparation session | Plot personal 90.814 s and reference 86.871 s speed traces; mark 3.30-3.50 km for closer comparison |
 | `silverstone-sectors.png` | CM session `260912-205309` | Select the three valid medium-tyre laps; compare recorded S1/S2/S3 |
 
 `evidence-summary.json` stores the aggregate tables, selected lap timings and server speed-distance comparison.
