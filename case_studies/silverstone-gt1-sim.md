@@ -1,10 +1,10 @@
-# GT1 / Silverstone: time-loss allocation, tyre state and controlled testing
+# GT1 / Silverstone: front-wheel lockup, lap-time losses and tyre state
 
 [Portfolio contents](../README.md)
 
 **2026-09-12 · Assetto Corsa · RSS GT Shadow V8 · Silverstone GP OSRW**
 
-I drove and analysed a prequalification practice programme, combining CM laps and validity flags, the saved setup and **50 Hz Live Telemetry**. I compared sector times, brake input, wheel speeds and tyre state to choose a setup test.
+I drove and analysed a prequalification practice programme, combining CM laps and validity flags, the saved setup and **50 Hz Live Telemetry**. I located front-wheel lockup, compared where lap time was gained and lost, and checked tyre pressures and temperatures.
 
 ## Valid laps and sector allocation
 

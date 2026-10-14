@@ -70,7 +70,6 @@ I proposed this test:
 
 > Change front brake bias from `61.0%` to `60.5%`; hold the rest of the setup fixed; compare front-wheel lockup and exit performance in Village, Becketts, and Vale.
 
-The brake-bias change remains a proposed test.
 
 ## F4 simulation: learn from a local gain and an incomplete setup fix
 
