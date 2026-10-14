@@ -51,6 +51,8 @@ L15 passes the same S2 transition with the right rear dropping to approximately 
 
 At **29.610 s** on the matched 91.303 s L15, the replay reports **344.75 N right-rear load versus 605 N left-rear**, with **99.2% throttle** and zero recorded brake.
 
+The right-rear load rebounds from **0.345 to 4.432 kN in 0.12 s**, while total four-wheel load rises from **3.75 to 10.20 kN**. This rapid unload-and-reload pattern is consistent with a vertical impact and suspension motion; the exact kerb or road feature needs confirmation in the replay.
+
 I compare wheel loads, throttle, steering and replay position through the loss and recovery of rear-wheel load, focusing on the curb approach and throttle timing. I proposed two separate tests, comparing load recovery and exit stability at the same transition:
 
 - A: rear fast rebound reduced from 6 to 5, intended to investigate the unload/recontact transition.
